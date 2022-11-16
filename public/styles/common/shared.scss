@@ -1,6 +1,4 @@
-$se-dark : rgb(38, 38, 38);
-$se-dimgrey: rgb(58, 58, 58);
-$se-grey: rgb(161, 161, 161);
+@import "../variables.scss";
 
 :root, html, body {
     padding: 0;
@@ -14,6 +12,19 @@ body {
     background-color: #e8e8e8;
     margin-top: 40px;
 }
+
+*  a {
+    text-decoration: none;
+    color: $secondary-100;
+    border-bottom: 2px solid rgba(32, 87, 169, 0.1);
+    transition: all 100ms linear;
+    &:hover {
+        color: $secondary-120;
+        // background-color: rgba(255, 221, 0, 0.1);
+        border-bottom: 2px dotted $secondary-120;
+    }
+}
+
 .se-header {
     height: 40px;
     background: white;
@@ -34,6 +45,7 @@ body {
             color: $se-dark;
             text-decoration: none;
             transition: all 100ms linear;
+            border: none !important;
             &:hover {
                 background-color: #e0f6f9;
             }
@@ -42,7 +54,7 @@ body {
 }
 
 .se-container {
-    width: 1024px;
+    max-width: 1024px;
     margin: 0 auto;
     &__section {
         min-height: 100px;
@@ -50,6 +62,26 @@ body {
         &:nth-child(even) {
             background-color: #F2F8FF;
             
+        }
+    }
+}
+
+.se-footer {
+    padding: 20px;
+    background-color: #474747;
+    color: #ececec;
+    .se-container {
+        max-width: 1024px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .se-socials {
+            min-width: 250px;
+        }
+        .se-newsletter {
+            min-width: 250px;
+            flex: 1;
         }
     }
 }
