@@ -28,7 +28,6 @@
 
 body {
   background-color: #ffffff;
-  margin-top: 80px;
 }
 
 * a {
@@ -80,6 +79,14 @@ body {
 }
 .se-container__section:nth-child(even) {
   background-color: #F2F8FF;
+}
+.se-container__section h2 {
+  margin-top: -90px;
+  padding-top: 100px;
+}
+.se-container__section h1 {
+  margin-top: -90px;
+  padding-top: 100px;
 }
 
 .se-footer {
