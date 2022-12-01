@@ -28,7 +28,7 @@
 
 body {
   background-color: #e8e8e8;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 * a {
@@ -43,8 +43,8 @@ body {
 }
 
 .se-header {
-  height: 40px;
-  background: white;
+  height: 80px;
+  background: rgb(241, 241, 241);
   position: fixed;
   top: 0;
   width: 100%;
@@ -67,7 +67,7 @@ body {
   border: none !important;
 }
 .se-header__menu a:hover {
-  background-color: #e0f6f9;
+  background-color: #adadad;
 }
 
 .se-container {

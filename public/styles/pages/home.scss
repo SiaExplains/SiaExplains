@@ -1,3 +1,13 @@
 .page-home {
     background-color: white;
 }
+
+.slider-image {
+    background-color: yellow;
+    background: url('../../../public/images/me-at-bb.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    width: 100%;
+    height: 100vh;
+}
