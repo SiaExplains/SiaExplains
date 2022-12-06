@@ -17,4 +17,23 @@
 .blog .show-more {
   width: 100%;
   text-align: right;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.contact .left-side {
+  flex: 1;
+}
+.contact .right-side {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.contact .right-side .buymeacoffee {
+  width: 200px;
+  height: auto;
+  display: block;
 }/*# sourceMappingURL=home.css.map */
