@@ -18,6 +18,10 @@
   color: #cccccc;
 }
 
+/** -----------------
+      FROM BOOTSTRAP
+     --------------------
+     */
 :root,
 html,
 body {
@@ -43,18 +47,88 @@ body {
   border-bottom: 2px dotted #19466d;
 }
 
+.mobile-title {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 300px;
+}
+.mobile-title input {
+  width: 100%;
+  border-radius: 5px;
+  height: 25px;
+  border: 1px solid grey;
+  padding-left: 10px;
+}
+
+.burger-icon {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(10, 120, 107);
+  margin: 6px 0;
+}
+
+.burger-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  transition: all 200ms linear;
+  display: none;
+  z-index: 10000;
+  background-color: white;
+}
+.burger-menu--show {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  z-index: 10000;
+  padding: 10px;
+}
+.burger-menu a {
+  display: flex;
+  min-height: 30px;
+  align-items: center;
+}
+
 .se-header {
   height: 80px;
   background: rgb(241, 241, 241);
   position: fixed;
+  z-index: 999;
   top: 0;
   width: 100%;
 }
-.se-header__menu {
+@media screen and (max-width: 768px) {
+  .se-header {
+    height: auto;
+  }
+}
+.se-header__burger {
+  display: none;
   height: 100%;
-  display: flex;
   max-width: 700px;
   margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .se-header__burger {
+    display: inline-flex;
+    padding: 10px;
+  }
+}
+.se-header__menu {
+  display: none;
+  height: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .se-header__menu {
+    display: flex;
+  }
 }
 .se-header__menu a {
   flex: 1;

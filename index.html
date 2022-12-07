@@ -17,6 +17,7 @@
     <link href="./public/styles/style.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="public/images/favicon.ico" />
     <script src="./scripts/home.js" type="text/javascript" defer></script>
+    <script src="./scripts/menu.js" type="text/javascript" defer></script>
   </head>
   <body>
     <div class="se-header">
@@ -27,6 +28,31 @@
         <a href="#videos">Videos</a>
         <a href="#coaching">Coaching</a>
         <a href="#contact">Contact</a>
+      </div>
+      <div class="se-header__burger">
+        <div onclick="onBurgerMenuClick()">
+          <div class="burger-icon"></div>
+          <div class="burger-icon"></div>
+          <div class="burger-icon"></div>
+        </div>
+        <div class="mobile-title">
+          <input placeholder="Search in blog..." />
+        </div>
+      </div>
+      <div class="burger-menu" id="burger-menu">
+        <div>
+          <div onclick="onBurgerMenuClick()">
+            <div class="burger-icon"></div>
+            <div class="burger-icon"></div>
+            <div class="burger-icon"></div>
+          </div>
+        </div>
+        <a href="#about" onclick="onBurgerMenuClick()">About Me</a>
+        <a href="#courses" onclick="onBurgerMenuClick()">Courses</a>
+        <a href="#blog" onclick="onBurgerMenuClick()">Blog</a>
+        <a href="#videos" onclick="onBurgerMenuClick()">Videos</a>
+        <a href="#coaching" onclick="onBurgerMenuClick()">Coaching</a>
+        <a href="#contact" onclick="onBurgerMenuClick()">Contact</a>
       </div>
     </div>
     <div class="slider-image">
