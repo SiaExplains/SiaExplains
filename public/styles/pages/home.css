@@ -44,11 +44,17 @@
   max-width: 600px;
   right: 100px;
 }
+.slider-image .quote #quote-by {
+  font-size: 24px;
+}
 @media screen and (max-width: 1110px) {
   .slider-image .quote {
     font-size: 32px;
     max-width: 400px;
     right: 50px;
+  }
+  .slider-image .quote #quote-by {
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -57,6 +63,9 @@
     max-width: 100%;
     right: 20px;
     left: 20px;
+  }
+  .slider-image .quote #quote-by {
+    font-size: 12px;
   }
 }
 

@@ -24,16 +24,27 @@
     font-size: 48px;
     max-width: 600px;
     right: 100px;
+
+    #quote-by {
+      font-size: 24px;
+    }
+
     @include se-max($se-viewport-xl) {
       font-size: 32px;
       max-width: 400px;
       right: 50px;
+      #quote-by {
+        font-size: 18px;
+      }
     }
     @include se-max($se-viewport-lg) {
       font-size: 24px;
       max-width: 100%;
       right: 20px;
       left: 20px;
+      #quote-by {
+        font-size: 12px;
+      }
     }
   }
 }
