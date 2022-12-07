@@ -1,3 +1,6 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
 .page-home {
   background-color: white;
 }
@@ -10,6 +13,29 @@
 
   width: 100%;
   height: 100vh;
+  position: relative;
+  .quote {
+    position: absolute;
+    bottom: 100px;
+
+    color: white;
+    text-shadow: 0 0 3px #313131, 0 0 5px #202020;
+
+    font-size: 48px;
+    max-width: 600px;
+    right: 100px;
+    @include se-max($se-viewport-xl) {
+      font-size: 32px;
+      max-width: 400px;
+      right: 50px;
+    }
+    @include se-max($se-viewport-lg) {
+      font-size: 24px;
+      max-width: 100%;
+      right: 20px;
+      left: 20px;
+    }
+  }
 }
 
 .blog {
