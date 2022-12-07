@@ -49,7 +49,6 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 500;
 }
 .se-header__menu {
   height: 100%;
@@ -110,4 +109,4 @@ body {
 .se-footer .se-container .se-newsletter {
   min-width: 250px;
   flex: 1;
-} /*# sourceMappingURL=shared.css.map */
+}/*# sourceMappingURL=shared.css.map */

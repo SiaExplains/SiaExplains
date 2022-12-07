@@ -36,17 +36,15 @@ $blue-50: #b3d5f2;
 $blue-20: #dce7f4;
 $blue-10: #e6ebec;
 
-
-$se-dark : rgb(38, 38, 38);
+$se-dark: rgb(38, 38, 38);
 $se-dimgrey: rgb(58, 58, 58);
 $se-grey: rgb(161, 161, 161);
-
 
 // TEXT & FONTS
 // ------------------------
 
 // FAMILY
-$font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // SIZES
 $se-font-xxs: 10px;
@@ -98,7 +96,7 @@ $colors: (
   primary-90: $primary-90,
   primary-20: $primary-20,
   gray-100: $gray-100,
-  gray-50: $gray-50
+  gray-50: $gray-50,
 );
 @each $name, $color in $colors {
   .et-font-#{$name} {
