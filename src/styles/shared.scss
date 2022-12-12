@@ -74,9 +74,6 @@ body {
 .se-header {
   height: 80px;
   background: rgb(241, 241, 241);
-  position: fixed;
-  z-index: 999;
-  top: 0;
   width: 100%;
   @include se-max($se-viewport-md) {
     height: auto;
