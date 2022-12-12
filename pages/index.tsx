@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import quotes from "../common/quotes.json";
 
 export default function Home(props: any) {
@@ -77,7 +78,7 @@ export default function Home(props: any) {
             </div>
           </div>
           <p className="show-more">
-            <a href="/blog">Show More</a>
+            <Link href={"/blog"}>Show more</Link>
           </p>
         </div>
         <div className="se-container__section">
