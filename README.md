@@ -17,3 +17,8 @@
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/siaexplains?style=social)](https://twitter.com/siaexplains)
 
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SiaExplains&layout=compact&theme=radical" width="500" />
+
+![Stats](https://github-readme-stats.vercel.app/api?username=SiaExplains&show_icons=true&count_private=true)  
+![Profile views](https://gpvc.arturio.dev/SiaExplains)  
+
