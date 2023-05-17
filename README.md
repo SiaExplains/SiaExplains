@@ -2,7 +2,7 @@
 
 
 
-🔭 I’m currently working as FullStack Software Developer at <ins>**[TradeMachines](https://trademachines.com/)**</ins> and In addition I'm working on my personal project: **<ins>[KeepCent](https://github.com/SiaExplains/keepcent)</ins>**
+🔭 I’m currently working as FullStack Software Developer at <ins>**[TradeMachines](https://trademachines.com/)**</ins>.
 
 🌱 I’m currently learning more about AWS & CI/CD skills.
 
