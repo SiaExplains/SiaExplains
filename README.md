@@ -17,6 +17,8 @@
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/siaexplains?style=social)](https://twitter.com/siaexplains)
 
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge&logo=Linkedin&&target=_blanklogoColor=white&link=https://www.linkedin.com/in/SiaExplains/)](https://www.linkedin.com/in/siavash-ghanbari/) [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white&link=https://medium.com/@siaexplains)](https://medium.com/@siaexplains)
+
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SiaExplains&layout=compact&theme=radical" width="500" />
 
 ![Stats](https://github-readme-stats.vercel.app/api?username=SiaExplains&show_icons=true&count_private=true)  
