@@ -2,11 +2,11 @@
 
 
 
-🔭 I’m currently working as FullStack Software Developer at <ins>**[TradeMachines](https://trademachines.com/)**</ins>.
+🔭 I’m currently working as FullStack Software Developer at <ins>**[MHP](https://mhp.com/)**</ins> A Porsche company.
 
 🌱 I’m currently learning more about AWS & CI/CD skills.
 
-💬 Ask me about = [`Javascript`, `NodeJs`, `CSS`, `HTML`, `TravisCI`, `Git`, ...{jsEchoSystem}];
+💬 Ask me about = [`SDLC`, `AWS`,`Cloud`,`Software Architecture`,`AI`,`MCP`,`Javascript`, `NodeJs`, `CSS`, `HTML`, `TravisCI`, `Git`, ...{jsEchoSystem}];
 
 😄 Pronouns: He/Him
 
