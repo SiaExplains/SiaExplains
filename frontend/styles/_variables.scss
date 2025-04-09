@@ -1,0 +1,124 @@
+// Color System
+:root {
+  // Brand colors
+  --primary: #005246;
+  --primary-hover: #004038;
+  --accent: #FFD401;
+  --accent-hover: #E6BF00;
+  --secondary: #B6CB3D;
+  --secondary-hover: #A3B835;
+
+  --rainbow-gold: #ffcd6b;
+  --rainbow-brick: #ff8c66;
+  --rainbow-blue: #2fc6ec;
+  --rainbow-lavender: #a45ee5;
+
+  // Neutral colors
+  --background-white: #FFFFFF;
+  --background-khaki:#f9f6f3 ;
+  --foreground: #303030;
+  --gray-900: #303030;
+  --gray-800: #404040;
+  --gray-700: #505050;
+  --gray-600: #606060;
+  --gray-500: #707070;
+  --gray-400: #808080;
+  --gray-300: #909090;
+  --gray-200: #A0A0A0;
+  --gray-100: #F0F0F0;
+  --gray-50: #F8F8F8;
+
+  // Alpha colors
+  --gray-alpha-100: rgba(48, 48, 48, 0.05);
+  --gray-alpha-200: rgba(48, 48, 48, 0.08);
+  --gray-alpha-300: rgba(48, 48, 48, 0.12);
+  --gray-alpha-400: rgba(48, 48, 48, 0.16);
+  --gray-alpha-500: rgba(48, 48, 48, 0.24);
+  --gray-alpha-600: rgba(48, 48, 48, 0.32);
+  --gray-alpha-700: rgba(48, 48, 48, 0.48);
+  --gray-alpha-800: rgba(48, 48, 48, 0.64);
+  --gray-alpha-900: rgba(48, 48, 48, 0.96);
+
+  // Button colors
+  --button-primary-hover: #004038;
+  --button-secondary-hover: #A3B835;
+  --button-accent-hover: #E6BF00;
+}
+
+// Dark mode colors
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #303030;
+    --foreground: #FFFFFF;
+    --gray-rgb: 255, 255, 255;
+    
+    --button-primary-hover: #006655;
+    --button-secondary-hover: #C4D94D;
+    --button-accent-hover: #FFE033;
+  }
+}
+
+// Spacing System
+$spacing-unit: 8px;
+$spacing-xs: $spacing-unit;
+$spacing-sm: $spacing-unit * 2;
+$spacing-md: $spacing-unit * 3;
+$spacing-lg: $spacing-unit * 4;
+$spacing-xl: $spacing-unit * 5;
+$spacing-2xl: $spacing-unit * 6;
+$spacing-3xl: $spacing-unit * 8;
+$spacing-4xl: $spacing-unit * 10;
+
+// Typography
+$font-size-xs: 0.75rem;    // 12px
+$font-size-sm: 0.875rem;   // 14px
+$font-size-base: 1rem;     // 16px
+$font-size-lg: 1.125rem;   // 18px
+$font-size-xl: 1.25rem;    // 20px
+$font-size-2xl: 1.5rem;    // 24px
+$font-size-3xl: 1.875rem;  // 30px
+$font-size-4xl: 2.25rem;   // 36px
+
+// Line heights
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// Border radius
+$radius-sm: 0.25rem;
+$radius-md: 0.375rem;
+$radius-lg: 0.5rem;
+$radius-xl: 0.75rem;
+$radius-2xl: 1rem;
+$radius-full: 9999px;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 1024px;
+
+// Z-index
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
+// Transitions
+$transition-fast: 150ms ease;
+$transition-normal: 250ms ease;
+$transition-slow: 350ms ease;
+$transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 

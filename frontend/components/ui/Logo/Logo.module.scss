@@ -1,0 +1,11 @@
+@import '../../../styles/mixins';
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    width: 40px;
+    height: 40px;
+}

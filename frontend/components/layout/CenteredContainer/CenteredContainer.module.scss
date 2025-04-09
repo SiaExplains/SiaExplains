@@ -1,0 +1,19 @@
+@import '../../../styles/mixins';
+
+.centeredContainer {
+    margin: 0 auto;
+    padding: 16px 75px;
+    max-width: 1580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @include tablet {
+        padding: 15px 40px;
+    }
+
+    @include mobile {
+        padding: 15px 20px;
+    }
+  }

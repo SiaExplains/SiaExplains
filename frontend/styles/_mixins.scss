@@ -1,0 +1,164 @@
+@import 'variables';
+// Media Queries
+@mixin respond-max($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl) { @content; }
+  } @else if $breakpoint == 2xl {
+    @media (max-width: $breakpoint-2xl) { @content; }
+  }
+}
+
+// Flexbox
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// Grid
+@mixin grid($columns: 1, $gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+// Typography
+@mixin text($size: $font-size-base, $line-height: $line-height-normal, $weight: normal) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+}
+
+// Truncate text
+@mixin truncate($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// Position
+@mixin position($position: relative, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// Transitions
+@mixin transition($property: all, $duration: $transition-normal) {
+  transition: $property $duration;
+}
+
+// Hover and focus states
+@mixin hover-focus {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover, &:focus {
+      @content;
+    }
+  }
+}
+
+// Button styles
+@mixin button($background: var(--primary), $color: white, $hover: var(--primary-hover)) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-md;
+  background-color: $background;
+  color: $color;
+  border: none;
+  cursor: pointer;
+  @include transition;
+  
+  @include hover-focus {
+    background-color: $hover;
+  }
+}
+
+
+// Input styles
+@mixin input {
+  width: 100%;
+  padding: $spacing-sm $spacing-md;
+  border: 1px solid var(--gray-200);
+  border-radius: $radius-md;
+  background-color: var(--background);
+  color: var(--foreground);
+  @include transition(border-color);
+  
+  &:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+}
+
+// Scrollbar styles
+@mixin scrollbar($width: 8px, $thumb: var(--gray-300), $track: var(--gray-100)) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $track;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $thumb;
+    border-radius: $radius-full;
+  }
+} 
+
+// Usage: @include hide-on-mobile;
+@mixin hide-on-mobile {
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+}
+
+@mixin show-on-mobile {
+  display: none !important;
+  @media (max-width: 767px) {
+    display: block !important;
+  }
+}
+
+
+
+
+// Mobile: up to 767px
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+// Tablet: 768px to 1024px
+@mixin tablet {
+  @media (min-width: #{($breakpoint-mobile + 1)}) and (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+// Desktop: 1025px and up
+@mixin desktop {
+  @media (min-width: #{($breakpoint-tablet + 1)}) {
+    @content;
+  }
+}

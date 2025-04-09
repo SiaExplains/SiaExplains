@@ -1,0 +1,160 @@
+@import '../../../styles/mixins';
+
+.menuBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    z-index: 10;
+    @include mobile {
+        visible: hidden;
+        display: none;
+    }
+  }
+
+  .menuList {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menuItem {
+    position: relative;
+    border-bottom: 2px solid transparent;
+    padding: 0px 0px 2px 0px;
+    margin: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    &:hover {
+        border-bottom: 2px solid #14101a;
+    }
+  }
+
+  .menuItem a,
+  .dropdownButton {
+    font-size: 16px;
+    color: #14101a;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .chevron {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid #14101a;
+    border-bottom: 2px solid #14101a;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+    margin-top: 2px;
+  }
+
+  .open {
+    transform: rotate(-135deg);
+    margin-top: 4px;
+  }
+
+  .dropdown {
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    z-index: 100;
+    min-width: 500px;
+  }
+  
+  .dropdownSection {
+    display: flex;
+    flex-direction: column;
+  
+    strong {
+      font-size: 14px;
+      margin-bottom: 0.5rem;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 15px;
+      }
+  
+      .link {
+        margin-top: 0.75rem;
+  
+        a {
+          text-decoration: underline;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .burgerMenuContainer {
+    display: none;
+    @include mobile {
+        display: flex;
+        visibility: visible;
+    }
+  }
+
+  .menuBurger {
+    display: none;
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+  }
+  .menuBurgerLine {
+    width: 30px;
+    height: 3px;
+    background-color: #14101a;
+    margin: 2px 0;
+    transition: all 0.3s ease;
+  }
+  .menuBurgerLine.open {
+    transform: rotate(45deg);
+    margin: 0;
+  }
+  .menuBurgerLine.open:nth-child(2) {
+    opacity: 0;
+  }
+  .burgerMenuList {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    z-index: 100;
+    min-width: 200px;
+  
+    @include mobile {
+        display: flex;
+    }
+  }
