@@ -1,3 +1,5 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
 .page {
     background-color: var(--background-white, #f9f6f3);
 }
@@ -6,8 +8,10 @@
     justify-content: center;
     text-align: left;
     font-size: clamp(1rem, 4vw, 6rem);
-    // font-weight: 900;
     width: 100%;
+    @include mobile {
+        text-align: center;
+    }
 }
 
 .heroContainer {
@@ -31,18 +35,31 @@
 }
 
 .textContainer {
-    padding-left: 20px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-basis: 58%;
+    max-width: 600px;
+    @include mobile {
+        padding-left: 10px;
+    }
+    @include tablet {
+        padding-left: 20px;
+    }
+    @include desktop {
+        padding-left: 40px;
+    }
 }
 
 .description {
     font-size: 20px;
     text-align: center;
     margin-top: 20px;
-    font-size: clamp(1rem, 2.5vw, 4rem);
+    font-size: clamp(1.5rem, 2.2یشvw, 4rem);
     text-align: left;
+    @include mobile {
+        text-align: center;
+    }
 }

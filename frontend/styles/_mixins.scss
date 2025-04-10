@@ -1,4 +1,4 @@
-@import 'variables';
+@use './variables' as *;
 // Media Queries
 @mixin respond-max($breakpoint) {
   @if $breakpoint == sm {

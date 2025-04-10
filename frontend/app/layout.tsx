@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "@/styles/index.scss";
+import "@/styles/global.scss";
 import CenteredContainer from "@/components/layout/CenteredContainer/CenteredContainer";
 import Card from "@/components/ui/Card/Card";
 import Header from "@/components/shared/Header/Header";

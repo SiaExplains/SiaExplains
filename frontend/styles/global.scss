@@ -1,5 +1,6 @@
-@import './_variables';
-@import './_mixins';
+@use 'variables';
+@use 'mixins';
+@use 'css-variables';
 
 
 .poppins-thin {
