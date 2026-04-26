@@ -1,0 +1,101 @@
+---
+title: "System Design at Scale: What Actually Matters"
+date: "2026-04-15"
+description: "After a decade of building distributed systems, here are the principles that actually matter when designing for scale — and the ones that are just interview theater."
+tags: ["system-design", "engineering", "distributed-systems", "architecture"]
+slug: "system-design-at-scale"
+---
+
+# System Design at Scale: What Actually Matters
+
+There's a disconnect between how system design is taught and how it's actually practiced.
+
+In interviews, we talk about CAP theorem, consistent hashing, and Bloom filters. In production, we're debugging why a cron job is creating a thundering herd on our database at 3am on a Tuesday.
+
+This article is about the latter.
+
+## The Gap Between Theory and Production
+
+After building systems that serve millions of users — some at a fintech unicorn in Berlin, some at side projects — I've noticed a pattern: the things that bite you in production are almost never the things you worried about when designing the system.
+
+Let me share what actually matters.
+
+## 1. Boring Technology Wins
+
+The best architecture choice is usually the *boring* one. Not because boring technology is better, but because:
+
+- It has better documentation
+- Your team already understands it
+- The failure modes are well-known
+- Stack Overflow has answers
+
+When I joined my current company, the first thing I wanted to do was replace a 5-year-old PostgreSQL setup with a shiny new distributed database. 
+
+I didn't. Two years later, that PostgreSQL setup handles 50k+ requests per second with proper indexing, connection pooling, and read replicas. Boring, but fast.
+
+## 2. Your Bottleneck is Probably the Database
+
+It's almost always the database.
+
+Not the application layer. Not the network. The database.
+
+Before you add caching, message queues, or a new microservice: profile your queries. Add indexes. Analyze `EXPLAIN ANALYZE` output. Fix the N+1 queries.
+
+Tools I actually use:
+
+- **pgBadger** — PostgreSQL log analyzer
+- **pg_stat_statements** — query performance stats
+- **DataDog / Grafana** — dashboards that page you at 3am
+
+## 3. Async > Sync for Scale
+
+If a user action doesn't need an immediate response, make it asynchronous.
+
+```
+User submits form
+  → Save to DB (synchronous, fast)
+  → Publish event to queue (synchronous, fast)
+  → Return 202 Accepted
+
+Background worker
+  → Process event
+  → Send email, update search index, notify webhooks
+```
+
+This decoupling is the single biggest architectural lever I've pulled at every company. It makes systems resilient to downstream failures, allows independent scaling, and dramatically simplifies retry logic.
+
+## 4. Observability is Not Optional
+
+You cannot optimize what you cannot measure.
+
+The three pillars:
+
+| Pillar | What it tells you |
+|--------|------------------|
+| Metrics | Is the system healthy right now? |
+| Logs | What happened when it wasn't? |
+| Traces | Which request caused the slowdown? |
+
+If you're starting a new service today, set up structured logging and basic metrics before writing the first endpoint. You'll thank yourself later.
+
+## 5. The Real Consistency Question
+
+CAP theorem is not a practical guide. In practice, the question is:
+
+> *"What's the acceptable staleness window for this specific piece of data?"*
+
+User profile data? 5 minutes of staleness is fine. Shopping cart? Maybe 10 seconds. Payment confirmation? Zero — this must be strongly consistent.
+
+Design each data type's consistency requirements explicitly, rather than defaulting to "all eventual" or "all strong."
+
+---
+
+## Closing Thoughts
+
+Scale is not a technology problem. It's a product problem.
+
+Most systems fail because someone optimized the wrong thing. They built a caching layer before they profiled queries. They added microservices before they understood their domain boundaries. They optimized for throughput before they understood their access patterns.
+
+Start boring. Measure everything. Fix what's slow. Ship.
+
+The rest usually takes care of itself.
