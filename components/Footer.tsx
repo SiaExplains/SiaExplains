@@ -20,14 +20,14 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/5 bg-[#0a0a0f]">
+    <footer className="border-t border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-[#0a0a0f]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           {/* Brand */}
           <div>
             <Link
               href="/"
-              className="text-white font-semibold text-lg tracking-tight"
+              className="text-gray-900 dark:text-white font-semibold text-lg tracking-tight"
             >
               <span className="text-brand-500">Sia</span>Explains
             </Link>
@@ -39,7 +39,7 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <p className="text-xs uppercase tracking-widest text-gray-600 mb-4">
+            <p className="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-600 mb-4">
               Explore
             </p>
             <ul className="space-y-2">
@@ -47,7 +47,7 @@ export default function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm text-gray-500 hover:text-white transition-colors"
+                    className="text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
                   >
                     {label}
                   </Link>
@@ -58,7 +58,7 @@ export default function Footer() {
 
           {/* Socials */}
           <div>
-            <p className="text-xs uppercase tracking-widest text-gray-600 mb-4">
+            <p className="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-600 mb-4">
               Find me on
             </p>
             <div className="flex gap-3">
@@ -69,7 +69,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="p-2 rounded-lg text-gray-500 hover:text-white hover:bg-white/5 transition-colors"
+                  className="p-2 rounded-lg text-gray-500 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
                 >
                   <Icon size={18} />
                 </a>
@@ -78,11 +78,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-gray-600">
+        <div className="pt-6 border-t border-gray-200 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="text-xs text-gray-500 dark:text-gray-600">
             © {year} Siavash · SiaExplains.com
           </p>
-          <p className="text-xs text-gray-700">
+          <p className="text-xs text-gray-400 dark:text-gray-700">
             Built with Next.js · Deployed on Vercel
           </p>
         </div>

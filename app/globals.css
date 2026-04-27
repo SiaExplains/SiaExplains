@@ -25,8 +25,19 @@
 }
 
 :root {
+  --background: #f8f8fc;
+  --foreground: #0a0a0f;
+  --nav-bg: rgba(248, 248, 252, 0.9);
+  --nav-mobile-bg: rgba(255, 255, 255, 0.97);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+}
+
+.dark {
   --background: #0a0a0f;
   --foreground: #f0f0f5;
+  --nav-bg: rgba(10, 10, 15, 0.9);
+  --nav-mobile-bg: rgba(17, 17, 24, 0.97);
+  --border-subtle: rgba(255, 255, 255, 0.05);
 }
 
 body {

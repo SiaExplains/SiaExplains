@@ -79,11 +79,11 @@ export default function TimelinePage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center mb-16">
-        <p className="text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
+        <p className="text-brand-500 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
           The journey
         </p>
-        <h1 className="text-4xl font-bold text-white mb-4">Timeline</h1>
-        <p className="text-gray-400 text-lg max-w-xl mx-auto">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Timeline</h1>
+        <p className="text-gray-600 dark:text-gray-400 text-lg max-w-xl mx-auto">
           Key milestones from Tehran to Berlin — from student to Principal
           Engineer, founder, and creator.
         </p>

@@ -90,7 +90,7 @@ function StarRating({ rating }: { rating: number }) {
       {[1, 2, 3, 4, 5].map((star) => (
         <span
           key={star}
-          className={star <= rating ? "text-amber-400" : "text-gray-700"}
+          className={star <= rating ? "text-amber-500 dark:text-amber-400" : "text-gray-300 dark:text-gray-700"}
         >
           ★
         </span>
@@ -103,11 +103,11 @@ export default function BooksPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-12">
-        <p className="text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
+        <p className="text-brand-500 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
           Reading list
         </p>
-        <h1 className="text-4xl font-bold text-white mb-4">Books</h1>
-        <p className="text-gray-400 text-lg">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Books</h1>
+        <p className="text-gray-600 dark:text-gray-400 text-lg">
           Books that shaped how I think about engineering, leadership, and the
           world. Only ones I&apos;d actually recommend.
         </p>
@@ -115,13 +115,13 @@ export default function BooksPage() {
 
       {/* Category filters (static for now) */}
       <div className="flex flex-wrap gap-2 mb-10">
-        <span className="text-xs px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400">
+        <span className="text-xs px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 dark:text-brand-400">
           All ({books.length})
         </span>
         {categories.map((cat) => (
           <span
             key={cat}
-            className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/5 text-gray-500"
+            className="text-xs px-3 py-1 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/5 text-gray-500"
           >
             {cat} ({books.filter((b) => b.category === cat).length})
           </span>
@@ -132,12 +132,12 @@ export default function BooksPage() {
         {books.map((book) => (
           <div
             key={book.title}
-            className="rounded-2xl border border-white/5 bg-white/2 p-5 hover:border-white/10 transition-colors"
+            className="rounded-2xl border border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-white/5 p-5 hover:border-gray-300 dark:hover:border-white/10 transition-colors"
           >
             <div className="flex items-start gap-3 mb-3">
               <span className="text-3xl shrink-0">{book.emoji}</span>
               <div className="flex-1 min-w-0">
-                <h3 className="font-semibold text-white text-sm leading-snug mb-0.5">
+                <h3 className="font-semibold text-gray-900 dark:text-white text-sm leading-snug mb-0.5">
                   {book.title}
                 </h3>
                 <p className="text-xs text-gray-500">{book.author}</p>
@@ -145,14 +145,14 @@ export default function BooksPage() {
             </div>
 
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-gray-500">
+              <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-white/5 text-gray-500">
                 {book.category}
               </span>
               <StarRating rating={book.rating} />
             </div>
 
             {book.notes && (
-              <p className="text-xs text-gray-500 leading-relaxed border-t border-white/5 pt-3">
+              <p className="text-xs text-gray-500 leading-relaxed border-t border-gray-200 dark:border-white/5 pt-3">
                 {book.notes}
               </p>
             )}

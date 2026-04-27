@@ -84,15 +84,15 @@ export default function CvPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Header */}
-      <div className="mb-12 pb-8 border-b border-white/5">
-        <h1 className="text-4xl font-bold text-white mb-2">Siavash</h1>
-        <p className="text-brand-400 text-lg mb-1">
+      <div className="mb-12 pb-8 border-b border-gray-200 dark:border-white/5">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">Siavash</h1>
+        <p className="text-brand-500 dark:text-brand-400 text-lg mb-1">
           Principal Software Engineer & Tech Lead
         </p>
         <p className="text-gray-500 text-sm">
           Berlin, Germany · siavash@siaexplains.com · SiaExplains.com
         </p>
-        <p className="mt-4 text-gray-400 leading-relaxed max-w-2xl">
+        <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
           Principal engineer with 10+ years building high-scale distributed
           systems. Experienced in fintech, SaaS, and logistics. Passionate about
           clean architecture, engineering culture, and sharing knowledge.
@@ -101,7 +101,7 @@ export default function CvPage() {
 
       {/* Experience */}
       <section className="mb-12">
-        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-600 mb-6">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-500 dark:text-gray-600 mb-6">
           <Briefcase size={14} />
           Experience
         </div>
@@ -109,21 +109,21 @@ export default function CvPage() {
           {experience.map((job) => (
             <div
               key={`${job.company}-${job.period}`}
-              className="border-l-2 border-white/5 pl-5 hover:border-brand-500/40 transition-colors"
+              className="border-l-2 border-gray-200 dark:border-white/5 pl-5 hover:border-brand-500/40 transition-colors"
             >
               <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                 <div>
-                  <h3 className="font-semibold text-white">{job.role}</h3>
-                  <p className="text-brand-400 text-sm">{job.company}</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">{job.role}</h3>
+                  <p className="text-brand-500 dark:text-brand-400 text-sm">{job.company}</p>
                 </div>
                 <div className="text-right">
                   <p className="text-sm text-gray-500">{job.period}</p>
-                  <p className="text-xs text-gray-600">{job.location}</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-600">{job.location}</p>
                 </div>
               </div>
               <ul className="space-y-1 mt-3">
                 {job.bullets.map((b, i) => (
-                  <li key={i} className="text-sm text-gray-400 flex gap-2">
+                  <li key={i} className="text-sm text-gray-600 dark:text-gray-400 flex gap-2">
                     <span className="text-brand-500 mt-1 shrink-0">›</span>
                     {b}
                   </li>
@@ -136,21 +136,21 @@ export default function CvPage() {
 
       {/* Education */}
       <section className="mb-12">
-        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-600 mb-6">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-500 dark:text-gray-600 mb-6">
           <GraduationCap size={14} />
           Education
         </div>
         {education.map((edu) => (
-          <div key={edu.institution} className="border-l-2 border-white/5 pl-5">
+          <div key={edu.institution} className="border-l-2 border-gray-200 dark:border-white/5 pl-5">
             <div className="flex flex-wrap items-start justify-between gap-2 mb-1">
               <div>
-                <h3 className="font-semibold text-white">{edu.degree}</h3>
-                <p className="text-brand-400 text-sm">{edu.institution}</p>
+                <h3 className="font-semibold text-gray-900 dark:text-white">{edu.degree}</h3>
+                <p className="text-brand-500 dark:text-brand-400 text-sm">{edu.institution}</p>
               </div>
               <p className="text-sm text-gray-500">{edu.period}</p>
             </div>
             {edu.note && (
-              <p className="text-sm text-gray-600 mt-1 italic">{edu.note}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-600 mt-1 italic">{edu.note}</p>
             )}
           </div>
         ))}
@@ -158,21 +158,21 @@ export default function CvPage() {
 
       {/* Skills */}
       <section className="mb-12">
-        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-600 mb-6">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-500 dark:text-gray-600 mb-6">
           <Code2 size={14} />
           Skills
         </div>
         <div className="space-y-4">
           {Object.entries(skills).map(([category, items]) => (
             <div key={category} className="flex flex-wrap gap-x-6 gap-y-2">
-              <span className="text-sm text-gray-600 w-32 shrink-0">
+              <span className="text-sm text-gray-500 dark:text-gray-600 w-32 shrink-0">
                 {category}
               </span>
               <div className="flex flex-wrap gap-2">
                 {items.map((skill) => (
                   <span
                     key={skill}
-                    className="text-xs px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-gray-400"
+                    className="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400"
                   >
                     {skill}
                   </span>
@@ -185,7 +185,7 @@ export default function CvPage() {
 
       {/* Languages */}
       <section>
-        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-600 mb-6">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-500 dark:text-gray-600 mb-6">
           <Globe size={14} />
           Languages
         </div>
@@ -193,9 +193,9 @@ export default function CvPage() {
           {languages.map(({ lang, level }) => (
             <div
               key={lang}
-              className="px-4 py-2 rounded-xl bg-white/3 border border-white/5"
+              className="px-4 py-2 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/5"
             >
-              <p className="text-sm font-medium text-white">{lang}</p>
+              <p className="text-sm font-medium text-gray-900 dark:text-white">{lang}</p>
               <p className="text-xs text-gray-500">{level}</p>
             </div>
           ))}
