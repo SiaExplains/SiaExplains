@@ -2,8 +2,8 @@
 
 export default function NewsletterForm() {
   return (
-    <div className="rounded-2xl border border-white/5 bg-white/2 p-8">
-      <h2 className="text-xl font-semibold text-white mb-2">
+    <div className="rounded-2xl border border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-white/5 p-8">
+      <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
         Join the newsletter
       </h2>
       <p className="text-sm text-gray-500 mb-6">
@@ -19,7 +19,7 @@ export default function NewsletterForm() {
             id="nl-name"
             type="text"
             placeholder="Siavash"
-            className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-gray-600 text-sm focus:outline-none focus:border-brand-500/50 transition-colors"
+            className="w-full px-4 py-2.5 rounded-lg bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 text-sm focus:outline-none focus:border-brand-500/50 transition-colors"
           />
         </div>
         <div>
@@ -30,7 +30,7 @@ export default function NewsletterForm() {
             id="nl-email"
             type="email"
             placeholder="you@example.com"
-            className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-gray-600 text-sm focus:outline-none focus:border-brand-500/50 transition-colors"
+            className="w-full px-4 py-2.5 rounded-lg bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 text-sm focus:outline-none focus:border-brand-500/50 transition-colors"
           />
         </div>
         <button
@@ -41,7 +41,7 @@ export default function NewsletterForm() {
         </button>
       </form>
 
-      <p className="text-xs text-gray-700 text-center mt-4">
+      <p className="text-xs text-gray-400 dark:text-gray-700 text-center mt-4">
         Newsletter service not connected yet. Coming soon.
       </p>
     </div>
