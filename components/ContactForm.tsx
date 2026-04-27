@@ -14,7 +14,7 @@ export default function ContactForm() {
           id="contact-name"
           type="text"
           placeholder="Your name"
-          className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-gray-600 text-sm focus:outline-none focus:border-brand-500/50 transition-colors"
+          className="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 text-sm focus:outline-none focus:border-brand-500/50 transition-colors"
         />
       </div>
       <div>
@@ -25,7 +25,7 @@ export default function ContactForm() {
           id="contact-email"
           type="email"
           placeholder="you@example.com"
-          className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-gray-600 text-sm focus:outline-none focus:border-brand-500/50 transition-colors"
+          className="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 text-sm focus:outline-none focus:border-brand-500/50 transition-colors"
         />
       </div>
       <div>
@@ -36,7 +36,7 @@ export default function ContactForm() {
           id="contact-message"
           rows={5}
           placeholder="What's on your mind?"
-          className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-gray-600 text-sm focus:outline-none focus:border-brand-500/50 transition-colors resize-none"
+          className="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 text-sm focus:outline-none focus:border-brand-500/50 transition-colors resize-none"
         />
       </div>
       <button
@@ -45,7 +45,7 @@ export default function ContactForm() {
       >
         Send message
       </button>
-      <p className="text-xs text-gray-700 text-center">
+      <p className="text-xs text-gray-400 dark:text-gray-700 text-center">
         Form not connected yet — coming soon. Or reach out directly below.
       </p>
     </form>

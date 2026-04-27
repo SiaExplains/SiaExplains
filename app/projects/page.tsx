@@ -50,21 +50,21 @@ const statusConfig = {
   live: {
     label: "Live",
     icon: Zap,
-    color: "text-emerald-400",
+    color: "text-emerald-600 dark:text-emerald-400",
     bg: "bg-emerald-500/10",
     border: "border-emerald-500/20",
   },
   building: {
     label: "Building",
     icon: Clock,
-    color: "text-amber-400",
+    color: "text-amber-600 dark:text-amber-400",
     bg: "bg-amber-500/10",
     border: "border-amber-500/20",
   },
   concept: {
     label: "Concept",
     icon: Lightbulb,
-    color: "text-sky-400",
+    color: "text-sky-600 dark:text-sky-400",
     bg: "bg-sky-500/10",
     border: "border-sky-500/20",
   },
@@ -74,11 +74,11 @@ export default function ProjectsPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-12">
-        <p className="text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
+        <p className="text-brand-500 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
           Side projects
         </p>
-        <h1 className="text-4xl font-bold text-white mb-4">Projects</h1>
-        <p className="text-gray-400 text-lg max-w-2xl">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Projects</h1>
+        <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl">
           Things I&apos;m building outside of work — mostly tools I wish existed, experiments
           with new tech, and startups in progress. All built in public.
         </p>
@@ -91,7 +91,7 @@ export default function ProjectsPage() {
           return (
             <div
               key={project.title}
-              className="rounded-2xl border border-white/5 bg-white/2 p-6 hover:border-white/10 transition-colors flex flex-col"
+              className="rounded-2xl border border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-white/5 p-6 hover:border-gray-300 dark:hover:border-white/10 transition-colors flex flex-col"
             >
               <div className="flex items-start justify-between mb-4">
                 <span className="text-3xl">{project.emoji}</span>
@@ -103,10 +103,10 @@ export default function ProjectsPage() {
                 </span>
               </div>
 
-              <h3 className="font-semibold text-white text-lg mb-2">
+              <h3 className="font-semibold text-gray-900 dark:text-white text-lg mb-2">
                 {project.title}
               </h3>
-              <p className="text-sm text-gray-400 leading-relaxed flex-1 mb-4">
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-1 mb-4">
                 {project.description}
               </p>
 
@@ -114,7 +114,7 @@ export default function ProjectsPage() {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-gray-500"
+                    className="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-white/5 text-gray-500"
                   >
                     {tag}
                   </span>
@@ -127,7 +127,7 @@ export default function ProjectsPage() {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs text-brand-400 hover:text-brand-300 transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs text-brand-600 dark:text-brand-400 hover:text-brand-500 dark:hover:text-brand-300 transition-colors"
                   >
                     <ExternalLink size={12} />
                     Visit
@@ -138,7 +138,7 @@ export default function ProjectsPage() {
                     href={project.repo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-300 transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
                   >
                     <GithubIcon size={12} />
                     Source
@@ -150,14 +150,14 @@ export default function ProjectsPage() {
         })}
       </div>
 
-      <div className="mt-12 p-6 rounded-2xl border border-dashed border-white/10 text-center">
+      <div className="mt-12 p-6 rounded-2xl border border-dashed border-gray-300 dark:border-white/10 text-center">
         <p className="text-gray-500 text-sm">
           More projects in the pipeline.{" "}
           <a
             href="https://youtube.com/@SiaExplains"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-brand-400 hover:text-brand-300 transition-colors"
+            className="text-brand-600 dark:text-brand-400 hover:text-brand-500 dark:hover:text-brand-300 transition-colors"
           >
             Follow on YouTube
           </a>{" "}

@@ -14,7 +14,7 @@ const socials = [
     handle: "@SiaExplains",
     href: "https://youtube.com/@SiaExplains",
     icon: YoutubeIcon,
-    color: "text-rose-400",
+    color: "text-rose-500 dark:text-rose-400",
     bg: "bg-rose-500/10",
     border: "border-rose-500/20",
   },
@@ -23,16 +23,16 @@ const socials = [
     handle: "github.com/siavash",
     href: "https://github.com/siavash",
     icon: GithubIcon,
-    color: "text-gray-300",
-    bg: "bg-white/5",
-    border: "border-white/10",
+    color: "text-gray-600 dark:text-gray-300",
+    bg: "bg-gray-100 dark:bg-white/5",
+    border: "border-gray-200 dark:border-white/10",
   },
   {
     label: "LinkedIn",
     handle: "linkedin.com/in/siavash",
     href: "https://linkedin.com/in/siavash",
     icon: LinkedinIcon,
-    color: "text-sky-400",
+    color: "text-sky-600 dark:text-sky-400",
     bg: "bg-sky-500/10",
     border: "border-sky-500/20",
   },
@@ -41,9 +41,9 @@ const socials = [
     handle: "@SiaExplains",
     href: "https://twitter.com/SiaExplains",
     icon: TwitterIcon,
-    color: "text-gray-300",
-    bg: "bg-white/5",
-    border: "border-white/10",
+    color: "text-gray-600 dark:text-gray-300",
+    bg: "bg-gray-100 dark:bg-white/5",
+    border: "border-gray-200 dark:border-white/10",
   },
 ];
 
@@ -51,11 +51,11 @@ export default function ContactPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-12">
-        <p className="text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
+        <p className="text-brand-500 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
           Get in touch
         </p>
-        <h1 className="text-4xl font-bold text-white mb-4">Contact</h1>
-        <p className="text-gray-400 text-lg leading-relaxed max-w-xl">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Contact</h1>
+        <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl">
           I&apos;m open to interesting conversations — collaborations, speaking
           invitations, feedback on my content, or just saying hello. I read
           everything, though I can&apos;t always reply quickly.
@@ -65,7 +65,7 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Contact form */}
         <div>
-          <h2 className="text-lg font-semibold text-white mb-5">
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-5">
             Send a message
           </h2>
           <ContactForm />
@@ -73,7 +73,7 @@ export default function ContactPage() {
 
         {/* Socials */}
         <div>
-          <h2 className="text-lg font-semibold text-white mb-5">Find me on</h2>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-5">Find me on</h2>
           <div className="space-y-3">
             {socials.map(({ label, handle, href, icon: Icon, color, bg, border }) => (
               <a
@@ -81,23 +81,23 @@ export default function ContactPage() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center gap-3 p-4 rounded-xl border ${bg} ${border} hover:border-white/20 transition-colors`}
+                className={`flex items-center gap-3 p-4 rounded-xl border ${bg} ${border} hover:border-gray-300 dark:hover:border-white/20 transition-colors`}
               >
                 <div className={`p-2 rounded-lg ${bg}`}>
                   <Icon size={18} className={color} />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-white">{label}</p>
+                  <p className="text-sm font-medium text-gray-900 dark:text-white">{label}</p>
                   <p className="text-xs text-gray-500">{handle}</p>
                 </div>
               </a>
             ))}
           </div>
 
-          <div className="mt-6 p-4 rounded-xl border border-white/5 bg-white/2">
+          <div className="mt-6 p-4 rounded-xl border border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-white/5">
             <div className="flex items-center gap-2 mb-1">
-              <Mail size={14} className="text-brand-400" />
-              <span className="text-sm font-medium text-white">Email</span>
+              <Mail size={14} className="text-brand-500 dark:text-brand-400" />
+              <span className="text-sm font-medium text-gray-900 dark:text-white">Email</span>
             </div>
             <p className="text-sm text-gray-500">siavash@siaexplains.com</p>
           </div>

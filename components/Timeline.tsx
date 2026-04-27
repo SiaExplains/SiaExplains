@@ -9,34 +9,34 @@ import { TimelineEvent } from "@/types";
 const categoryConfig = {
   Education: {
     icon: GraduationCap,
-    color: "text-sky-400",
+    color: "text-sky-600 dark:text-sky-400",
     bg: "bg-sky-500/10",
     border: "border-sky-500/30",
-    dot: "bg-sky-400",
+    dot: "bg-sky-500 dark:bg-sky-400",
     glow: "shadow-sky-500/30",
   },
   Career: {
     icon: Briefcase,
-    color: "text-brand-400",
+    color: "text-brand-600 dark:text-brand-400",
     bg: "bg-brand-500/10",
     border: "border-brand-500/30",
-    dot: "bg-brand-400",
+    dot: "bg-brand-500 dark:bg-brand-400",
     glow: "shadow-brand-500/30",
   },
   Company: {
     icon: Rocket,
-    color: "text-emerald-400",
+    color: "text-emerald-600 dark:text-emerald-400",
     bg: "bg-emerald-500/10",
     border: "border-emerald-500/30",
-    dot: "bg-emerald-400",
+    dot: "bg-emerald-500 dark:bg-emerald-400",
     glow: "shadow-emerald-500/30",
   },
   Life: {
     icon: Heart,
-    color: "text-rose-400",
+    color: "text-rose-600 dark:text-rose-400",
     bg: "bg-rose-500/10",
     border: "border-rose-500/30",
-    dot: "bg-rose-400",
+    dot: "bg-rose-500 dark:bg-rose-400",
     glow: "shadow-rose-500/30",
   },
 };
@@ -81,14 +81,14 @@ function TimelineItem({
               {event.category}
             </div>
             <p className="text-xs text-gray-500 mb-1">{event.year}</p>
-            <h3 className="font-semibold text-white text-base mb-1.5">
+            <h3 className="font-semibold text-gray-900 dark:text-white text-base mb-1.5">
               {event.title}
             </h3>
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
               {event.description}
             </p>
             {event.location && (
-              <p className="text-xs text-gray-600 mt-2">📍 {event.location}</p>
+              <p className="text-xs text-gray-500 mt-2">📍 {event.location}</p>
             )}
           </motion.div>
         )}
@@ -101,14 +101,14 @@ function TimelineItem({
           animate={inView ? { scale: 1, opacity: 1 } : {}}
           transition={{ duration: 0.4, delay: index * 0.08 + 0.1, type: "spring", stiffness: 200 }}
           className={cn(
-            "w-4 h-4 rounded-full border-2 border-[#0a0a0f] shadow-lg z-10 mt-5",
+            "w-4 h-4 rounded-full border-2 border-white dark:border-[#0a0a0f] shadow-lg z-10 mt-5",
             cfg.dot,
             cfg.glow,
             "shadow-[0_0_12px_2px]"
           )}
         />
         {!isLast && (
-          <div className="w-px flex-1 bg-gradient-to-b from-white/10 to-transparent min-h-[60px]" />
+          <div className="w-px flex-1 bg-gradient-to-b from-gray-300/60 dark:from-white/10 to-transparent min-h-[60px]" />
         )}
       </div>
 
@@ -135,14 +135,14 @@ function TimelineItem({
               {event.category}
             </div>
             <p className="text-xs text-gray-500 mb-1">{event.year}</p>
-            <h3 className="font-semibold text-white text-base mb-1.5">
+            <h3 className="font-semibold text-gray-900 dark:text-white text-base mb-1.5">
               {event.title}
             </h3>
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
               {event.description}
             </p>
             {event.location && (
-              <p className="text-xs text-gray-600 mt-2">📍 {event.location}</p>
+              <p className="text-xs text-gray-500 mt-2">📍 {event.location}</p>
             )}
           </motion.div>
         )}
@@ -169,14 +169,14 @@ function TimelineItem({
           {event.category}
         </div>
         <p className="text-xs text-gray-500 mb-0.5">{event.year}</p>
-        <h3 className="font-semibold text-white text-sm mb-1">
+        <h3 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">
           {event.title}
         </h3>
-        <p className="text-xs text-gray-400 leading-relaxed">
+        <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
           {event.description}
         </p>
         {event.location && (
-          <p className="text-xs text-gray-600 mt-1.5">📍 {event.location}</p>
+          <p className="text-xs text-gray-500 mt-1.5">📍 {event.location}</p>
         )}
       </motion.div>
     </div>
@@ -187,7 +187,7 @@ export default function Timeline({ events }: { events: TimelineEvent[] }) {
   return (
     <div className="relative">
       {/* Vertical line (desktop) */}
-      <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+      <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gray-300/60 dark:via-white/10 to-transparent" />
 
       <div className="space-y-8 md:space-y-12">
         {events.map((event, i) => (

@@ -20,13 +20,13 @@ export default function AboutPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-12">
-        <p className="text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
+        <p className="text-brand-500 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
           About me
         </p>
-        <h1 className="text-4xl font-bold text-white mb-4">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
           Engineer. Creator. Builder.
         </h1>
-        <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">
+        <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-2xl">
           I&apos;m Siavash — a software engineer with over a decade of experience
           building systems that scale, teams that ship, and products that matter.
         </p>
@@ -37,11 +37,11 @@ export default function AboutPage() {
         {facts.map(({ icon: Icon, label, value }) => (
           <div
             key={label}
-            className="rounded-xl border border-white/5 bg-white/2 p-4"
+            className="rounded-xl border border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-white/5 p-4"
           >
-            <Icon size={16} className="text-brand-400 mb-2" />
-            <p className="text-xs text-gray-600 mb-1">{label}</p>
-            <p className="text-sm font-medium text-white">{value}</p>
+            <Icon size={16} className="text-brand-500 dark:text-brand-400 mb-2" />
+            <p className="text-xs text-gray-500 dark:text-gray-600 mb-1">{label}</p>
+            <p className="text-sm font-medium text-gray-900 dark:text-white">{value}</p>
           </div>
         ))}
       </div>
@@ -49,10 +49,10 @@ export default function AboutPage() {
       <div className="prose-custom space-y-10">
         {/* Origin story */}
         <section>
-          <h2 className="text-2xl font-semibold text-white mb-4">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
             The origin story
           </h2>
-          <div className="space-y-4 text-gray-400 leading-relaxed">
+          <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
             <p>
               I grew up in Tehran, Iran, where I fell in love with computers as a
               teenager — taking apart hardware, learning to code, and spending more
@@ -74,10 +74,10 @@ export default function AboutPage() {
 
         {/* Engineering */}
         <section>
-          <h2 className="text-2xl font-semibold text-white mb-4">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
             The engineering chapter
           </h2>
-          <div className="space-y-4 text-gray-400 leading-relaxed">
+          <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
             <p>
               Over the past decade, I&apos;ve worked across fintech, e-commerce, and
               SaaS — building everything from payment infrastructure to real-time
@@ -98,10 +98,10 @@ export default function AboutPage() {
 
         {/* YouTube */}
         <section>
-          <h2 className="text-2xl font-semibold text-white mb-4">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
             Why SiaExplains?
           </h2>
-          <div className="space-y-4 text-gray-400 leading-relaxed">
+          <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
             <p>
               I started SiaExplains because I wanted to create the content I
               wished existed when I was earlier in my career. Content that respects
@@ -118,10 +118,10 @@ export default function AboutPage() {
 
         {/* Personal */}
         <section>
-          <h2 className="text-2xl font-semibold text-white mb-4">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
             Outside the terminal
           </h2>
-          <div className="space-y-4 text-gray-400 leading-relaxed">
+          <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
             <p>
               When I&apos;m not building software, I&apos;m probably reading, doing strength
               training, or exploring Berlin&apos;s surprisingly great coffee scene. I&apos;m
@@ -136,7 +136,7 @@ export default function AboutPage() {
       </div>
 
       {/* CTA */}
-      <div className="mt-14 pt-8 border-t border-white/5 flex flex-wrap gap-4">
+      <div className="mt-14 pt-8 border-t border-gray-200 dark:border-white/5 flex flex-wrap gap-4">
         <Link
           href="/timeline"
           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-600 hover:bg-brand-500 text-white font-medium transition-colors text-sm"
@@ -145,13 +145,13 @@ export default function AboutPage() {
         </Link>
         <Link
           href="/cv"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 hover:bg-white/5 text-gray-300 font-medium transition-colors text-sm"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gray-300 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 text-gray-700 dark:text-gray-300 font-medium transition-colors text-sm"
         >
           View CV
         </Link>
         <Link
           href="/contact"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 hover:bg-white/5 text-gray-300 font-medium transition-colors text-sm"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gray-300 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 text-gray-700 dark:text-gray-300 font-medium transition-colors text-sm"
         >
           Get in touch
         </Link>
