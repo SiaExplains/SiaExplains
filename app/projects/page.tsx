@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ExternalLink, Zap, Clock, Lightbulb } from "lucide-react";
 import { GithubIcon } from "@/components/SocialIcons";
 import { Project } from "@/types";
@@ -8,7 +9,16 @@ export const metadata: Metadata = {
   description: "Side projects and startup ideas by Siavash — built in public.",
 };
 
-const projects: (Project & { emoji: string })[] = [
+const projects: (Project & { emoji?: string; image?: string })[] = [
+  {
+    image: "/emojar-favicon.png",
+    title: "Emojar",
+    description:
+      "A free online emoji platform where users can easily search, copy, and paste emojis into social media, messages, and documents.",
+    tags: ["TypeScript", "Next.js", "Tailwind"],
+    status: "live",
+    url: "https://emojar.com",
+  },
   {
     emoji: "🌐",
     title: "SiaExplains.com",
@@ -94,7 +104,17 @@ export default function ProjectsPage() {
               className="rounded-2xl border border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-white/5 p-6 hover:border-gray-300 dark:hover:border-white/10 transition-colors flex flex-col"
             >
               <div className="flex items-start justify-between mb-4">
-                <span className="text-3xl">{project.emoji}</span>
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={36}
+                    height={36}
+                    className="rounded-lg"
+                  />
+                ) : (
+                  <span className="text-3xl">{project.emoji}</span>
+                )}
                 <span
                   className={`inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full ${status.bg} ${status.border} border ${status.color}`}
                 >
