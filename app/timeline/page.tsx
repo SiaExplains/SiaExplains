@@ -5,48 +5,24 @@ import { TimelineEvent } from "@/types";
 export const metadata: Metadata = {
   title: "Timeline",
   description:
-    "Key milestones in Siavash's journey — from studying engineering in Tehran to leading engineering teams in Berlin.",
+    "Key milestones in Siavash's journey — from co-founding a tech company in Iran to Principal Engineer and manager in Berlin.",
 };
 
 const timelineEvents: TimelineEvent[] = [
   {
-    year: "2012",
-    title: "BSc Computer Engineering",
-    category: "Education",
-    description:
-      "Graduated with a degree in Computer Engineering from one of Iran's top technical universities. Fell in love with distributed systems and operating systems during my thesis work.",
-    location: "Tehran, Iran",
-  },
-  {
-    year: "2013",
-    title: "First Software Engineering Role",
-    category: "Career",
-    description:
-      "Joined a rapidly growing Iranian tech startup as a backend engineer. Built my first production APIs serving hundreds of thousands of users. Learned that real software is nothing like university projects.",
-    location: "Tehran, Iran",
-  },
-  {
-    year: "2016",
-    title: "Co-founded a Startup",
-    category: "Company",
-    description:
-      "Co-founded a B2B SaaS company targeting the logistics sector. Served as CTO — built the product from scratch, hired the first engineering team, and raised a seed round. Learned more in 18 months than in the previous 5 years.",
-    location: "Tehran, Iran",
-  },
-  {
-    year: "2019",
-    title: "Moved to Europe",
+    year: "2026",
+    title: "Building in Public",
     category: "Life",
     description:
-      "Made the leap to Europe after years of planning. The immigration process was long and bureaucratic, but ultimately life-changing. Berlin was the destination — a city that felt immediately like home.",
+      "Launched SiaExplains.com as a home for writing, projects, and the full story. Building side projects and startups while sharing the journey — engineering, content creation, and everything in between.",
     location: "Berlin, Germany",
   },
   {
-    year: "2020",
-    title: "Senior Engineer at Berlin Fintech",
+    year: "2023",
+    title: "Principal Engineer & Manager at MHP",
     category: "Career",
     description:
-      "Joined a Berlin-based fintech unicorn as a Senior Software Engineer. Led the redesign of the core payment processing pipeline, reducing latency by 60% and improving reliability from 99.9% to 99.99% uptime.",
+      "Joined MHP as Principal Software Engineer and Manager. Leading a cross-functional team, designing KPI comparison tools for Volkswagen Group plants, implementing virtual meter concepts for energy dashboards, and automating CI/CD pipelines that were previously fully manual.",
     location: "Berlin, Germany",
   },
   {
@@ -58,20 +34,60 @@ const timelineEvents: TimelineEvent[] = [
     location: "Berlin, Germany",
   },
   {
-    year: "2023",
-    title: "Promoted to Principal Engineer",
+    year: "2020",
+    title: "Senior Engineer at Trademachines, Berlin",
     category: "Career",
     description:
-      "Promoted to Principal Software Engineer & Tech Lead, taking ownership of system architecture across multiple teams. Responsible for technical strategy, cross-team standards, and mentoring senior engineers.",
+      "Joined Trademachines as a Senior Software Engineer. Built a Next.js 13 management dashboard, boosted Web Core Vitals by 18%, drove a 30% SEO traffic increase, introduced A/B testing that lifted conversion rates by 20%, and led migration from legacy PHP7 to React.",
     location: "Berlin, Germany",
   },
   {
-    year: "2026",
-    title: "Building in Public",
+    year: "2019",
+    title: "Moved Abroad",
     category: "Life",
     description:
-      "Launched SiaExplains.com as a home for writing, projects, and the full story. Building side projects and startups while sharing the journey — engineering, content creation, and everything in between.",
-    location: "Berlin, Germany",
+      "Made the leap internationally — first to Sydney, Australia, where I helped migrate a legacy e-commerce platform to React and Node.js. Then onward to Europe, landing in Berlin: a city that immediately felt like home.",
+    location: "Sydney → Berlin",
+  },
+  {
+    year: "2016",
+    title: "Lead Engineer & Senior Roles in Tehran",
+    category: "Career",
+    description:
+      "Progressed through senior engineering roles across multiple companies. At Soniran, led front-end and back-end teams building an e-wallet and credit system. At SON Corporate Group, improved financial data entry applications and built a custom spreadsheet language for non-technical users.",
+    location: "Tehran, Iran",
+  },
+  {
+    year: "2012",
+    title: "First Professional Engineering Role",
+    category: "Career",
+    description:
+      "Joined Saman International Analysts as a Software Developer. Redesigned a core financial messaging app based on ISO-8553, implemented an automatic modular update system saving $50k/year, and led development of deposit, withdrawal, and transfer modules.",
+    location: "Tehran, Iran",
+  },
+  {
+    year: "2009",
+    title: "Bachelor's in Computer Software Engineering",
+    category: "Education",
+    description:
+      "Enrolled at Mazandaran University of Science and Technology. Graduated in 2012 with a grade of 15.94/20. My thesis focused on analysis, design, and implementation of a multi-glossary dictionary similar to Babylon.",
+    location: "Mazandaran, Iran",
+  },
+  {
+    year: "2007",
+    title: "Co-founded Taazuu Developers",
+    category: "Company",
+    description:
+      "Co-founded a software development company while still in university. As CTO, built a multilingual dictionary supporting 12+ languages with OCR, architected an LMS for a major Iranian university, and shipped over 12 web portfolios and a native Windows app for fuel card distribution across 14 cities.",
+    location: "Ghaemshahr, Iran",
+  },
+  {
+    year: "2006",
+    title: "Associate's Degree in Software",
+    category: "Education",
+    description:
+      "Enrolled at Azad University to study Software. Participated in Robotics Seminar and built an Interactive Content Management System as my final project. Graduated in 2009 with a grade of 16.66/20.",
+    location: "Iran",
   },
 ];
 
@@ -84,8 +100,8 @@ export default function TimelinePage() {
         </p>
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Timeline</h1>
         <p className="text-gray-600 dark:text-gray-400 text-lg max-w-xl mx-auto">
-          Key milestones from Tehran to Berlin — from student to Principal
-          Engineer, founder, and creator.
+          Key milestones from Iran to Berlin — from co-founding a company at 20
+          to Principal Engineer, manager, and creator.
         </p>
       </div>
 
