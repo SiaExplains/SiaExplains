@@ -20,8 +20,8 @@ const socials = [
   },
   {
     label: "GitHub",
-    handle: "github.com/siavash",
-    href: "https://github.com/siavash",
+    handle: "github.com/SiaExplains",
+    href: "https://github.com/SiaExplains",
     icon: GithubIcon,
     color: "text-gray-600 dark:text-gray-300",
     bg: "bg-gray-100 dark:bg-white/5",
@@ -29,8 +29,8 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    handle: "linkedin.com/in/siavash",
-    href: "https://linkedin.com/in/siavash",
+    handle: "linkedin.com/in/siavash-ghanbari",
+    href: "https://www.linkedin.com/in/siavash-ghanbari/",
     icon: LinkedinIcon,
     color: "text-sky-600 dark:text-sky-400",
     bg: "bg-sky-500/10",
@@ -99,7 +99,7 @@ export default function ContactPage() {
               <Mail size={14} className="text-brand-500 dark:text-brand-400" />
               <span className="text-sm font-medium text-gray-900 dark:text-white">Email</span>
             </div>
-            <p className="text-sm text-gray-500">siavash@siaexplains.com</p>
+            <p className="text-sm text-gray-500">siaexplains@gmail.com</p>
           </div>
         </div>
       </div>

@@ -18,6 +18,22 @@ const timelineEvents: TimelineEvent[] = [
     location: "Berlin, Germany",
   },
   {
+    year: "2026",
+    title: "Launched WikiDigit",
+    category: "Company",
+    description:
+      "Founded WikiDigit — a tech media and news platform delivering curated stories on AI, software, and the digital world. Built for engineers and tech enthusiasts who want depth over clickbait.",
+    location: "Berlin, Germany",
+  },
+  {
+    year: "2025",
+    title: "Launched Emojar",
+    category: "Company",
+    description:
+      "Built and launched Emojar.com — a free emoji search and copy platform featuring 3,600+ emojis, curated collections, and mini-games. The entire product was shipped using AI tools with zero hand-written code. Monetised via Google Ads.",
+    location: "Berlin, Germany",
+  },
+  {
     year: "2023",
     title: "Principal Engineer & Manager at MHP",
     category: "Career",

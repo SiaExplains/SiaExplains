@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ExternalLink, Zap, Clock, Lightbulb } from "lucide-react";
+import { ExternalLink, Zap, Clock, Lightbulb, CalendarDays } from "lucide-react";
 import { GithubIcon } from "@/components/SocialIcons";
 import { Project } from "@/types";
 
@@ -9,15 +9,26 @@ export const metadata: Metadata = {
   description: "Side projects and startup ideas by Siavash — built in public.",
 };
 
-const projects: (Project & { emoji?: string; image?: string })[] = [
+const projects: (Project & { emoji?: string; image?: string; started?: string })[] = [
+  {
+    emoji: "📰",
+    title: "WikiDigit",
+    description:
+      "A tech media and news website covering the latest in technology, AI, and the digital world. Curated content for engineers and tech enthusiasts who want signal over noise.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "CMS"],
+    status: "live",
+    url: "https://wikidigit.com",
+    started: "Jan 2026",
+  },
   {
     image: "/emojar-favicon.png",
     title: "Emojar",
     description:
-      "A free online emoji platform where users can easily search, copy, and paste emojis into social media, messages, and documents.",
-    tags: ["TypeScript", "Next.js", "Tailwind"],
+      "A free emoji search and copy platform with 3,600+ emojis, curated collections, and mini-games. Built entirely with AI tools — zero lines of hand-written code. Monetised via Google Ads.",
+    tags: ["TypeScript", "Next.js", "Tailwind", "Google Ads"],
     status: "live",
     url: "https://emojar.com",
+    started: "Apr 2025",
   },
   {
     emoji: "🌐",
@@ -27,7 +38,7 @@ const projects: (Project & { emoji?: string; image?: string })[] = [
     tags: ["Next.js", "TypeScript", "Tailwind", "MDX", "Neon"],
     status: "live",
     url: "https://siaexplains.com",
-    repo: "https://github.com/siavash/siaexplains",
+    repo: "https://github.com/SiaExplains/SiaExplains",
   },
   {
     emoji: "🤖",
@@ -36,7 +47,7 @@ const projects: (Project & { emoji?: string; image?: string })[] = [
       "A GitHub app that performs automated code reviews using LLMs. Catches security issues, performance anti-patterns, and style violations before human review.",
     tags: ["TypeScript", "Claude API", "GitHub API", "PostgreSQL"],
     status: "building",
-    repo: "https://github.com/siavash/ai-review-bot",
+    repo: "https://github.com/SiaExplains/ai-review-bot",
   },
   {
     emoji: "📊",
@@ -141,28 +152,36 @@ export default function ProjectsPage() {
                 ))}
               </div>
 
-              <div className="flex gap-3">
-                {project.url && (
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs text-brand-600 dark:text-brand-400 hover:text-brand-500 dark:hover:text-brand-300 transition-colors"
-                  >
-                    <ExternalLink size={12} />
-                    Visit
-                  </a>
-                )}
-                {project.repo && (
-                  <a
-                    href={project.repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
-                  >
-                    <GithubIcon size={12} />
-                    Source
-                  </a>
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex gap-3">
+                  {project.url && (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs text-brand-600 dark:text-brand-400 hover:text-brand-500 dark:hover:text-brand-300 transition-colors"
+                    >
+                      <ExternalLink size={12} />
+                      Visit
+                    </a>
+                  )}
+                  {project.repo && (
+                    <a
+                      href={project.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+                    >
+                      <GithubIcon size={12} />
+                      Source
+                    </a>
+                  )}
+                </div>
+                {project.started && (
+                  <span className="inline-flex items-center gap-1 text-xs text-gray-400 dark:text-gray-600">
+                    <CalendarDays size={10} />
+                    {project.started}
+                  </span>
                 )}
               </div>
             </div>

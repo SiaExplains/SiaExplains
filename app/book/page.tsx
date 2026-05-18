@@ -100,7 +100,7 @@ export default function BookPage() {
             reach out via email or LinkedIn to schedule.
           </p>
           <a
-            href="mailto:siavash@siaexplains.com?subject=Book a Call"
+            href="mailto:siaexplains@gmail.com?subject=Book a Call"
             className="mt-5 px-5 py-2.5 rounded-full bg-brand-600 hover:bg-brand-500 text-white font-medium text-sm transition-colors"
           >
             Email to schedule

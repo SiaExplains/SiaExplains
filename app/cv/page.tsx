@@ -150,7 +150,7 @@ const skills = {
 
 const languages = [
   { lang: "English", level: "Fluent" },
-  { lang: "German", level: "A2" },
+  { lang: "German", level: "B2" },
   { lang: "Persian", level: "Native" },
 ];
 
