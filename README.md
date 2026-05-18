@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hey, I'm Siavash 👋
 
-## Getting Started
+Principal Software Engineer and Tech Lead based in Berlin. Originally from Iran — been writing code professionally since 2007, which feels like both forever and yesterday at the same time.
 
-First, run the development server:
+I run **[SiaExplains](https://siaexplains.com)** — a YouTube channel, blog, and collection of side projects where I share what I've learned about engineering, AI, career growth, and navigating the tech world as an international professional.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## What I'm up to
+
+- 🏢 Leading engineering at **MHP** in Berlin — working on tooling for Volkswagen Group
+- 📺 Creating content on **[YouTube @SiaExplains](https://youtube.com/@SiaExplains)** about tech, AI, and engineering careers
+- 🫙 Running **[Emojar.com](https://emojar.com)** — an emoji search and copy tool (built entirely with AI, zero lines of hand-written code)
+- 📰 Building **[WikiDigit.com](https://wikidigit.com)** — a tech media and news site for engineers who want signal over noise
+- ✍️ Writing about system design, AI tools, and the realities of a software career at [siaexplains.com/blog](https://siaexplains.com/blog)
+
+---
+
+## This repo
+
+This is the source code for **siaexplains.com** — my personal site, built with:
+
+- **Next.js 15** (App Router)
+- **TypeScript**
+- **Tailwind CSS v4**
+- **MDX** for blog posts and articles
+
+It's open source. Feel free to look around, take inspiration, or open an issue if something is broken.
+
+---
+
+## Tech I work with
+
+```
+ReactJS · Next.js · Node.js · TypeScript · AWS · PostgreSQL
+MongoDB · GraphQL · Docker · Terraform · Python
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Find me
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 🌐 [siaexplains.com](https://siaexplains.com)
+- 💼 [LinkedIn](https://www.linkedin.com/in/siavash-ghanbari/)
+- 🐙 [GitHub @SiaExplains](https://github.com/SiaExplains)
+- 📺 [YouTube @SiaExplains](https://youtube.com/@SiaExplains)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Iran → Sydney → Berlin. Loving the journey.*

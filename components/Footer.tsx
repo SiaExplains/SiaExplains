@@ -3,8 +3,8 @@ import { YoutubeIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "@/components
 
 const socials = [
   { label: "YouTube", href: "https://youtube.com/@SiaExplains", icon: YoutubeIcon },
-  { label: "GitHub", href: "https://github.com/siavash", icon: GithubIcon },
-  { label: "LinkedIn", href: "https://linkedin.com/in/siavash", icon: LinkedinIcon },
+  { label: "GitHub", href: "https://github.com/SiaExplains", icon: GithubIcon },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/siavash-ghanbari/", icon: LinkedinIcon },
   { label: "Twitter", href: "https://twitter.com/SiaExplains", icon: TwitterIcon },
 ];
 

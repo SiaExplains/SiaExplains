@@ -20,8 +20,8 @@ const socials = [
   },
   {
     label: "GitHub",
-    handle: "github.com/siavash",
-    href: "https://github.com/siavash",
+    handle: "github.com/SiaExplains",
+    href: "https://github.com/SiaExplains",
     icon: GithubIcon,
     color: "text-gray-600 dark:text-gray-300",
     bg: "bg-gray-100 dark:bg-white/5",
@@ -29,8 +29,8 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    handle: "linkedin.com/in/siavash",
-    href: "https://linkedin.com/in/siavash",
+    handle: "linkedin.com/in/siavash-ghanbari",
+    href: "https://www.linkedin.com/in/siavash-ghanbari/",
     icon: LinkedinIcon,
     color: "text-sky-600 dark:text-sky-400",
     bg: "bg-sky-500/10",
