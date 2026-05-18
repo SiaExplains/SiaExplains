@@ -99,7 +99,7 @@ export default function ContactPage() {
               <Mail size={14} className="text-brand-500 dark:text-brand-400" />
               <span className="text-sm font-medium text-gray-900 dark:text-white">Email</span>
             </div>
-            <p className="text-sm text-gray-500">siavash@siaexplains.com</p>
+            <p className="text-sm text-gray-500">siaexplains@gmail.com</p>
           </div>
         </div>
       </div>
