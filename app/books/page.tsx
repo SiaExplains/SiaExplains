@@ -103,7 +103,7 @@ export default function BooksPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-12">
-        <p className="text-brand-700 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
+        <p className="text-accent-600 dark:text-accent-300 text-sm font-medium tracking-wide uppercase mb-3">
           Reading list
         </p>
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Books</h1>

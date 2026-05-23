@@ -111,7 +111,7 @@ export default function TimelinePage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center mb-16">
-        <p className="text-brand-700 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
+        <p className="text-accent-600 dark:text-accent-300 text-sm font-medium tracking-wide uppercase mb-3">
           The journey
         </p>
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Timeline</h1>

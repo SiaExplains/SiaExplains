@@ -69,7 +69,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="p-2 rounded-lg text-gray-500 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+                  className="p-2 rounded-lg text-gray-500 hover:text-accent-600 dark:hover:text-accent-300 hover:bg-accent-300/10 dark:hover:bg-accent-300/10 transition-colors"
                 >
                   <Icon size={18} />
                 </a>

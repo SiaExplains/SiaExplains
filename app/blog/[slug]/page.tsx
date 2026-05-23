@@ -44,7 +44,7 @@ export default async function BlogPostPage({ params }: Props) {
           {frontmatter.tags.map((tag) => (
             <span
               key={tag}
-              className="inline-flex items-center gap-1 text-xs text-brand-700 dark:text-brand-400 bg-brand-400/10 border border-brand-400/20 dark:border-accent-300/20 px-2.5 py-0.5 rounded-full"
+              className="inline-flex items-center gap-1 text-xs text-accent-700 dark:text-accent-300 bg-accent-300/10 border border-accent-300/25 px-2.5 py-0.5 rounded-full"
             >
               <Tag size={9} />
               {tag}

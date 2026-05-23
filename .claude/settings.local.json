@@ -55,7 +55,12 @@
       "Bash(sed -i '' 's/bg-brand-400 hover:bg-brand-300 text-white text-sm font-medium/bg-brand-400 hover:bg-brand-300 text-brand-900 text-sm font-semibold/g' components/Navbar.tsx)",
       "Bash(sed -i '' 's/bg-brand-400 text-white font-medium text-center/bg-brand-400 text-brand-900 font-semibold text-center/g' components/Navbar.tsx)",
       "Bash(sed -i '' 's/from-brand-500 to-brand-700 dark:from-brand-400 dark:to-brand-600/from-brand-600 to-brand-800 dark:from-brand-300 dark:to-brand-500/g' app/page.tsx)",
-      "Bash(sed -i '' 's/border border-brand-400\\\\/20 px-2\\\\.5 py-0\\\\.5 rounded-full/border border-brand-400\\\\/20 dark:border-accent-300\\\\/20 px-2.5 py-0.5 rounded-full/g' \"/Users/siavash/Projects/SiaExplains/siaexplains-src/.claude/worktrees/gifted-kalam-5d2580/app/articles/[slug]/page.tsx\" *)"
+      "Bash(sed -i '' 's/border border-brand-400\\\\/20 px-2\\\\.5 py-0\\\\.5 rounded-full/border border-brand-400\\\\/20 dark:border-accent-300\\\\/20 px-2.5 py-0.5 rounded-full/g' \"/Users/siavash/Projects/SiaExplains/siaexplains-src/.claude/worktrees/gifted-kalam-5d2580/app/articles/[slug]/page.tsx\" *)",
+      "Bash(xargs sed -i '' 's/text-brand-700 dark:text-brand-400 text-sm font-medium tracking-wide uppercase/text-accent-600 dark:text-accent-300 text-sm font-medium tracking-wide uppercase/g')",
+      "Bash(sed -i '' 's/text-xs text-brand-700 dark:text-brand-400 inline-flex items-center gap-1 group-hover:gap-2/text-xs text-accent-600 dark:text-accent-300 inline-flex items-center gap-1 group-hover:gap-2/g' app/blog/page.tsx)",
+      "Bash(sed -i '' 's/text-xs text-brand-700 dark:text-brand-400 inline-flex items-center gap-1 group-hover:gap-2/text-xs text-accent-600 dark:text-accent-300 inline-flex items-center gap-1 group-hover:gap-2/g' app/articles/page.tsx)",
+      "Bash(sed -i '' 's/text-xs text-brand-700 dark:text-brand-400 hover:text-brand-600 dark:hover:text-brand-300 transition-colors\">\\\\n.*<ExternalLink/text-xs text-accent-600 dark:text-accent-300 hover:text-accent-500 dark:hover:text-accent-200 transition-colors\">/g' app/projects/page.tsx)",
+      "Bash(grep -c \"accent\" /Users/siavash/Projects/SiaExplains/siaexplains-src/.claude/worktrees/gifted-kalam-5d2580/app/blog/page.tsx /Users/siavash/Projects/SiaExplains/siaexplains-src/.clone/worktrees/gifted-kalam-5d2580/app/projects/page.tsx 2>/dev/null; \\\\ *)"
     ]
   }
 }

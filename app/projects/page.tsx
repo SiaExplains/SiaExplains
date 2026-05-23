@@ -95,7 +95,7 @@ export default function ProjectsPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-12">
-        <p className="text-brand-700 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
+        <p className="text-accent-600 dark:text-accent-300 text-sm font-medium tracking-wide uppercase mb-3">
           Side projects
         </p>
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Projects</h1>
@@ -159,7 +159,7 @@ export default function ProjectsPage() {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs text-brand-700 dark:text-brand-400 hover:text-brand-600 dark:hover:text-brand-300 transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs text-accent-600 dark:text-accent-300 hover:text-accent-500 dark:hover:text-accent-200 transition-colors"
                     >
                       <ExternalLink size={12} />
                       Visit
