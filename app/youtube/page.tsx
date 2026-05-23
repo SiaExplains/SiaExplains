@@ -13,25 +13,25 @@ const playlists = [
     title: "System Design",
     description: "Deep dives into distributed systems, architecture patterns, and real-world engineering decisions.",
     count: 8,
-    color: "bg-brand-500/10 border-brand-500/20 text-brand-600 dark:text-brand-400",
+    color: "bg-brand-400/10 border-brand-400/20 text-brand-700 dark:text-brand-400",
   },
   {
     title: "AI Tools for Engineers",
     description: "Honest reviews and walkthroughs of AI tools — what works, what's hype, and how to use them effectively.",
     count: 6,
-    color: "bg-brand-500/10 border-brand-500/20 text-brand-600 dark:text-brand-400",
+    color: "bg-brand-400/10 border-brand-400/20 text-brand-700 dark:text-brand-400",
   },
   {
     title: "Immigration & International Career",
     description: "The real story of moving from Iran to Berlin through the tech industry. Visas, culture, and building a career abroad.",
     count: 5,
-    color: "bg-brand-500/10 border-brand-500/20 text-brand-600 dark:text-brand-400",
+    color: "bg-brand-400/10 border-brand-400/20 text-brand-700 dark:text-brand-400",
   },
   {
     title: "Engineering Productivity",
     description: "Systems, tools, and habits for engineers who want to do their best work without burning out.",
     count: 4,
-    color: "bg-brand-500/10 border-brand-500/20 text-brand-600 dark:text-brand-400",
+    color: "bg-brand-400/10 border-brand-400/20 text-brand-700 dark:text-brand-400",
   },
 ];
 
@@ -95,7 +95,7 @@ export default function YoutubePage() {
             href="https://youtube.com/@SiaExplains"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-600 hover:bg-brand-500 text-white font-medium transition-colors text-sm"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-400 hover:bg-brand-300 text-brand-900 font-medium transition-colors text-sm"
           >
             <YoutubeIcon size={16} />
             Subscribe on YouTube

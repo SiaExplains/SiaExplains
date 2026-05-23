@@ -20,7 +20,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-[#0a0a0f]">
+    <footer className="border-t border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-[#14110a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           {/* Brand */}
@@ -29,7 +29,7 @@ export default function Footer() {
               href="/"
               className="text-gray-900 dark:text-white font-semibold text-lg tracking-tight"
             >
-              <span className="text-brand-500">Sia</span>Explains
+              <span className="text-brand-700 dark:text-brand-400">Sia</span>Explains
             </Link>
             <p className="mt-3 text-sm text-gray-500 leading-relaxed max-w-xs">
               Principal Software Engineer & Tech Lead based in Berlin. Building

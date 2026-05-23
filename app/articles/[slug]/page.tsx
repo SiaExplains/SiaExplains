@@ -44,7 +44,7 @@ export default async function ArticlePostPage({ params }: Props) {
           {frontmatter.tags.map((tag) => (
             <span
               key={tag}
-              className="inline-flex items-center gap-1 text-xs text-brand-600 dark:text-brand-400 bg-brand-500/10 border border-brand-500/20 px-2.5 py-0.5 rounded-full"
+              className="inline-flex items-center gap-1 text-xs text-brand-700 dark:text-brand-400 bg-brand-400/10 border border-brand-400/20 dark:border-accent-300/20 px-2.5 py-0.5 rounded-full"
             >
               <Tag size={9} />
               {tag}
@@ -80,7 +80,7 @@ export default async function ArticlePostPage({ params }: Props) {
       <div className="mt-16 pt-8 border-t border-gray-200 dark:border-white/5">
         <Link
           href="/articles"
-          className="inline-flex items-center gap-2 text-sm text-brand-600 dark:text-brand-400 hover:text-brand-500 dark:hover:text-brand-300 transition-colors"
+          className="inline-flex items-center gap-2 text-sm text-brand-700 dark:text-brand-400 hover:text-brand-600 dark:hover:text-brand-300 transition-colors"
         >
           <ArrowLeft size={14} />
           All articles

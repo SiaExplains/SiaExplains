@@ -15,13 +15,13 @@ const components = {
   ),
   a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
     <a
-      className="text-brand-600 dark:text-brand-400 hover:text-brand-500 dark:hover:text-brand-300 underline underline-offset-2 transition-colors"
+      className="text-brand-700 dark:text-brand-400 hover:text-brand-600 dark:hover:text-brand-300 underline underline-offset-2 transition-colors"
       {...props}
     />
   ),
   code: (props: React.HTMLAttributes<HTMLElement>) => (
     <code
-      className="bg-gray-100 dark:bg-white/5 text-brand-600 dark:text-brand-300 px-1.5 py-0.5 rounded text-sm font-mono"
+      className="bg-gray-100 dark:bg-white/5 text-brand-700 dark:text-brand-300 px-1.5 py-0.5 rounded text-sm font-mono"
       {...props}
     />
   ),

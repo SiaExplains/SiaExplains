@@ -90,7 +90,7 @@ function StarRating({ rating }: { rating: number }) {
       {[1, 2, 3, 4, 5].map((star) => (
         <span
           key={star}
-          className={star <= rating ? "text-brand-500 dark:text-brand-400" : "text-gray-300 dark:text-gray-700"}
+          className={star <= rating ? "text-brand-700 dark:text-brand-400" : "text-gray-300 dark:text-gray-700"}
         >
           ★
         </span>
@@ -103,7 +103,7 @@ export default function BooksPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-12">
-        <p className="text-brand-500 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
+        <p className="text-brand-700 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
           Reading list
         </p>
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Books</h1>
@@ -115,7 +115,7 @@ export default function BooksPage() {
 
       {/* Category filters (static for now) */}
       <div className="flex flex-wrap gap-2 mb-10">
-        <span className="text-xs px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 dark:text-brand-400">
+        <span className="text-xs px-3 py-1 rounded-full bg-brand-400/10 border border-brand-400/20 text-brand-700 dark:text-brand-400">
           All ({books.length})
         </span>
         {categories.map((cat) => (

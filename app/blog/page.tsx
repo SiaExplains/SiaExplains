@@ -16,7 +16,7 @@ export default function BlogPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-12">
-        <p className="text-brand-500 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
+        <p className="text-brand-700 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
           Writing
         </p>
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Blog</h1>
@@ -61,7 +61,7 @@ export default function BlogPage() {
                   <span>·</span>
                   <span>{post.readingTime}</span>
                 </div>
-                <span className="text-xs text-brand-600 dark:text-brand-400 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                <span className="text-xs text-brand-700 dark:text-brand-400 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
                   Read <ArrowRight size={12} />
                 </span>
               </div>

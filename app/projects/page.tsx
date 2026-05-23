@@ -71,16 +71,16 @@ const statusConfig = {
   live: {
     label: "Live",
     icon: Zap,
-    color: "text-brand-600 dark:text-brand-400",
-    bg: "bg-brand-500/10",
-    border: "border-brand-500/20",
+    color: "text-brand-700 dark:text-brand-400",
+    bg: "bg-brand-400/10",
+    border: "border-brand-400/20",
   },
   building: {
     label: "Building",
     icon: Clock,
     color: "text-brand-500/70 dark:text-brand-300/70",
-    bg: "bg-brand-500/5",
-    border: "border-brand-500/15",
+    bg: "bg-brand-400/5",
+    border: "border-brand-400/15",
   },
   concept: {
     label: "Concept",
@@ -95,7 +95,7 @@ export default function ProjectsPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-12">
-        <p className="text-brand-500 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
+        <p className="text-brand-700 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
           Side projects
         </p>
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Projects</h1>
@@ -159,7 +159,7 @@ export default function ProjectsPage() {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs text-brand-600 dark:text-brand-400 hover:text-brand-500 dark:hover:text-brand-300 transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs text-brand-700 dark:text-brand-400 hover:text-brand-600 dark:hover:text-brand-300 transition-colors"
                     >
                       <ExternalLink size={12} />
                       Visit
@@ -196,7 +196,7 @@ export default function ProjectsPage() {
             href="https://youtube.com/@SiaExplains"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-brand-600 dark:text-brand-400 hover:text-brand-500 dark:hover:text-brand-300 transition-colors"
+            className="text-brand-700 dark:text-brand-400 hover:text-brand-600 dark:hover:text-brand-300 transition-colors"
           >
             Follow on YouTube
           </a>{" "}
