@@ -4,40 +4,54 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
+  /* Primary — warm golden */
+  --color-brand-50: #fffdf0;
+  --color-brand-100: #fff8d6;
+  --color-brand-200: #fdf0a8;
+  --color-brand-300: #f9e480;
+  --color-brand-400: #f6d57b;
+  --color-brand-500: #e8bf45;
+  --color-brand-600: #c49a1a;
+  --color-brand-700: #8f6a00;
+  --color-brand-800: #5c4400;
+  --color-brand-900: #2e2200;
 
-  --color-surface-950: #0a0a0f;
-  --color-surface-900: #111118;
-  --color-surface-800: #1a1a24;
-  --color-surface-700: #252530;
+  /* Accent — cool sky blue (use sparingly) */
+  --color-accent-50: #f0f9fe;
+  --color-accent-100: #ddf2fb;
+  --color-accent-200: #b8e5f7;
+  --color-accent-300: #7bcbed;
+  --color-accent-400: #4db6e3;
+  --color-accent-500: #25a0d4;
+  --color-accent-600: #1b82ae;
+  --color-accent-700: #146287;
+
+  /* Warm ink surfaces (dark mode) */
+  --color-surface-950: #0e0c07;
+  --color-surface-900: #14110a;
+  --color-surface-800: #1c1912;
+  --color-surface-700: #26221a;
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 :root {
-  --background: #f8f8fc;
-  --foreground: #0a0a0f;
-  --nav-bg: rgba(248, 248, 252, 0.9);
-  --nav-mobile-bg: rgba(255, 255, 255, 0.97);
-  --border-subtle: rgba(0, 0, 0, 0.08);
+  --background: #faf8f2;
+  --foreground: #1a1610;
+  --nav-bg: rgba(250, 248, 242, 0.92);
+  --nav-mobile-bg: rgba(253, 251, 246, 0.97);
+  --border-subtle: rgba(0, 0, 0, 0.07);
 }
 
 .dark {
-  --background: #0a0a0f;
-  --foreground: #f0f0f5;
-  --nav-bg: rgba(10, 10, 15, 0.9);
-  --nav-mobile-bg: rgba(17, 17, 24, 0.97);
-  --border-subtle: rgba(255, 255, 255, 0.05);
+  /* Warm ink — NOT blue-black. A very dark charcoal with a golden undertone. */
+  --background: #111008;
+  --foreground: #f0e8d0;
+  --nav-bg: rgba(17, 16, 8, 0.93);
+  --nav-mobile-bg: rgba(20, 17, 10, 0.97);
+  /* Borders carry a faint golden warmth in dark mode */
+  --border-subtle: rgba(246, 213, 123, 0.07);
 }
 
 body {
@@ -50,21 +64,28 @@ body {
   box-sizing: border-box;
 }
 
+/* Golden glow selection in both modes */
 ::selection {
-  background-color: #7c3aed40;
-  color: #f0f0f5;
+  background-color: #f6d57b50;
+  color: #1a1610;
+}
+
+.dark ::selection {
+  background-color: #f6d57b30;
+  color: #f0e8d0;
 }
 
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #111118;
+  background: #14110a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3d3d52;
+  background: #2e2820;
   border-radius: 3px;
 }
+/* Accent blue as a delightful scrollbar hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #7c3aed;
+  background: #7bcbed;
 }

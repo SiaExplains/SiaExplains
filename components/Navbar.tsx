@@ -53,7 +53,7 @@ export default function Navbar() {
             href="/"
             className="text-gray-900 dark:text-white font-semibold text-lg tracking-tight hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
           >
-            <span className="text-brand-500">Sia</span>Explains
+            <span className="text-brand-700 dark:text-brand-400">Sia</span>Explains
           </Link>
 
           {/* Desktop links */}
@@ -63,7 +63,7 @@ export default function Navbar() {
                 <Link
                   key={href}
                   href={href}
-                  className="ml-2 px-4 py-1.5 rounded-full bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium transition-colors"
+                  className="ml-2 px-4 py-1.5 rounded-full bg-brand-400 hover:bg-brand-300 text-brand-900 text-sm font-medium transition-colors"
                 >
                   {label}
                 </Link>
@@ -74,7 +74,7 @@ export default function Navbar() {
                   className={cn(
                     "px-3 py-1.5 rounded-md text-sm transition-colors",
                     pathname === href
-                      ? "text-brand-600 dark:text-brand-400 bg-brand-500/10"
+                      ? "text-brand-700 dark:text-brand-400 bg-brand-400/10"
                       : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5"
                   )}
                 >
@@ -117,9 +117,9 @@ export default function Navbar() {
               className={cn(
                 "block px-4 py-2.5 rounded-lg text-sm transition-colors",
                 highlight
-                  ? "bg-brand-600 text-white font-medium text-center mt-2"
+                  ? "bg-brand-400 text-brand-900 font-semibold text-center mt-2"
                   : pathname === href
-                  ? "text-brand-600 dark:text-brand-400 bg-brand-500/10"
+                  ? "text-brand-700 dark:text-brand-400 bg-brand-400/10"
                   : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5"
               )}
             >

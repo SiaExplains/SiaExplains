@@ -11,9 +11,9 @@ const highlights = [
     description:
       "10+ years building distributed systems, leading engineering teams, and shipping products at scale in Berlin's tech scene.",
     href: "/cv",
-    color: "text-brand-500 dark:text-brand-400",
-    bg: "bg-brand-500/10",
-    border: "border-brand-500/20",
+    color: "text-brand-700 dark:text-brand-400",
+    bg: "bg-brand-400/10",
+    border: "border-brand-400/20",
   },
   {
     icon: YoutubeIcon,
@@ -21,9 +21,9 @@ const highlights = [
     description:
       "A channel covering tech, AI, productivity, and immigration — for engineers who want depth over hype.",
     href: "/youtube",
-    color: "text-rose-500 dark:text-rose-400",
-    bg: "bg-rose-500/10",
-    border: "border-rose-500/20",
+    color: "text-brand-700 dark:text-brand-400",
+    bg: "bg-brand-400/10",
+    border: "border-brand-400/20",
   },
   {
     icon: BookOpen,
@@ -31,9 +31,9 @@ const highlights = [
     description:
       "Long-form technical writing on system design, engineering leadership, and building software that lasts.",
     href: "/articles",
-    color: "text-emerald-600 dark:text-emerald-400",
-    bg: "bg-emerald-500/10",
-    border: "border-emerald-500/20",
+    color: "text-brand-700 dark:text-brand-400",
+    bg: "bg-brand-400/10",
+    border: "border-brand-400/20",
   },
   {
     icon: Calendar,
@@ -41,9 +41,9 @@ const highlights = [
     description:
       "30-minute sessions for career advice, code review, or just talking shop with a senior engineer.",
     href: "/book",
-    color: "text-sky-600 dark:text-sky-400",
-    bg: "bg-sky-500/10",
-    border: "border-sky-500/20",
+    color: "text-brand-700 dark:text-brand-400",
+    bg: "bg-brand-400/10",
+    border: "border-brand-400/20",
   },
 ];
 
@@ -55,14 +55,14 @@ export default function HomePage() {
       {/* Hero */}
       <section className="pt-20 pb-24 md:pt-28 md:pb-32">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 dark:text-brand-400 text-sm mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-500 dark:bg-brand-400 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-400/10 border border-brand-400/20 text-brand-700 dark:text-brand-400 text-sm mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse" />
             Based in Berlin · Open to new projects
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight tracking-tight mb-6">
             Hi, I&apos;m{" "}
-            <span className="bg-gradient-to-r from-brand-500 to-brand-700 dark:from-brand-400 dark:to-brand-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-600 to-brand-800 dark:from-brand-300 dark:to-brand-500 bg-clip-text text-transparent">
               Siavash
             </span>
             .
@@ -77,7 +77,7 @@ export default function HomePage() {
             I run{" "}
             <Link
               href="/youtube"
-              className="text-brand-600 dark:text-brand-400 hover:text-brand-500 dark:hover:text-brand-300 transition-colors"
+              className="text-brand-700 dark:text-brand-400 hover:text-brand-600 dark:hover:text-brand-300 transition-colors"
             >
               SiaExplains
             </Link>{" "}
@@ -88,7 +88,7 @@ export default function HomePage() {
           <div className="flex flex-wrap gap-3">
             <Link
               href="/about"
-              className="px-5 py-2.5 rounded-full bg-brand-600 hover:bg-brand-500 text-white font-medium transition-colors inline-flex items-center gap-2"
+              className="px-5 py-2.5 rounded-full bg-brand-400 hover:bg-brand-300 text-brand-900 font-medium transition-colors inline-flex items-center gap-2"
             >
               About me <ArrowRight size={16} />
             </Link>
@@ -104,7 +104,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="px-5 py-2.5 rounded-full border border-gray-300 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 text-gray-700 dark:text-gray-300 font-medium transition-colors inline-flex items-center gap-2"
             >
-              <YoutubeIcon size={16} className="text-rose-500 dark:text-rose-400" />
+              <YoutubeIcon size={16} className="text-brand-700 dark:text-brand-400" />
               YouTube
             </a>
           </div>
@@ -147,7 +147,7 @@ export default function HomePage() {
             </h2>
             <Link
               href="/blog"
-              className="text-sm text-brand-600 dark:text-brand-400 hover:text-brand-500 dark:hover:text-brand-300 inline-flex items-center gap-1 transition-colors"
+              className="text-sm text-brand-700 dark:text-brand-400 hover:text-brand-600 dark:hover:text-brand-300 inline-flex items-center gap-1 transition-colors"
             >
               All posts <ArrowRight size={14} />
             </Link>

@@ -35,7 +35,7 @@ export default function NewsletterForm() {
         </div>
         <button
           type="submit"
-          className="w-full py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium text-sm transition-colors"
+          className="w-full py-3 rounded-lg bg-brand-400 hover:bg-brand-300 text-brand-900 font-medium text-sm transition-colors"
         >
           Subscribe — it&apos;s free
         </button>

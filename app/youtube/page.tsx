@@ -13,25 +13,25 @@ const playlists = [
     title: "System Design",
     description: "Deep dives into distributed systems, architecture patterns, and real-world engineering decisions.",
     count: 8,
-    color: "bg-brand-500/10 border-brand-500/20 text-brand-600 dark:text-brand-400",
+    color: "bg-brand-400/10 border-brand-400/20 text-brand-700 dark:text-brand-400",
   },
   {
     title: "AI Tools for Engineers",
     description: "Honest reviews and walkthroughs of AI tools — what works, what's hype, and how to use them effectively.",
     count: 6,
-    color: "bg-emerald-500/10 border-emerald-500/20 text-emerald-700 dark:text-emerald-400",
+    color: "bg-brand-400/10 border-brand-400/20 text-brand-700 dark:text-brand-400",
   },
   {
     title: "Immigration & International Career",
     description: "The real story of moving from Iran to Berlin through the tech industry. Visas, culture, and building a career abroad.",
     count: 5,
-    color: "bg-rose-500/10 border-rose-500/20 text-rose-600 dark:text-rose-400",
+    color: "bg-brand-400/10 border-brand-400/20 text-brand-700 dark:text-brand-400",
   },
   {
     title: "Engineering Productivity",
     description: "Systems, tools, and habits for engineers who want to do their best work without burning out.",
     count: 4,
-    color: "bg-sky-500/10 border-sky-500/20 text-sky-700 dark:text-sky-400",
+    color: "bg-brand-400/10 border-brand-400/20 text-brand-700 dark:text-brand-400",
   },
 ];
 
@@ -71,7 +71,7 @@ export default function YoutubePage() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Header */}
       <div className="flex flex-col md:flex-row gap-8 items-start mb-16 pb-12 border-b border-gray-200 dark:border-white/5">
-        <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-brand-600 to-rose-500 flex items-center justify-center shrink-0">
+        <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-brand-600 to-brand-400 flex items-center justify-center shrink-0">
           <YoutubeIcon size={36} className="text-white" />
         </div>
         <div className="flex-1">
@@ -95,7 +95,7 @@ export default function YoutubePage() {
             href="https://youtube.com/@SiaExplains"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-medium transition-colors text-sm"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-400 hover:bg-brand-300 text-brand-900 font-medium transition-colors text-sm"
           >
             <YoutubeIcon size={16} />
             Subscribe on YouTube

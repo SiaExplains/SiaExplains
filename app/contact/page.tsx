@@ -14,9 +14,9 @@ const socials = [
     handle: "@SiaExplains",
     href: "https://youtube.com/@SiaExplains",
     icon: YoutubeIcon,
-    color: "text-rose-500 dark:text-rose-400",
-    bg: "bg-rose-500/10",
-    border: "border-rose-500/20",
+    color: "text-brand-700 dark:text-brand-400",
+    bg: "bg-brand-400/10",
+    border: "border-brand-400/20",
   },
   {
     label: "GitHub",
@@ -32,9 +32,9 @@ const socials = [
     handle: "linkedin.com/in/siavash-ghanbari",
     href: "https://www.linkedin.com/in/siavash-ghanbari/",
     icon: LinkedinIcon,
-    color: "text-sky-600 dark:text-sky-400",
-    bg: "bg-sky-500/10",
-    border: "border-sky-500/20",
+    color: "text-brand-700 dark:text-brand-400",
+    bg: "bg-brand-400/10",
+    border: "border-brand-400/20",
   },
   {
     label: "Twitter / X",
@@ -51,7 +51,7 @@ export default function ContactPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-12">
-        <p className="text-brand-500 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
+        <p className="text-accent-600 dark:text-accent-300 text-sm font-medium tracking-wide uppercase mb-3">
           Get in touch
         </p>
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Contact</h1>
@@ -96,7 +96,7 @@ export default function ContactPage() {
 
           <div className="mt-6 p-4 rounded-xl border border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-white/5">
             <div className="flex items-center gap-2 mb-1">
-              <Mail size={14} className="text-brand-500 dark:text-brand-400" />
+              <Mail size={14} className="text-brand-700 dark:text-brand-400" />
               <span className="text-sm font-medium text-gray-900 dark:text-white">Email</span>
             </div>
             <p className="text-sm text-gray-500">siaexplains@gmail.com</p>

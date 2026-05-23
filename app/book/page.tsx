@@ -14,9 +14,9 @@ const sessionTypes = [
     duration: "30 min",
     description:
       "Career decisions, international job search, transitioning to senior/principal roles, or navigating immigration through tech.",
-    color: "text-brand-600 dark:text-brand-400",
-    bg: "bg-brand-500/10",
-    border: "border-brand-500/20",
+    color: "text-brand-700 dark:text-brand-400",
+    bg: "bg-brand-400/10",
+    border: "border-brand-400/20",
   },
   {
     icon: Video,
@@ -24,9 +24,9 @@ const sessionTypes = [
     duration: "45 min",
     description:
       "Walk me through your system design, codebase, or architecture decisions. I'll give honest, senior-level feedback.",
-    color: "text-emerald-600 dark:text-emerald-400",
-    bg: "bg-emerald-500/10",
-    border: "border-emerald-500/20",
+    color: "text-brand-700 dark:text-brand-400",
+    bg: "bg-brand-400/10",
+    border: "border-brand-400/20",
   },
   {
     icon: Clock,
@@ -34,9 +34,9 @@ const sessionTypes = [
     duration: "30 min",
     description:
       "No agenda required. Come with questions, problems, or ideas. Good for a second opinion on anything technical.",
-    color: "text-sky-600 dark:text-sky-400",
-    bg: "bg-sky-500/10",
-    border: "border-sky-500/20",
+    color: "text-brand-700 dark:text-brand-400",
+    bg: "bg-brand-400/10",
+    border: "border-brand-400/20",
   },
 ];
 
@@ -44,8 +44,8 @@ export default function BookPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center mb-12">
-        <div className="inline-flex p-4 rounded-2xl bg-brand-500/10 border border-brand-500/20 mb-6">
-          <Calendar size={28} className="text-brand-600 dark:text-brand-400" />
+        <div className="inline-flex p-4 rounded-2xl bg-brand-400/10 border border-brand-400/20 mb-6">
+          <Calendar size={28} className="text-brand-700 dark:text-brand-400" />
         </div>
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Book a Call</h1>
         <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl mx-auto">
@@ -101,7 +101,7 @@ export default function BookPage() {
           </p>
           <a
             href="mailto:siaexplains@gmail.com?subject=Book a Call"
-            className="mt-5 px-5 py-2.5 rounded-full bg-brand-600 hover:bg-brand-500 text-white font-medium text-sm transition-colors"
+            className="mt-5 px-5 py-2.5 rounded-full bg-brand-400 hover:bg-brand-300 text-brand-900 font-medium text-sm transition-colors"
           >
             Email to schedule
           </a>

@@ -160,7 +160,7 @@ export default function CvPage() {
       {/* Header */}
       <div className="mb-12 pb-8 border-b border-gray-200 dark:border-white/5">
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">Siavash Ghanbari</h1>
-        <p className="text-brand-500 dark:text-brand-400 text-lg mb-1">
+        <p className="text-brand-700 dark:text-brand-400 text-lg mb-1">
           Principal Software Engineer | Manager
         </p>
         <p className="text-gray-500 text-sm">
@@ -190,7 +190,7 @@ export default function CvPage() {
               <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white">{job.role}</h3>
-                  <p className="text-brand-500 dark:text-brand-400 text-sm">{job.company}</p>
+                  <p className="text-brand-700 dark:text-brand-400 text-sm">{job.company}</p>
                 </div>
                 <div className="text-right">
                   <p className="text-sm text-gray-500">{job.period}</p>
@@ -200,7 +200,7 @@ export default function CvPage() {
               <ul className="space-y-1 mt-3">
                 {job.bullets.map((b, i) => (
                   <li key={i} className="text-sm text-gray-600 dark:text-gray-400 flex gap-2">
-                    <span className="text-brand-500 mt-1 shrink-0">›</span>
+                    <span className="text-brand-700 dark:text-brand-400 mt-1 shrink-0">›</span>
                     {b}
                   </li>
                 ))}
@@ -222,7 +222,7 @@ export default function CvPage() {
               <div className="flex flex-wrap items-start justify-between gap-2 mb-1">
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white">{edu.degree}</h3>
-                  <p className="text-brand-500 dark:text-brand-400 text-sm">{edu.institution}</p>
+                  <p className="text-brand-700 dark:text-brand-400 text-sm">{edu.institution}</p>
                 </div>
                 {edu.period && <p className="text-sm text-gray-500">{edu.period}</p>}
               </div>

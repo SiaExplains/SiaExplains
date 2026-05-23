@@ -111,7 +111,7 @@ export default function TimelinePage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center mb-16">
-        <p className="text-brand-500 dark:text-brand-400 text-sm font-medium tracking-wide uppercase mb-3">
+        <p className="text-accent-600 dark:text-accent-300 text-sm font-medium tracking-wide uppercase mb-3">
           The journey
         </p>
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Timeline</h1>
@@ -124,10 +124,10 @@ export default function TimelinePage() {
       {/* Legend */}
       <div className="flex flex-wrap justify-center gap-4 mb-16 text-sm">
         {[
-          { label: "Education", color: "bg-sky-400" },
-          { label: "Career", color: "bg-brand-400" },
-          { label: "Company", color: "bg-emerald-400" },
-          { label: "Life", color: "bg-rose-400" },
+          { label: "Education", color: "bg-brand-300" },
+          { label: "Career", color: "bg-brand-500" },
+          { label: "Company", color: "bg-brand-400" },
+          { label: "Life", color: "bg-brand-400" },
         ].map(({ label, color }) => (
           <div key={label} className="flex items-center gap-2 text-gray-500">
             <div className={`w-2.5 h-2.5 rounded-full ${color}`} />

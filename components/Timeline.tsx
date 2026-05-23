@@ -9,35 +9,35 @@ import { TimelineEvent } from "@/types";
 const categoryConfig = {
   Education: {
     icon: GraduationCap,
-    color: "text-sky-600 dark:text-sky-400",
-    bg: "bg-sky-500/10",
-    border: "border-sky-500/30",
-    dot: "bg-sky-500 dark:bg-sky-400",
-    glow: "shadow-sky-500/30",
+    color: "text-brand-500/80 dark:text-brand-300",
+    bg: "bg-brand-400/5",
+    border: "border-brand-400/15",
+    dot: "bg-brand-300 dark:bg-brand-300",
+    glow: "shadow-brand-500/20",
   },
   Career: {
     icon: Briefcase,
-    color: "text-brand-600 dark:text-brand-400",
-    bg: "bg-brand-500/10",
-    border: "border-brand-500/30",
+    color: "text-brand-700 dark:text-brand-400",
+    bg: "bg-brand-400/10",
+    border: "border-brand-400/25",
     dot: "bg-brand-500 dark:bg-brand-400",
     glow: "shadow-brand-500/30",
   },
   Company: {
     icon: Rocket,
-    color: "text-emerald-600 dark:text-emerald-400",
-    bg: "bg-emerald-500/10",
-    border: "border-emerald-500/30",
-    dot: "bg-emerald-500 dark:bg-emerald-400",
-    glow: "shadow-emerald-500/30",
+    color: "text-brand-700 dark:text-brand-300",
+    bg: "bg-brand-400/[0.08]",
+    border: "border-brand-400/20",
+    dot: "bg-brand-400 dark:bg-brand-300",
+    glow: "shadow-brand-500/25",
   },
   Life: {
     icon: Heart,
-    color: "text-rose-600 dark:text-rose-400",
-    bg: "bg-rose-500/10",
-    border: "border-rose-500/30",
-    dot: "bg-rose-500 dark:bg-rose-400",
-    glow: "shadow-rose-500/30",
+    color: "text-brand-700 dark:text-brand-400",
+    bg: "bg-brand-400/[0.06]",
+    border: "border-brand-400/15",
+    dot: "bg-brand-400 dark:bg-brand-400",
+    glow: "shadow-brand-500/20",
   },
 };
 
@@ -101,7 +101,7 @@ function TimelineItem({
           animate={inView ? { scale: 1, opacity: 1 } : {}}
           transition={{ duration: 0.4, delay: index * 0.08 + 0.1, type: "spring", stiffness: 200 }}
           className={cn(
-            "w-4 h-4 rounded-full border-2 border-white dark:border-[#0a0a0f] shadow-lg z-10 mt-5",
+            "w-4 h-4 rounded-full border-2 border-white dark:border-[#111008] shadow-lg z-10 mt-5",
             cfg.dot,
             cfg.glow,
             "shadow-[0_0_12px_2px]"
