@@ -24,9 +24,9 @@ const sessionTypes = [
     duration: "45 min",
     description:
       "Walk me through your system design, codebase, or architecture decisions. I'll give honest, senior-level feedback.",
-    color: "text-emerald-600 dark:text-emerald-400",
-    bg: "bg-emerald-500/10",
-    border: "border-emerald-500/20",
+    color: "text-brand-600 dark:text-brand-400",
+    bg: "bg-brand-500/10",
+    border: "border-brand-500/20",
   },
   {
     icon: Clock,
@@ -34,9 +34,9 @@ const sessionTypes = [
     duration: "30 min",
     description:
       "No agenda required. Come with questions, problems, or ideas. Good for a second opinion on anything technical.",
-    color: "text-sky-600 dark:text-sky-400",
-    bg: "bg-sky-500/10",
-    border: "border-sky-500/20",
+    color: "text-brand-600 dark:text-brand-400",
+    bg: "bg-brand-500/10",
+    border: "border-brand-500/20",
   },
 ];
 

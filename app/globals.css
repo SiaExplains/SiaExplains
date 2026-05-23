@@ -4,16 +4,16 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-brand-50: #f5f3ff;
-  --color-brand-100: #ede9fe;
-  --color-brand-200: #ddd6fe;
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
-  --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
+  --color-brand-50: #f0f5f9;
+  --color-brand-100: #dce8f1;
+  --color-brand-200: #b8d1e3;
+  --color-brand-300: #8fb5ce;
+  --color-brand-400: #6e9ab9;
+  --color-brand-500: #5c7a96;
+  --color-brand-600: #4a6279;
+  --color-brand-700: #3a4d60;
+  --color-brand-800: #2b3947;
+  --color-brand-900: #1c2730;
 
   --color-surface-950: #0a0a0f;
   --color-surface-900: #111118;
@@ -51,7 +51,7 @@ body {
 }
 
 ::selection {
-  background-color: #7c3aed40;
+  background-color: #5c7a9640;
   color: #f0f0f5;
 }
 
@@ -66,5 +66,5 @@ body {
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #7c3aed;
+  background: #5c7a96;
 }

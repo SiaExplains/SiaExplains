@@ -21,9 +21,9 @@ const highlights = [
     description:
       "A channel covering tech, AI, productivity, and immigration — for engineers who want depth over hype.",
     href: "/youtube",
-    color: "text-rose-500 dark:text-rose-400",
-    bg: "bg-rose-500/10",
-    border: "border-rose-500/20",
+    color: "text-brand-500 dark:text-brand-400",
+    bg: "bg-brand-500/10",
+    border: "border-brand-500/20",
   },
   {
     icon: BookOpen,
@@ -31,9 +31,9 @@ const highlights = [
     description:
       "Long-form technical writing on system design, engineering leadership, and building software that lasts.",
     href: "/articles",
-    color: "text-emerald-600 dark:text-emerald-400",
-    bg: "bg-emerald-500/10",
-    border: "border-emerald-500/20",
+    color: "text-brand-500 dark:text-brand-400",
+    bg: "bg-brand-500/10",
+    border: "border-brand-500/20",
   },
   {
     icon: Calendar,
@@ -41,9 +41,9 @@ const highlights = [
     description:
       "30-minute sessions for career advice, code review, or just talking shop with a senior engineer.",
     href: "/book",
-    color: "text-sky-600 dark:text-sky-400",
-    bg: "bg-sky-500/10",
-    border: "border-sky-500/20",
+    color: "text-brand-500 dark:text-brand-400",
+    bg: "bg-brand-500/10",
+    border: "border-brand-500/20",
   },
 ];
 
@@ -104,7 +104,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="px-5 py-2.5 rounded-full border border-gray-300 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 text-gray-700 dark:text-gray-300 font-medium transition-colors inline-flex items-center gap-2"
             >
-              <YoutubeIcon size={16} className="text-rose-500 dark:text-rose-400" />
+              <YoutubeIcon size={16} className="text-brand-500 dark:text-brand-400" />
               YouTube
             </a>
           </div>

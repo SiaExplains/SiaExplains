@@ -124,10 +124,10 @@ export default function TimelinePage() {
       {/* Legend */}
       <div className="flex flex-wrap justify-center gap-4 mb-16 text-sm">
         {[
-          { label: "Education", color: "bg-sky-400" },
-          { label: "Career", color: "bg-brand-400" },
-          { label: "Company", color: "bg-emerald-400" },
-          { label: "Life", color: "bg-rose-400" },
+          { label: "Education", color: "bg-brand-300" },
+          { label: "Career", color: "bg-brand-500" },
+          { label: "Company", color: "bg-brand-600" },
+          { label: "Life", color: "bg-brand-400" },
         ].map(({ label, color }) => (
           <div key={label} className="flex items-center gap-2 text-gray-500">
             <div className={`w-2.5 h-2.5 rounded-full ${color}`} />

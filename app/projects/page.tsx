@@ -71,23 +71,23 @@ const statusConfig = {
   live: {
     label: "Live",
     icon: Zap,
-    color: "text-emerald-600 dark:text-emerald-400",
-    bg: "bg-emerald-500/10",
-    border: "border-emerald-500/20",
+    color: "text-brand-600 dark:text-brand-400",
+    bg: "bg-brand-500/10",
+    border: "border-brand-500/20",
   },
   building: {
     label: "Building",
     icon: Clock,
-    color: "text-amber-600 dark:text-amber-400",
-    bg: "bg-amber-500/10",
-    border: "border-amber-500/20",
+    color: "text-brand-500/70 dark:text-brand-300/70",
+    bg: "bg-brand-500/5",
+    border: "border-brand-500/15",
   },
   concept: {
     label: "Concept",
     icon: Lightbulb,
-    color: "text-sky-600 dark:text-sky-400",
-    bg: "bg-sky-500/10",
-    border: "border-sky-500/20",
+    color: "text-gray-500 dark:text-gray-400",
+    bg: "bg-gray-500/5",
+    border: "border-gray-500/15",
   },
 };
 
