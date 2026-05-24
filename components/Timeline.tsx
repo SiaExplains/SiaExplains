@@ -45,16 +45,19 @@ function TimelineItem({
   event,
   index,
   isLast,
+  categoryLabels,
 }: {
   event: TimelineEvent;
   index: number;
   isLast: boolean;
+  categoryLabels?: Record<string, string>;
 }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const cfg = categoryConfig[event.category];
   const Icon = cfg.icon;
   const isLeft = index % 2 === 0;
+  const categoryLabel = categoryLabels?.[event.category] ?? event.category;
 
   return (
     <div ref={ref} className="relative flex items-start gap-6 md:gap-0">
@@ -78,7 +81,7 @@ function TimelineItem({
               )}
             >
               <Icon size={12} />
-              {event.category}
+              {categoryLabel}
             </div>
             <p className="text-xs text-gray-500 mb-1">{event.year}</p>
             <h3 className="font-semibold text-gray-900 dark:text-white text-base mb-1.5">
@@ -132,7 +135,7 @@ function TimelineItem({
               )}
             >
               <Icon size={12} />
-              {event.category}
+              {categoryLabel}
             </div>
             <p className="text-xs text-gray-500 mb-1">{event.year}</p>
             <h3 className="font-semibold text-gray-900 dark:text-white text-base mb-1.5">
@@ -183,7 +186,13 @@ function TimelineItem({
   );
 }
 
-export default function Timeline({ events }: { events: TimelineEvent[] }) {
+export default function Timeline({
+  events,
+  categoryLabels,
+}: {
+  events: TimelineEvent[];
+  categoryLabels?: Record<string, string>;
+}) {
   return (
     <div className="relative">
       {/* Vertical line (desktop) */}
@@ -196,6 +205,7 @@ export default function Timeline({ events }: { events: TimelineEvent[] }) {
             event={event}
             index={i}
             isLast={i === events.length - 1}
+            categoryLabels={categoryLabels}
           />
         ))}
       </div>

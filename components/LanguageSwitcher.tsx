@@ -7,9 +7,9 @@ import { Globe, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const locales = [
-  { code: "en", flag: "🇬🇧", label: "English" },
-  { code: "fa", flag: "🇮🇷", label: "فارسی" },
-  { code: "de", flag: "🇩🇪", label: "Deutsch" },
+  { code: "en", flag: "🇬🇧", label: "English", short: "EN" },
+  { code: "fa", flag: "🇮🇷", label: "فارسی", short: "FA" },
+  { code: "de", flag: "🇩🇪", label: "Deutsch", short: "DE" },
 ] as const;
 
 export default function LanguageSwitcher() {
@@ -47,7 +47,7 @@ export default function LanguageSwitcher() {
       >
         <Globe size={14} />
         <span className="hidden sm:inline">{current.flag}</span>
-        <span className="hidden md:inline text-xs font-medium">{current.label}</span>
+        <span className="hidden sm:inline text-xs font-medium">{current.short}</span>
         <ChevronDown
           size={12}
           className={cn("transition-transform", open && "rotate-180")}

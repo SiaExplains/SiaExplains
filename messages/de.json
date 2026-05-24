@@ -128,7 +128,93 @@
     "education": "Ausbildung",
     "career": "Karriere",
     "company": "Unternehmen",
-    "life": "Leben"
+    "life": "Leben",
+    "events": [
+      {
+        "year": "2026",
+        "title": "Öffentlich bauen",
+        "category": "Life",
+        "description": "SiaExplains.com als Zuhause für Schreiben, Projekte und die ganze Geschichte gestartet. Baue Nebenprojekte und Startups und teile den Weg — Ingenieurwesen, Content Creation und alles dazwischen.",
+        "location": "Berlin, Deutschland"
+      },
+      {
+        "year": "2026",
+        "title": "WikiDigit gestartet",
+        "category": "Company",
+        "description": "WikiDigit gegründet — eine Tech-Medien- und Nachrichtenplattform, die kuratierte Geschichten über KI, Software und die digitale Welt liefert. Für Ingenieure und Tech-Enthusiasten, die Tiefe statt Clickbait wollen.",
+        "location": "Berlin, Deutschland"
+      },
+      {
+        "year": "2025",
+        "title": "Emojar gestartet",
+        "category": "Company",
+        "description": "Emojar.com gebaut und gestartet — eine kostenlose Emoji-Such- und Kopierpattform mit über 3.600 Emojis, kuratierten Sammlungen und Mini-Spielen. Das gesamte Produkt wurde mit KI-Tools ohne eine einzige handgeschriebene Codezeile geliefert. Monetarisiert über Google Ads.",
+        "location": "Berlin, Deutschland"
+      },
+      {
+        "year": "2023",
+        "title": "Principal Engineer & Manager bei MHP",
+        "category": "Career",
+        "description": "Bei MHP als Principal Software Engineer und Manager eingestiegen. Leite ein funktionsübergreifendes Team, designe KPI-Vergleichstools für Volkswagen Group-Werke, implementiere virtuelle Zählerkonzepte für Energie-Dashboards und automatisiere CI/CD-Pipelines, die zuvor vollständig manuell waren.",
+        "location": "Berlin, Deutschland"
+      },
+      {
+        "year": "2022",
+        "title": "SiaExplains auf YouTube gestartet",
+        "category": "Life",
+        "description": "SiaExplains gestartet, um zu teilen, was ich über Ingenieurwesen, Karrierewachstum und internationale Tech-Karrieren gelernt hatte. Die Resonanz übertraf alle Erwartungen und entfachte eine Leidenschaft für Lehren und Content Creation.",
+        "location": "Berlin, Deutschland"
+      },
+      {
+        "year": "2020",
+        "title": "Senior Engineer bei Trademachines, Berlin",
+        "category": "Career",
+        "description": "Als Senior Software Engineer bei Trademachines eingestiegen. Ein Next.js 13 Management-Dashboard gebaut, Web Core Vitals um 18% verbessert, SEO-Traffic um 30% gesteigert, A/B-Testing eingeführt, das die Konversionsraten um 20% erhöhte, und die Migration von Legacy-PHP7 zu React geleitet.",
+        "location": "Berlin, Deutschland"
+      },
+      {
+        "year": "2019",
+        "title": "Ins Ausland gezogen",
+        "category": "Life",
+        "description": "Den internationalen Sprung gewagt — zuerst nach Sydney, Australien, wo ich bei der Migration einer Legacy-E-Commerce-Plattform auf React und Node.js half. Dann nach Europa, in Berlin gelandet: eine Stadt, die sich sofort wie Zuhause anfühlte.",
+        "location": "Sydney → Berlin"
+      },
+      {
+        "year": "2016",
+        "title": "Lead Engineer & Senior-Rollen in Teheran",
+        "category": "Career",
+        "description": "Durch Senior-Engineering-Rollen in mehreren Unternehmen aufgestiegen. Bei Soniran Front-End- und Back-End-Teams beim Aufbau eines E-Wallets und Kreditsystems geleitet. Bei SON Corporate Group finanzielle Dateneingabeanwendungen verbessert und eine benutzerdefinierte Tabellensprache für nicht-technische Benutzer gebaut.",
+        "location": "Teheran, Iran"
+      },
+      {
+        "year": "2012",
+        "title": "Erste professionelle Ingenieursstelle",
+        "category": "Career",
+        "description": "Als Software-Entwickler bei Saman International Analysts eingestiegen. Eine zentrale Finanznachrichten-App basierend auf ISO-8553 neu gestaltet, ein automatisches modulares Aktualisierungssystem implementiert, das jährlich 50.000 US-Dollar einspart, und die Entwicklung von Einzahlungs-, Abhebungs- und Überweisungsmodulen geleitet.",
+        "location": "Teheran, Iran"
+      },
+      {
+        "year": "2009",
+        "title": "Bachelor in Software Engineering",
+        "category": "Education",
+        "description": "An der Mazandaran University of Science and Technology eingeschrieben. 2012 mit einer Note von 15,94/20 abgeschlossen. Meine Abschlussarbeit konzentrierte sich auf Analyse, Design und Implementierung eines mehrsprachigen Wörterbuchs ähnlich wie Babylon.",
+        "location": "Mazandaran, Iran"
+      },
+      {
+        "year": "2007",
+        "title": "Mitgründung von Taazuu Developers",
+        "category": "Company",
+        "description": "Während des Studiums ein Softwareentwicklungsunternehmen mitgegründet. Als CTO ein mehrsprachiges Wörterbuch mit Unterstützung von 12+ Sprachen und OCR gebaut, ein LMS für eine große iranische Universität entworfen und über 12 Web-Portfolios sowie eine native Windows-Anwendung zur Kraftstoffkartenverteilung in 14 Städten geliefert.",
+        "location": "Ghaemshahr, Iran"
+      },
+      {
+        "year": "2006",
+        "title": "Fachhochschulabschluss in Software",
+        "category": "Education",
+        "description": "An der Azad University für das Studium der Software eingeschrieben. Am Robotik-Seminar teilgenommen und ein interaktives Content-Management-System als Abschlussprojekt entwickelt. 2009 mit einer Note von 16,66/20 abgeschlossen.",
+        "location": "Iran"
+      }
+    ]
   },
   "newsletter": {
     "title": "Der Newsletter",
