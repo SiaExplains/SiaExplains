@@ -1,0 +1,54 @@
+---
+title: "The Site Is Now Available in Farsi and German"
+description: "SiaExplains.com now speaks three languages — English, فارسی, and Deutsch. Here's why I added i18n and how it works."
+date: "2026-05-24"
+tags: ["build-in-public", "i18n", "web-dev"]
+readingTime: "3 min read"
+---
+
+As of today, [SiaExplains.com](https://siaexplains.com) is available in three languages: **English** (default), **فارسی** (Persian/Farsi), and **Deutsch** (German).
+
+You'll find the language switcher in the top navigation bar — the globe icon with a dropdown. Switch between languages and the entire site updates instantly, including the URL (e.g. `/fa/about` for Persian).
+
+## Why three languages?
+
+**English** is obvious — it's the global language of tech and the one I write in.
+
+**Farsi** because a significant part of my audience is Iranian. My YouTube channel is entirely in Persian, and the people who find me through that channel often speak Farsi as their first language. Having the site available in their native tongue felt like the right thing to do.
+
+**German** because I live and work in Berlin. A good chunk of the people I interact with professionally are German speakers, and "localizing for the place you live" is just good practice.
+
+## What's translated
+
+Everything visible on the site:
+
+- Navigation and footer
+- All page headings, descriptions, and body text
+- Buttons, labels, and CTAs
+- The About page (full biography in all three languages)
+- Blog and article pages (UI — individual posts stay in their original language, which is standard practice)
+- YouTube, Projects, Timeline, Contact, Newsletter, Book a Call pages
+
+## How it works technically
+
+Built with **next-intl**, the industry-standard i18n library for Next.js App Router. The setup:
+
+- `messages/en.json`, `messages/fa.json`, `messages/de.json` — all translation strings
+- `middleware.ts` — detects locale from URL and sets it in request context
+- `app/[locale]/` — all routes nested under a locale segment
+- **No prefix for English** (default locale): `/about` instead of `/en/about`
+- Farsi and German get prefixed: `/fa/about`, `/de/about`
+
+**Farsi is RTL.** The `<html dir="rtl">` attribute is set automatically when the Farsi locale is active, so text flows right-to-left across the whole page without any CSS hacks.
+
+The language switcher uses `next-intl`'s `useRouter().replace()` to swap the locale while staying on the same page — so if you're reading the Projects page in English and switch to German, you land on the German Projects page.
+
+## Sitemap
+
+The sitemap now includes all three locale variants for every URL — useful for SEO so search engines can index the Farsi and German versions independently.
+
+## What's next
+
+The blog posts and articles themselves are only in English for now (that's where I write). If there's enough demand, I may start writing some posts directly in Farsi or German. For now, the UI is fully localized and the content is in its original language.
+
+If you spot a translation mistake — especially in the German, where I'm still at B2 — feel free to [open an issue](https://github.com/SiaExplains/SiaExplains) or send me a message.

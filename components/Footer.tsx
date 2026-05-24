@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/lib/navigation";
 import { YoutubeIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/SocialIcons";
 
 const socials = [
@@ -8,16 +9,18 @@ const socials = [
   { label: "Twitter", href: "https://twitter.com/SiaExplains", icon: TwitterIcon },
 ];
 
-const footerLinks = [
-  { href: "/blog", label: "Blog" },
-  { href: "/articles", label: "Articles" },
-  { href: "/projects", label: "Projects" },
-  { href: "/newsletter", label: "Newsletter" },
-  { href: "/contact", label: "Contact" },
-];
-
-export default function Footer() {
+export default async function Footer() {
+  const t = await getTranslations("footer");
+  const nav = await getTranslations("nav");
   const year = new Date().getFullYear();
+
+  const footerLinks = [
+    { href: "/blog" as const, label: nav("blog") },
+    { href: "/articles" as const, label: nav("articles") },
+    { href: "/projects" as const, label: nav("projects") },
+    { href: "/newsletter" as const, label: "Newsletter" },
+    { href: "/contact" as const, label: nav("contact") },
+  ];
 
   return (
     <footer className="border-t border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-[#14110a]">
@@ -32,15 +35,14 @@ export default function Footer() {
               <span className="text-brand-700 dark:text-brand-400">Sia</span>Explains
             </Link>
             <p className="mt-3 text-sm text-gray-500 leading-relaxed max-w-xs">
-              Principal Software Engineer & Tech Lead based in Berlin. Building
-              software, sharing knowledge, and documenting the journey.
+              {t("tagline")}
             </p>
           </div>
 
           {/* Links */}
           <div>
             <p className="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-600 mb-4">
-              Explore
+              {t("explore")}
             </p>
             <ul className="space-y-2">
               {footerLinks.map(({ href, label }) => (
@@ -59,7 +61,7 @@ export default function Footer() {
           {/* Socials */}
           <div>
             <p className="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-600 mb-4">
-              Find me on
+              {t("findMeOn")}
             </p>
             <div className="flex gap-3">
               {socials.map(({ label, href, icon: Icon }) => (
@@ -80,10 +82,10 @@ export default function Footer() {
 
         <div className="pt-6 border-t border-gray-200 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-gray-500 dark:text-gray-600">
-            © {year} Siavash · SiaExplains.com
+            {t("copyright", { year })}
           </p>
           <p className="text-xs text-gray-400 dark:text-gray-700">
-            Built with Next.js · Deployed on Vercel
+            {t("builtWith")}
           </p>
         </div>
       </div>

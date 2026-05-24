@@ -1,33 +1,55 @@
 import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/mdx";
+import { routing } from "@/i18n/routing";
 
 const BASE_URL = "https://siaexplains.com";
 
+const staticPaths = [
+  { path: "", priority: 1, changeFrequency: "weekly" as const },
+  { path: "/blog", priority: 0.8, changeFrequency: "weekly" as const },
+  { path: "/articles", priority: 0.8, changeFrequency: "weekly" as const },
+  { path: "/about", priority: 0.7, changeFrequency: "monthly" as const },
+  { path: "/projects", priority: 0.7, changeFrequency: "monthly" as const },
+  { path: "/youtube", priority: 0.7, changeFrequency: "weekly" as const },
+  { path: "/timeline", priority: 0.6, changeFrequency: "monthly" as const },
+  { path: "/contact", priority: 0.5, changeFrequency: "yearly" as const },
+  { path: "/newsletter", priority: 0.5, changeFrequency: "yearly" as const },
+  { path: "/book", priority: 0.5, changeFrequency: "monthly" as const },
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const blogPosts = getAllPosts("blog").map((post) => ({
-    url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
+  const blogPosts = getAllPosts("blog").flatMap((post) =>
+    routing.locales.map((locale) => ({
+      url: locale === routing.defaultLocale
+        ? `${BASE_URL}/blog/${post.slug}`
+        : `${BASE_URL}/${locale}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }))
+  );
 
-  const articles = getAllPosts("articles").map((post) => ({
-    url: `${BASE_URL}/articles/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
+  const articles = getAllPosts("articles").flatMap((post) =>
+    routing.locales.map((locale) => ({
+      url: locale === routing.defaultLocale
+        ? `${BASE_URL}/articles/${post.slug}`
+        : `${BASE_URL}/${locale}/articles/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }))
+  );
 
-  const staticRoutes: MetadataRoute.Sitemap = [
-    { url: BASE_URL, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
-    { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE_URL}/articles`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/projects`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/youtube`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/timeline`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
-    { url: `${BASE_URL}/contact`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.4 },
-  ];
+  const staticRoutes: MetadataRoute.Sitemap = staticPaths.flatMap(({ path, priority, changeFrequency }) =>
+    routing.locales.map((locale) => ({
+      url: locale === routing.defaultLocale
+        ? `${BASE_URL}${path}`
+        : `${BASE_URL}/${locale}${path}`,
+      lastModified: new Date(),
+      changeFrequency,
+      priority,
+    }))
+  );
 
   return [...staticRoutes, ...blogPosts, ...articles];
 }

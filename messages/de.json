@@ -1,0 +1,289 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "timeline": "Werdegang",
+    "cv": "Lebenslauf",
+    "projects": "Projekte",
+    "youtube": "YouTube",
+    "blog": "Blog",
+    "articles": "Artikel",
+    "books": "Bücher",
+    "contact": "Kontakt",
+    "bookCall": "Termin buchen"
+  },
+  "footer": {
+    "tagline": "Principal Software Engineer & Tech Lead in Berlin. Ich baue Software, teile Wissen und dokumentiere die Reise.",
+    "explore": "Entdecken",
+    "findMeOn": "Folge mir auf",
+    "copyright": "© {year} Siavash · SiaExplains.com",
+    "builtWith": "Gebaut mit Next.js · Gehostet auf Vercel"
+  },
+  "home": {
+    "badge": "In Berlin ansässig · Offen für neue Projekte",
+    "heroGreeting": "Hallo, ich bin",
+    "heroLine1": "Ich baue Software &",
+    "heroLine2": "erkläre Dinge.",
+    "heroParagraph": "Principal Software Engineer & Tech Lead in Berlin. Ursprünglich aus dem Iran. Ich betreibe SiaExplains auf YouTube — über Tech, KI, Produktivität und den Weg zu einer internationalen Karriere.",
+    "ctaAbout": "Über mich",
+    "ctaProjects": "Meine Projekte",
+    "whatIDo": "Was ich mache",
+    "learnMore": "Mehr erfahren",
+    "recentWriting": "Aktuelle Beiträge",
+    "allPosts": "Alle Beiträge",
+    "highlightEngineerTitle": "Principal Engineer",
+    "highlightEngineerDesc": "10+ Jahre Aufbau verteilter Systeme, Führung von Engineering-Teams und Produktauslieferung im Berliner Tech-Ökosystem.",
+    "highlightYoutubeTitle": "SiaExplains YouTube",
+    "highlightYoutubeDesc": "Ein Kanal über Tech, KI, Produktivität und Immigration — für Ingenieure, die Tiefe statt Hype suchen.",
+    "highlightWritingTitle": "Texte & Artikel",
+    "highlightWritingDesc": "Ausführliche technische Beiträge zu System-Design, Engineering-Leadership und nachhaltiger Software.",
+    "highlightBookTitle": "Termin buchen",
+    "highlightBookDesc": "30-minütige Sitzungen für Karriereberatung, Code-Review oder einfach ein Gespräch mit einem Senior Engineer."
+  },
+  "about": {
+    "label": "Über mich",
+    "title": "Ingenieur. Creator. Erbauer.",
+    "subtitle": "Ich bin Siavash — ein Software-Ingenieur mit über einem Jahrzehnt Erfahrung im Aufbau skalierbarer Systeme, liefernder Teams und wichtiger Produkte.",
+    "factLocation": "Standort",
+    "factRole": "Rolle",
+    "factYoutube": "YouTube",
+    "factFrom": "Herkunft",
+    "originTitle": "Die Anfangsgeschichte",
+    "originP1": "Ich wuchs in Teheran, Iran, auf und verliebte mich als Teenager in Computer — Hardware auseinandernehmen, Programmieren lernen und mehr Zeit in Foren verbringen, als ich sollte.",
+    "originP2": "Ich studierte Informatik und entdeckte schnell meine Leidenschaft für verteilte Systeme. Nach einigen Jahren im iranischen Tech-Ökosystem — das lebhafter ist, als die meisten glauben — entschied ich, meine Karriere international fortzusetzen.",
+    "originP3": "Diese Reise führte mich schließlich nach Berlin, eine Stadt, die perfekt zu meiner Energie passt: pragmatisch, international und ernsthaft in der Ingenieurskunst.",
+    "engineeringTitle": "Das Engineering-Kapitel",
+    "engineeringP1": "Im letzten Jahrzehnt habe ich in Fintech, E-Commerce und SaaS gearbeitet — von Zahlungsinfrastrukturen über Echtzeit-Kollaborationstools bis hin zu Datenpipelines, die Milliarden von Ereignissen verarbeiten.",
+    "engineeringP2": "Als Principal Engineer und Tech Lead bewege ich mich an der Schnittstelle von technischer Strategie und Umsetzung. Ich schreibe Code, reviewe Systeme, mentore Ingenieure und arbeite eng mit Produkt und Business zusammen.",
+    "engineeringP3": "Saubere Architektur, pragmatische technische Entscheidungen und der Aufbau von Engineering-Kulturen, in denen Menschen ihre beste Arbeit leisten — das liegt mir am Herzen.",
+    "whySiaTitle": "Warum SiaExplains?",
+    "whySiaP1": "Ich startete SiaExplains, weil ich die Inhalte schaffen wollte, die ich mir in meiner frühen Karriere gewünscht hätte. Inhalte, die deine Intelligenz respektieren, das \"Warum\" und nicht nur das \"Wie\" erklären und ehrlich über die Realitäten einer Tech-Karriere sind.",
+    "whySiaP2": "Der Kanal behandelt System-Design, KI-Tools, Produktivitätssysteme für Ingenieure und den Immigrationsweg durch die Tech-Branche.",
+    "outsideTitle": "Außerhalb des Terminals",
+    "outsideP1": "Wenn ich keine Software baue, lese ich wahrscheinlich, mache Krafttraining oder erkunde Berlins überraschend großartige Kaffeekultur. Ich bin ein leidenschaftlicher Leser — Belletristik und Sachbücher gleichermaßen.",
+    "outsideP2": "Ich spreche Persisch (Farsi), Englisch und genug Deutsch, um einem Berliner Behördengang zu überleben.",
+    "ctaTimeline": "Meinen Werdegang sehen",
+    "ctaCv": "Lebenslauf ansehen",
+    "ctaContact": "Kontakt aufnehmen"
+  },
+  "blog": {
+    "label": "Schreiben",
+    "title": "Blog",
+    "description": "Gedanken zu Engineering, Karriere, KI und dem Bau nachhaltiger Software. Kürzer als Artikel — persönlicher und häufiger.",
+    "noPosts": "Noch keine Beiträge. Schau bald wieder vorbei.",
+    "read": "Lesen"
+  },
+  "postDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "allBlogPosts": "Alle Blogbeiträge"
+  },
+  "articles": {
+    "label": "Longform",
+    "title": "Artikel",
+    "description": "Ausführliche technische Texte zu System-Design, verteilten Systemen, Engineering-Leadership und dem Handwerk der Software. Dauert länger als 5 Minuten. Es lohnt sich.",
+    "noArticles": "Noch keine Artikel. Schau bald wieder vorbei.",
+    "readArticle": "Artikel lesen"
+  },
+  "articleDetail": {
+    "backToArticles": "Zurück zu den Artikeln",
+    "allArticles": "Alle Artikel"
+  },
+  "projects": {
+    "label": "Nebenprojekte",
+    "title": "Projekte",
+    "description": "Dinge, die ich außerhalb meiner Arbeit baue — meistens Tools, die ich mir gewünscht hätte, Experimente mit neuen Technologien und Startups in Entwicklung. Alles öffentlich gebaut.",
+    "live": "Live",
+    "building": "In Entwicklung",
+    "concept": "Konzept",
+    "visit": "Besuchen",
+    "source": "Quellcode",
+    "morePipeline": "Weitere Projekte in der Pipeline.",
+    "followYouTube": "Auf YouTube folgen",
+    "started": "Gestartet"
+  },
+  "youtube": {
+    "langBadge": "🇮🇷 Videos auf Persisch (Farsi)",
+    "newVideos": "Regelmäßig neue Videos",
+    "channelDesc": "Ein persischsprachiger Kanal für Iraner, die Tech-Karrieren, Immigration nach Deutschland und das Leben als Expat-Ingenieur navigieren. Echte Geschichten, echte Zahlen — kein Fluff.",
+    "subscribe": "Auf YouTube abonnieren",
+    "featuredVideos": "Ausgewählte Videos",
+    "mostViewed": "Meistgesehen",
+    "viewAll": "Alle Videos auf YouTube",
+    "whatICover": "Meine Themen",
+    "ctaText": "Wenn du ein iranischer Ingenieur bist, der ans Auswandern denkt oder seine Tech-Karriere ausbauen möchte — dieser Kanal ist für dich.",
+    "followJourney": "Der Reise folgen",
+    "immigrationTitle": "Immigration & Leben in Deutschland",
+    "immigrationDesc": "Die echte Geschichte des Umzugs vom Iran nach Berlin — Visa, deutsche Staatsbürgerschaft, Wohnen, Banking und wie man wirklich ein Leben im Ausland aufbaut.",
+    "careerTitle": "Karriere & Engineering-Wachstum",
+    "careerDesc": "Erkenntnisse aus 17+ Jahren Software-Engineering in Teheran, Sydney und Berlin — vom Junior-Entwickler zum Principal Engineer und Manager.",
+    "aiTitle": "KI & Tech-Tools",
+    "aiDesc": "Ehrliche Walkthroughs von KI-Zertifikaten und Tools — was Ingenieuren im Alltag wirklich hilft versus was nur Hype ist.",
+    "financeTitle": "Finanzen & Expat-Tipps",
+    "financeDesc": "Praktische Geldtipps für Einwanderer und Expats in Deutschland — Banken, Steuern, Sparen und das deutsche Finanzsystem navigieren."
+  },
+  "timeline": {
+    "label": "Die Reise",
+    "title": "Werdegang",
+    "description": "Wichtige Meilensteine vom Iran nach Berlin — vom Mitgründer eines Unternehmens mit 20 Jahren bis zum Principal Engineer, Manager und Creator.",
+    "education": "Ausbildung",
+    "career": "Karriere",
+    "company": "Unternehmen",
+    "life": "Leben",
+    "events": [
+      {
+        "year": "2026",
+        "title": "Öffentlich bauen",
+        "category": "Life",
+        "description": "SiaExplains.com als Zuhause für Schreiben, Projekte und die ganze Geschichte gestartet. Baue Nebenprojekte und Startups und teile den Weg — Ingenieurwesen, Content Creation und alles dazwischen.",
+        "location": "Berlin, Deutschland"
+      },
+      {
+        "year": "2026",
+        "title": "WikiDigit gestartet",
+        "category": "Company",
+        "description": "WikiDigit gegründet — eine Tech-Medien- und Nachrichtenplattform, die kuratierte Geschichten über KI, Software und die digitale Welt liefert. Für Ingenieure und Tech-Enthusiasten, die Tiefe statt Clickbait wollen.",
+        "location": "Berlin, Deutschland"
+      },
+      {
+        "year": "2025",
+        "title": "Emojar gestartet",
+        "category": "Company",
+        "description": "Emojar.com gebaut und gestartet — eine kostenlose Emoji-Such- und Kopierpattform mit über 3.600 Emojis, kuratierten Sammlungen und Mini-Spielen. Das gesamte Produkt wurde mit KI-Tools ohne eine einzige handgeschriebene Codezeile geliefert. Monetarisiert über Google Ads.",
+        "location": "Berlin, Deutschland"
+      },
+      {
+        "year": "2023",
+        "title": "Principal Engineer & Manager bei MHP",
+        "category": "Career",
+        "description": "Bei MHP als Principal Software Engineer und Manager eingestiegen. Leite ein funktionsübergreifendes Team, designe KPI-Vergleichstools für Volkswagen Group-Werke, implementiere virtuelle Zählerkonzepte für Energie-Dashboards und automatisiere CI/CD-Pipelines, die zuvor vollständig manuell waren.",
+        "location": "Berlin, Deutschland"
+      },
+      {
+        "year": "2022",
+        "title": "SiaExplains auf YouTube gestartet",
+        "category": "Life",
+        "description": "SiaExplains gestartet, um zu teilen, was ich über Ingenieurwesen, Karrierewachstum und internationale Tech-Karrieren gelernt hatte. Die Resonanz übertraf alle Erwartungen und entfachte eine Leidenschaft für Lehren und Content Creation.",
+        "location": "Berlin, Deutschland"
+      },
+      {
+        "year": "2020",
+        "title": "Senior Engineer bei Trademachines, Berlin",
+        "category": "Career",
+        "description": "Als Senior Software Engineer bei Trademachines eingestiegen. Ein Next.js 13 Management-Dashboard gebaut, Web Core Vitals um 18% verbessert, SEO-Traffic um 30% gesteigert, A/B-Testing eingeführt, das die Konversionsraten um 20% erhöhte, und die Migration von Legacy-PHP7 zu React geleitet.",
+        "location": "Berlin, Deutschland"
+      },
+      {
+        "year": "2019",
+        "title": "Ins Ausland gezogen",
+        "category": "Life",
+        "description": "Den internationalen Sprung gewagt — zuerst nach Sydney, Australien, wo ich bei der Migration einer Legacy-E-Commerce-Plattform auf React und Node.js half. Dann nach Europa, in Berlin gelandet: eine Stadt, die sich sofort wie Zuhause anfühlte.",
+        "location": "Sydney → Berlin"
+      },
+      {
+        "year": "2016",
+        "title": "Lead Engineer & Senior-Rollen in Teheran",
+        "category": "Career",
+        "description": "Durch Senior-Engineering-Rollen in mehreren Unternehmen aufgestiegen. Bei Soniran Front-End- und Back-End-Teams beim Aufbau eines E-Wallets und Kreditsystems geleitet. Bei SON Corporate Group finanzielle Dateneingabeanwendungen verbessert und eine benutzerdefinierte Tabellensprache für nicht-technische Benutzer gebaut.",
+        "location": "Teheran, Iran"
+      },
+      {
+        "year": "2012",
+        "title": "Erste professionelle Ingenieursstelle",
+        "category": "Career",
+        "description": "Als Software-Entwickler bei Saman International Analysts eingestiegen. Eine zentrale Finanznachrichten-App basierend auf ISO-8553 neu gestaltet, ein automatisches modulares Aktualisierungssystem implementiert, das jährlich 50.000 US-Dollar einspart, und die Entwicklung von Einzahlungs-, Abhebungs- und Überweisungsmodulen geleitet.",
+        "location": "Teheran, Iran"
+      },
+      {
+        "year": "2009",
+        "title": "Bachelor in Software Engineering",
+        "category": "Education",
+        "description": "An der Mazandaran University of Science and Technology eingeschrieben. 2012 mit einer Note von 15,94/20 abgeschlossen. Meine Abschlussarbeit konzentrierte sich auf Analyse, Design und Implementierung eines mehrsprachigen Wörterbuchs ähnlich wie Babylon.",
+        "location": "Mazandaran, Iran"
+      },
+      {
+        "year": "2007",
+        "title": "Mitgründung von Taazuu Developers",
+        "category": "Company",
+        "description": "Während des Studiums ein Softwareentwicklungsunternehmen mitgegründet. Als CTO ein mehrsprachiges Wörterbuch mit Unterstützung von 12+ Sprachen und OCR gebaut, ein LMS für eine große iranische Universität entworfen und über 12 Web-Portfolios sowie eine native Windows-Anwendung zur Kraftstoffkartenverteilung in 14 Städten geliefert.",
+        "location": "Ghaemshahr, Iran"
+      },
+      {
+        "year": "2006",
+        "title": "Fachhochschulabschluss in Software",
+        "category": "Education",
+        "description": "An der Azad University für das Studium der Software eingeschrieben. Am Robotik-Seminar teilgenommen und ein interaktives Content-Management-System als Abschlussprojekt entwickelt. 2009 mit einer Note von 16,66/20 abgeschlossen.",
+        "location": "Iran"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Der Newsletter",
+    "description": "Ein Newsletter für Ingenieure, die klarer über Software, Karriere und die Zukunft der Technologie nachdenken wollen. Geschrieben von Siavash aus Berlin, zweimal im Monat.",
+    "buildingTitle": "Was ich baue",
+    "buildingDesc": "Früher Zugang zu Projekten, Tools und Experimenten, bevor sie veröffentlicht werden.",
+    "readingTitle": "Was ich lese",
+    "readingDesc": "Die interessantesten Paper, Artikel und Bücher, auf die ich jede Woche stoße.",
+    "toolsTitle": "Tools & Systeme",
+    "toolsDesc": "Produktivitätssysteme, KI-Tools und Engineering-Workflows, die wirklich funktionieren.",
+    "noSpamTitle": "Kein Spam, niemals",
+    "noSpamDesc": "Ich schreibe, wenn ich etwas Wertvolles zu sagen habe. Meist ein- bis zweimal im Monat.",
+    "joinTitle": "Newsletter abonnieren",
+    "joinSubtitle": "Kostenlos. Kein Spam. Jederzeit abbestellbar.",
+    "firstName": "Vorname",
+    "emailAddress": "E-Mail-Adresse",
+    "subscribeCta": "Abonnieren — kostenlos",
+    "comingSoon": "Newsletter-Service noch nicht verbunden. Kommt bald."
+  },
+  "book": {
+    "title": "Termin buchen",
+    "description": "Ich reserviere jede Woche Zeit für 1:1-Sitzungen. Ob du eine Karriereentscheidung triffst, etwas Interessantes baust oder einfach einen frischen Blick brauchst — lass uns reden.",
+    "careerTitle": "Karriereberatung",
+    "careerDesc": "Karriereentscheidungen, internationale Jobsuche, Übergang zu Senior-/Principal-Rollen oder Orientierung bei der Immigration durch Tech.",
+    "codeReviewTitle": "Code- / Architekturreview",
+    "codeReviewDesc": "Führe mich durch dein System-Design, deine Codebasis oder deine Architekturentscheidungen. Ich gebe ehrliches Feedback auf Senior-Niveau.",
+    "openSessionTitle": "Offene Sitzung",
+    "openSessionDesc": "Keine Agenda erforderlich. Komm mit Fragen, Problemen oder Ideen. Gut für eine zweite Meinung zu allem Technischen.",
+    "pickTime": "Zeit auswählen",
+    "conductedVia": "Alle Sitzungen finden via Google Meet oder Zoom statt.",
+    "calendlyWidget": "Calendly-Buchungs-Widget",
+    "calendlyInfo": "Das Calendly-Widget erscheint hier, sobald es konfiguriert ist. Wende dich in der Zwischenzeit per E-Mail oder LinkedIn.",
+    "emailToSchedule": "Per E-Mail buchen",
+    "noteTime": "⏰ Sitzungen laufen in MEZ (Berliner Zeit). Andere Zeitzonen werden nach Möglichkeit berücksichtigt.",
+    "noteConfidential": "🎥 Alle Sitzungen sind vertraulich — ich nehme ohne Erlaubnis nichts auf.",
+    "notePrepare": "💬 Bitte komm mit einer konkreten Frage oder einem Thema, um das Beste aus unserer Zeit zu machen.",
+    "min30": "30 Min.",
+    "min45": "45 Min."
+  },
+  "contact": {
+    "label": "Kontakt aufnehmen",
+    "title": "Kontakt",
+    "description": "Ich bin offen für interessante Gespräche — Kooperationen, Vortragseinladungen, Feedback zu meinen Inhalten oder einfach Hallo sagen. Ich lese alles, kann aber nicht immer schnell antworten.",
+    "sendMessage": "Nachricht senden",
+    "findMeOn": "Folge mir auf",
+    "email": "E-Mail",
+    "nameLabel": "Name",
+    "namePlaceholder": "Dein Name",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "du@beispiel.de",
+    "messageLabel": "Nachricht",
+    "messagePlaceholder": "Was liegt dir auf dem Herzen?",
+    "submitButton": "Nachricht senden",
+    "formNotice": "Formular noch nicht verbunden — kommt bald. Oder wende dich direkt unten."
+  },
+  "books": {
+    "label": "Lesen",
+    "title": "Bücher",
+    "description": "Bücher, die ich gelesen habe und empfehle — Belletristik, Sachbücher und alles, was mein Denken über Engineering und Leben geprägt hat.",
+    "noBooks": "Noch keine Bücher hinzugefügt. Schau bald wieder vorbei."
+  },
+  "cv": {
+    "label": "Lebenslauf",
+    "description": "Lebenslauf von Siavash — Principal Software Engineer & Tech Lead in Berlin."
+  },
+  "languageSwitcher": {
+    "label": "Sprache",
+    "en": "English",
+    "fa": "فارسی",
+    "de": "Deutsch"
+  }
+}
