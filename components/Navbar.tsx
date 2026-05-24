@@ -1,30 +1,33 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname } from "@/lib/navigation";
+import { Link } from "@/lib/navigation";
+import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/timeline", label: "Timeline" },
-  { href: "/cv", label: "CV" },
-  { href: "/projects", label: "Projects" },
-  { href: "/youtube", label: "YouTube" },
-  { href: "/blog", label: "Blog" },
-  { href: "/articles", label: "Articles" },
-  { href: "/books", label: "Books" },
-  { href: "/contact", label: "Contact" },
-  { href: "/book", label: "Book a Call", highlight: true },
-];
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Navbar() {
+  const t = useTranslations("nav");
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const navLinks = [
+    { href: "/", label: t("home") },
+    { href: "/about", label: t("about") },
+    { href: "/timeline", label: t("timeline") },
+    { href: "/cv", label: t("cv") },
+    { href: "/projects", label: t("projects") },
+    { href: "/youtube", label: t("youtube") },
+    { href: "/blog", label: t("blog") },
+    { href: "/articles", label: t("articles") },
+    { href: "/books", label: t("books") },
+    { href: "/contact", label: t("contact") },
+    { href: "/book", label: t("bookCall"), highlight: true },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -82,11 +85,15 @@ export default function Navbar() {
                 </Link>
               )
             )}
-            <ThemeSwitcher />
+            <div className="flex items-center gap-1 ml-1 pl-1 border-l border-gray-200 dark:border-white/10">
+              <LanguageSwitcher />
+              <ThemeSwitcher />
+            </div>
           </div>
 
-          {/* Mobile: theme switcher + hamburger */}
+          {/* Mobile: language + theme + hamburger */}
           <div className="lg:hidden flex items-center gap-1">
+            <LanguageSwitcher />
             <ThemeSwitcher />
             <button
               className="p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
