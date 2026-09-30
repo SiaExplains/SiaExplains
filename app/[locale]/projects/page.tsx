@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { localeAlternates } from "@/lib/seo";
 import Image from "next/image";
 import { ExternalLink, Zap, Clock, Lightbulb, CalendarDays, Crown, Users } from "lucide-react";
 import { GithubIcon } from "@/components/SocialIcons";
@@ -10,7 +11,7 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("projects");
-  return { title: t("title"), description: t("description") };
+  return { title: t("title"), description: t("description"), alternates: await localeAlternates("/projects") };
 }
 
 const projects: (Project & { emoji?: string; image?: string; started?: string })[] = [

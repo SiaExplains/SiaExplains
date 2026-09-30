@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { localeAlternates } from "@/lib/seo";
 import Image from "next/image";
 import { Link } from "@/lib/navigation";
 import { ArrowRight, ArrowUpRight, BookOpen, Layers, Calendar, MapPin } from "lucide-react";
@@ -15,6 +17,10 @@ import TiltedCard from "@/components/motion/TiltedCard";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export const revalidate = 60;
+
+export async function generateMetadata(): Promise<Metadata> {
+  return { alternates: await localeAlternates("/") };
+}
 
 export default async function HomePage() {
   const t = await getTranslations("home");

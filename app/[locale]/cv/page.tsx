@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { localeAlternates } from "@/lib/seo";
 import { Briefcase, GraduationCap, Code2, Globe } from "lucide-react";
 import BlurText from "@/components/motion/BlurText";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("cv");
-  return { title: t("label"), description: t("description") };
+  return { title: t("label"), description: t("description"), alternates: await localeAlternates("/cv") };
 }
 
 const experience = [

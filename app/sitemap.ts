@@ -3,61 +3,66 @@ import { getAllPosts } from "@/lib/mdx";
 import { getBlogPosts } from "@/lib/posts";
 import { routing } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/site";
+import { languageAlternates, localizedUrl } from "@/lib/seo";
 
-const BASE_URL = SITE_URL;
+type ChangeFrequency = NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
 
-const staticPaths = [
-  { path: "", priority: 1, changeFrequency: "weekly" as const },
-  { path: "/blog", priority: 0.8, changeFrequency: "weekly" as const },
-  { path: "/articles", priority: 0.8, changeFrequency: "weekly" as const },
-  { path: "/about", priority: 0.7, changeFrequency: "monthly" as const },
-  { path: "/projects", priority: 0.7, changeFrequency: "monthly" as const },
-  { path: "/youtube", priority: 0.7, changeFrequency: "weekly" as const },
-  { path: "/timeline", priority: 0.6, changeFrequency: "monthly" as const },
-  { path: "/contact", priority: 0.5, changeFrequency: "yearly" as const },
-  { path: "/newsletter", priority: 0.5, changeFrequency: "yearly" as const },
-  { path: "/book", priority: 0.5, changeFrequency: "monthly" as const },
+const staticPaths: { path: string; priority: number; changeFrequency: ChangeFrequency }[] = [
+  { path: "/", priority: 1, changeFrequency: "weekly" },
+  { path: "/blog", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/articles", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/about", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/cv", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/projects", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/youtube", priority: 0.7, changeFrequency: "weekly" },
+  { path: "/timeline", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/books", priority: 0.5, changeFrequency: "monthly" },
+  { path: "/contact", priority: 0.5, changeFrequency: "yearly" },
+  { path: "/newsletter", priority: 0.5, changeFrequency: "yearly" },
+  { path: "/book", priority: 0.5, changeFrequency: "monthly" },
 ];
 
 export const revalidate = 3600;
 
+/** One entry per locale, each listing every language version (hreflang) of the same page. */
+function localizedEntries(
+  path: string,
+  opts: { lastModified: Date; changeFrequency: ChangeFrequency; priority: number }
+): MetadataRoute.Sitemap {
+  const languages = languageAlternates(path);
+  return routing.locales.map((locale) => ({
+    url: localizedUrl(path, locale),
+    ...opts,
+    alternates: { languages },
+  }));
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const now = new Date();
+
+  const staticRoutes = staticPaths.flatMap(({ path, priority, changeFrequency }) =>
+    localizedEntries(path, { lastModified: now, changeFrequency, priority })
+  );
+
   const blogPosts = (await getBlogPosts()).flatMap((post) =>
-    routing.locales.map((locale) => ({
-      url: locale === routing.defaultLocale
-        ? `${BASE_URL}/blog/${post.slug}`
-        : `${BASE_URL}/${locale}/blog/${post.slug}`,
+    localizedEntries(`/blog/${post.slug}`, {
       lastModified: new Date(post.date),
-      changeFrequency: "monthly" as const,
+      changeFrequency: "monthly",
       priority: 0.7,
-    }))
+    })
   );
 
   const articles = getAllPosts("articles").flatMap((post) =>
-    routing.locales.map((locale) => ({
-      url: locale === routing.defaultLocale
-        ? `${BASE_URL}/articles/${post.slug}`
-        : `${BASE_URL}/${locale}/articles/${post.slug}`,
+    localizedEntries(`/articles/${post.slug}`, {
       lastModified: new Date(post.date),
-      changeFrequency: "monthly" as const,
+      changeFrequency: "monthly",
       priority: 0.7,
-    }))
+    })
   );
 
-  const staticRoutes: MetadataRoute.Sitemap = staticPaths.flatMap(({ path, priority, changeFrequency }) =>
-    routing.locales.map((locale) => ({
-      url: locale === routing.defaultLocale
-        ? `${BASE_URL}${path}`
-        : `${BASE_URL}/${locale}${path}`,
-      lastModified: new Date(),
-      changeFrequency,
-      priority,
-    }))
-  );
-
-  // /link is a single English page outside the locale tree.
+  // /link is a single English page outside the locale tree, so it has no language alternates.
   const linkPage: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/link`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/link`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
   ];
 
   return [...staticRoutes, ...linkPage, ...blogPosts, ...articles];
