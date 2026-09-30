@@ -4,7 +4,7 @@ import { localeAlternates } from "@/lib/seo";
 import { Link } from "@/lib/navigation";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Calendar, Clock, Tag } from "lucide-react";
-import { getBlogPost, getBlogPosts } from "@/lib/posts";
+import { getBlogPost } from "@/lib/posts";
 import { formatDate } from "@/lib/utils";
 import MdxContent from "@/components/MdxContent";
 import BlurText from "@/components/motion/BlurText";
@@ -12,11 +12,9 @@ import { Reveal } from "@/components/motion/Reveal";
 
 type Props = { params: Promise<{ slug: string; locale: string }> };
 
-export const revalidate = 60;
-
-export async function generateStaticParams() {
-  return (await getBlogPosts()).map((p) => ({ slug: p.slug }));
-}
+// Rendered per request, like every other locale page: next-intl reads the request to resolve the
+// locale, and a statically generated page that does that at runtime returns 500 on Vercel.
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
