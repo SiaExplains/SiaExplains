@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.3 — 2026-09-30
+
+### Fixed
+- Blog posts and articles returned a 500 error on the live site. Their pages were built ahead of time, but they read the request to work out the language, which Vercel rejects at runtime. They are now rendered on each request like every other page, so admin-written posts also show up the moment they're published.
+
 ## 0.4.2 — 2026-09-30
 
 ### Fixed
