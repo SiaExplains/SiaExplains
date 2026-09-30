@@ -14,6 +14,10 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
+  async redirects() {
+    // People type the plural; the link-in-bio page lives at /link.
+    return [{ source: "/links", destination: "/link", permanent: true }];
+  },
 };
 
 export default withNextIntl(nextConfig);
