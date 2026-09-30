@@ -9,35 +9,35 @@ import { TimelineEvent } from "@/types";
 const categoryConfig = {
   Education: {
     icon: GraduationCap,
-    color: "text-brand-500/80 dark:text-brand-300",
-    bg: "bg-brand-400/5",
-    border: "border-brand-400/15",
-    dot: "bg-brand-300 dark:bg-brand-300",
-    glow: "shadow-brand-500/20",
+    color: "text-accent-700 dark:text-accent-300",
+    bg: "bg-accent-500/[0.06]",
+    border: "border-accent-500/20",
+    dot: "bg-accent-400",
+    glow: "shadow-accent-500/40",
   },
   Career: {
     icon: Briefcase,
-    color: "text-brand-700 dark:text-brand-400",
-    bg: "bg-brand-400/10",
+    color: "text-brand-700 dark:text-brand-300",
+    bg: "bg-brand-400/[0.08]",
     border: "border-brand-400/25",
-    dot: "bg-brand-500 dark:bg-brand-400",
-    glow: "shadow-brand-500/30",
+    dot: "bg-brand-400",
+    glow: "shadow-brand-500/40",
   },
   Company: {
     icon: Rocket,
-    color: "text-brand-700 dark:text-brand-300",
-    bg: "bg-brand-400/[0.08]",
-    border: "border-brand-400/20",
-    dot: "bg-brand-400 dark:bg-brand-300",
-    glow: "shadow-brand-500/25",
+    color: "text-orange-700 dark:text-orange-300",
+    bg: "bg-orange-400/[0.07]",
+    border: "border-orange-400/25",
+    dot: "bg-orange-400",
+    glow: "shadow-orange-500/40",
   },
   Life: {
     icon: Heart,
-    color: "text-brand-700 dark:text-brand-400",
-    bg: "bg-brand-400/[0.06]",
-    border: "border-brand-400/15",
-    dot: "bg-brand-400 dark:bg-brand-400",
-    glow: "shadow-brand-500/20",
+    color: "text-accent-700 dark:text-accent-300",
+    bg: "bg-accent-600/[0.06]",
+    border: "border-accent-600/20",
+    dot: "bg-accent-600",
+    glow: "shadow-accent-600/40",
   },
 };
 
@@ -48,7 +48,7 @@ function EventLink({ url, label, className }: { url: string; label: string; clas
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "inline-flex items-center gap-1.5 text-xs text-accent-600 dark:text-accent-300 hover:text-accent-500 dark:hover:text-accent-200 transition-colors",
+        "link-draw inline-flex items-center gap-1.5 text-xs font-medium text-accent-700 dark:text-accent-300",
         className
       )}
     >
@@ -88,7 +88,7 @@ function TimelineItem({
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
             className={cn(
-              "max-w-sm rounded-2xl border p-5 text-right",
+              "max-w-sm rounded-2xl border p-5 text-right transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-20px_rgba(139,92,246,0.5)]",
               cfg.bg,
               cfg.border
             )}
@@ -126,14 +126,14 @@ function TimelineItem({
           animate={inView ? { scale: 1, opacity: 1 } : {}}
           transition={{ duration: 0.4, delay: index * 0.08 + 0.1, type: "spring", stiffness: 200 }}
           className={cn(
-            "w-4 h-4 rounded-full border-2 border-white dark:border-[#111008] shadow-lg z-10 mt-5",
+            "w-4 h-4 rounded-full border-2 border-white dark:border-surface-950 shadow-lg z-10 mt-5",
             cfg.dot,
             cfg.glow,
             "shadow-[0_0_12px_2px]"
           )}
         />
         {!isLast && (
-          <div className="w-px flex-1 bg-gradient-to-b from-gray-300/60 dark:from-white/10 to-transparent min-h-[60px]" />
+          <div className="w-px flex-1 bg-gradient-to-b from-accent-500/40 to-transparent min-h-[60px]" />
         )}
       </div>
 
@@ -145,7 +145,7 @@ function TimelineItem({
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
             className={cn(
-              "max-w-sm rounded-2xl border p-5",
+              "max-w-sm rounded-2xl border p-5 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-20px_rgba(139,92,246,0.5)]",
               cfg.bg,
               cfg.border
             )}
@@ -226,7 +226,7 @@ export default function Timeline({
   return (
     <div className="relative">
       {/* Vertical line (desktop) */}
-      <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gray-300/60 dark:via-white/10 to-transparent" />
+      <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-accent-500/30 to-transparent" />
 
       <div className="space-y-8 md:space-y-12">
         {events.map((event, i) => (

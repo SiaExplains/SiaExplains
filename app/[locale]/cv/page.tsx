@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Briefcase, GraduationCap, Code2, Globe } from "lucide-react";
+import BlurText from "@/components/motion/BlurText";
+import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("cv");
@@ -40,9 +42,10 @@ export default async function CvPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="mb-12 pb-8 border-b border-gray-200 dark:border-white/5">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">Siavash Ghanbari</h1>
-        <p className="text-brand-700 dark:text-brand-400 text-lg mb-1">Principal Software Engineer | Manager</p>
+      <div className="relative mb-12 pb-8 border-b border-gray-200 dark:border-white/5">
+        <div aria-hidden className="bg-dots pointer-events-none absolute -inset-x-10 -top-16 h-56" />
+        <BlurText as="h1" text="Siavash Ghanbari" className="relative text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-2" />
+        <p className="relative text-gradient text-lg font-medium mb-1 inline-block">Principal Software Engineer | Manager</p>
         <p className="text-gray-500 text-sm">Berlin, Germany · siaexplains@gmail.com · siaexplains.com</p>
         <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
           Spearheaded the delivery of engineering solutions for web, mobile, and native applications, leveraging ReactJS, NodeJS, AWS, and MongoDB, resulting in{" "}
@@ -51,20 +54,24 @@ export default async function CvPage() {
         </p>
       </div>
 
-      <section className="mb-12">
-        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-500 dark:text-gray-600 mb-6">
-          <Briefcase size={14} />
+      <Reveal as="section" className="mb-12">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-500 mb-6">
+          <Briefcase size={14} className="text-accent-500" />
           {t("label") === "Lebenslauf" ? "Berufserfahrung" : t("label") === "رزومه" ? "تجربه" : "Experience"}
         </div>
-        <div className="space-y-8">
+        <RevealGroup className="space-y-8">
           {experience.map((job) => (
-            <div key={`${job.company}-${job.period}`} className="border-l-2 border-gray-200 dark:border-white/5 pl-5 hover:border-brand-500/40 transition-colors">
+            <RevealItem
+              key={`${job.company}-${job.period}`}
+              className="group relative border-s-2 border-gray-200 dark:border-white/5 ps-5 transition-colors hover:border-accent-500/60"
+            >
+              <span aria-hidden className="absolute -start-[5px] top-1.5 h-2 w-2 rounded-full bg-gray-300 dark:bg-gray-700 transition-all duration-300 group-hover:scale-150 group-hover:bg-brand-400 group-hover:shadow-[0_0_12px_rgba(245,184,46,0.8)]" />
               <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white">{job.role}</h3>
-                  <p className="text-brand-700 dark:text-brand-400 text-sm">{job.company}</p>
+                  <p className="text-accent-700 dark:text-accent-300 text-sm">{job.company}</p>
                 </div>
-                <div className="text-right">
+                <div className="text-end">
                   <p className="text-sm text-gray-500">{job.period}</p>
                   <p className="text-xs text-gray-500 dark:text-gray-600">{job.location}</p>
                 </div>
@@ -72,35 +79,35 @@ export default async function CvPage() {
               <ul className="space-y-1 mt-3">
                 {job.bullets.map((b, i) => (
                   <li key={i} className="text-sm text-gray-600 dark:text-gray-400 flex gap-2">
-                    <span className="text-brand-700 dark:text-brand-400 mt-1 shrink-0">›</span>
+                    <span className="text-brand-600 dark:text-brand-400 mt-1 shrink-0 rtl:rotate-180">›</span>
                     {b}
                   </li>
                 ))}
               </ul>
-            </div>
+            </RevealItem>
           ))}
-        </div>
-      </section>
+        </RevealGroup>
+      </Reveal>
 
-      <section className="mb-12">
-        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-500 dark:text-gray-600 mb-6">
-          <GraduationCap size={14} />
+      <Reveal as="section" className="mb-12">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-500 mb-6">
+          <GraduationCap size={14} className="text-accent-500" />
           {t("label") === "Lebenslauf" ? "Ausbildung" : t("label") === "رزومه" ? "تحصیلات" : "Education"}
         </div>
         <div className="space-y-4">
           {education.map((edu) => (
-            <div key={edu.institution} className="border-l-2 border-gray-200 dark:border-white/5 pl-5">
+            <div key={edu.institution} className="border-s-2 border-gray-200 dark:border-white/5 ps-5 transition-colors hover:border-accent-500/60">
               <h3 className="font-semibold text-gray-900 dark:text-white">{edu.degree}</h3>
-              <p className="text-brand-700 dark:text-brand-400 text-sm">{edu.institution}</p>
+              <p className="text-accent-700 dark:text-accent-300 text-sm">{edu.institution}</p>
               {edu.note && <p className="text-sm text-gray-500 dark:text-gray-600 mt-1 italic">{edu.note}</p>}
             </div>
           ))}
         </div>
-      </section>
+      </Reveal>
 
-      <section className="mb-12">
-        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-500 dark:text-gray-600 mb-6">
-          <Code2 size={14} />
+      <Reveal as="section" className="mb-12">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-500 mb-6">
+          <Code2 size={14} className="text-accent-500" />
           {t("label") === "Lebenslauf" ? "Fähigkeiten" : t("label") === "رزومه" ? "مهارت‌ها" : "Skills"}
         </div>
         <div className="space-y-4">
@@ -109,7 +116,7 @@ export default async function CvPage() {
               <span className="text-sm text-gray-500 dark:text-gray-600 w-32 shrink-0">{category}</span>
               <div className="flex flex-wrap gap-2">
                 {items.map((skill) => (
-                  <span key={skill} className="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400">
+                  <span key={skill} className="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent-500/40 hover:bg-accent-500/10 hover:text-accent-700 dark:hover:text-accent-300 cursor-default">
                     {skill}
                   </span>
                 ))}
@@ -117,22 +124,22 @@ export default async function CvPage() {
             </div>
           ))}
         </div>
-      </section>
+      </Reveal>
 
-      <section>
-        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-500 dark:text-gray-600 mb-6">
-          <Globe size={14} />
+      <Reveal as="section">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-500 mb-6">
+          <Globe size={14} className="text-accent-500" />
           {t("label") === "Lebenslauf" ? "Sprachen" : t("label") === "رزومه" ? "زبان‌ها" : "Languages"}
         </div>
         <div className="flex flex-wrap gap-4">
           {languages.map(({ lang, level }) => (
-            <div key={lang} className="px-4 py-2 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/5">
+            <div key={lang} className="card card-interactive px-4 py-2">
               <p className="text-sm font-medium text-gray-900 dark:text-white">{lang}</p>
               <p className="text-xs text-gray-500">{level}</p>
             </div>
           ))}
         </div>
-      </section>
+      </Reveal>
     </div>
   );
 }

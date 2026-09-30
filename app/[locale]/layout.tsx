@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Instrument_Serif, Vazirmatn } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -8,6 +8,7 @@ import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ThemeProvider from "@/components/ThemeProvider";
+import MotionProvider from "@/components/motion/MotionProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,6 +18,18 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+});
+
+const vazirmatn = Vazirmatn({
+  variable: "--font-vazirmatn",
+  subsets: ["arabic", "latin"],
 });
 
 export const metadata: Metadata = {
@@ -66,14 +79,16 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} ${vazirmatn.variable} antialiased min-h-screen flex flex-col`}
         style={{ backgroundColor: "var(--background)", color: "var(--foreground)" }}
       >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
-            <Navbar />
-            <main className="flex-1 pt-16">{children}</main>
-            <Footer />
+            <MotionProvider>
+              <Navbar />
+              <main className="flex-1 pt-16">{children}</main>
+              <Footer />
+            </MotionProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

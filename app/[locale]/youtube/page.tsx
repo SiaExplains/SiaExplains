@@ -3,6 +3,10 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Play, ExternalLink, TrendingUp } from "lucide-react";
 import { YoutubeIcon } from "@/components/SocialIcons";
+import BlurText from "@/components/motion/BlurText";
+import Magnet from "@/components/motion/Magnet";
+import SpotlightCard from "@/components/motion/SpotlightCard";
+import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("youtube");
@@ -36,12 +40,12 @@ export default async function YoutubePage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Header */}
-      <div className="flex flex-col md:flex-row gap-8 items-start mb-16 pb-12 border-b border-gray-200 dark:border-white/5">
-        <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-brand-600 to-brand-400 flex items-center justify-center shrink-0">
+      <Reveal className="flex flex-col md:flex-row gap-8 items-start mb-16 pb-12 border-b border-gray-200 dark:border-white/5">
+        <div className="animate-float w-20 h-20 rounded-2xl bg-gradient-to-br from-red-500 via-brand-500 to-accent-600 flex items-center justify-center shrink-0 shadow-[0_18px_40px_-14px_rgba(139,92,246,0.6)]">
           <YoutubeIcon size={36} className="text-white" />
         </div>
         <div className="flex-1">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">SiaExplains</h1>
+          <BlurText as="h1" text="SiaExplains" animateBy="letters" delay={40} className="text-4xl font-bold text-gray-900 dark:text-white mb-2" />
           <div className="flex flex-wrap gap-3 mb-4">
             <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 text-gray-500">
               {t("langBadge")}
@@ -54,69 +58,68 @@ export default async function YoutubePage() {
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl mb-5">
             {t("channelDesc")}
           </p>
-          <a
-            href="https://youtube.com/@SiaExplains"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-400 hover:bg-brand-300 text-brand-900 font-medium transition-colors text-sm"
-          >
-            <YoutubeIcon size={16} />
-            {t("subscribe")}
-            <ExternalLink size={12} />
-          </a>
+          <Magnet>
+            <a href="https://youtube.com/@SiaExplains" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              <YoutubeIcon size={16} />
+              {t("subscribe")}
+              <ExternalLink size={12} />
+            </a>
+          </Magnet>
         </div>
-      </div>
+      </Reveal>
 
       {/* Videos */}
       <section className="mb-14">
         <p className="text-accent-600 dark:text-accent-300 text-sm font-medium tracking-wide uppercase mb-6">
           {t("featuredVideos")}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <RevealGroup className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {videos.map((video) => (
-            <a
-              key={video.id}
-              href={`https://www.youtube.com/watch?v=${video.id}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group rounded-2xl border border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-white/5 overflow-hidden hover:border-brand-400/40 dark:hover:border-brand-400/20 transition-colors"
-            >
-              <div className="aspect-video relative overflow-hidden bg-gray-200 dark:bg-white/5">
-                <Image
-                  src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
-                  alt={video.titleEn}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-colors">
-                  <div className="w-12 h-12 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Play size={20} className="text-white ml-1" fill="white" />
+            <RevealItem key={video.id}>
+              <a
+                key={video.id}
+                href={`https://www.youtube.com/watch?v=${video.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card card-interactive group block overflow-hidden"
+              >
+                <div className="aspect-video relative overflow-hidden bg-gray-200 dark:bg-white/5">
+                  <Image
+                    src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
+                    alt={video.titleEn}
+                    fill
+                    className="img-hover object-cover"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/0 to-black/0 group-hover:from-accent-900/50 group-hover:to-black/10 transition-colors duration-500">
+                    <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 shadow-xl">
+                      <Play size={22} className="text-accent-700 ms-1" fill="currentColor" />
+                    </div>
                   </div>
+                  {video.topPick && (
+                    <span className="absolute top-2 left-2 inline-flex items-center gap-1 text-xs bg-brand-400 text-brand-900 font-semibold px-2 py-0.5 rounded-full">
+                      <TrendingUp size={10} />
+                      {t("mostViewed")}
+                    </span>
+                  )}
                 </div>
-                {video.topPick && (
-                  <span className="absolute top-2 left-2 inline-flex items-center gap-1 text-xs bg-brand-400 text-brand-900 font-semibold px-2 py-0.5 rounded-full">
-                    <TrendingUp size={10} />
-                    {t("mostViewed")}
-                  </span>
-                )}
-              </div>
-              <div className="p-4">
-                <p className="font-semibold text-gray-900 dark:text-white text-sm leading-snug mb-0.5 group-hover:text-brand-700 dark:group-hover:text-brand-400 transition-colors" dir="rtl">
-                  {video.title}
-                </p>
-                <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">{video.titleEn}</p>
-                <p className="text-xs text-gray-400 dark:text-gray-600">{video.views} views · {video.date}</p>
-              </div>
-            </a>
+                <div className="p-4">
+                  <p className="font-semibold text-gray-900 dark:text-white text-sm leading-snug mb-0.5 group-hover:text-accent-700 dark:group-hover:text-accent-300 transition-colors" dir="rtl">
+                    {video.title}
+                  </p>
+                  <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">{video.titleEn}</p>
+                  <p className="text-xs text-gray-400 dark:text-gray-600">{video.views} views · {video.date}</p>
+                </div>
+              </a>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
         <div className="mt-6 text-center">
           <a
             href="https://youtube.com/@SiaExplains"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-accent-600 dark:text-accent-300 hover:text-accent-500 dark:hover:text-accent-200 transition-colors"
+            className="link-draw inline-flex items-center gap-2 text-sm font-medium text-accent-700 dark:text-accent-300"
           >
             {t("viewAll")}
             <ExternalLink size={13} />
@@ -129,33 +132,29 @@ export default async function YoutubePage() {
         <p className="text-accent-600 dark:text-accent-300 text-sm font-medium tracking-wide uppercase mb-6">
           {t("whatICover")}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <RevealGroup className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {topics.map((topic) => (
-            <div
-              key={topic.title}
-              className="rounded-2xl border border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-white/5 p-5 hover:border-gray-300 dark:hover:border-white/10 transition-colors"
-            >
-              <span className="text-2xl mb-3 block">{topic.emoji}</span>
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-1.5">{topic.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{topic.description}</p>
-            </div>
+            <RevealItem key={topic.title}>
+              <SpotlightCard className="group h-full p-5">
+                <span className="text-2xl mb-3 block transition-transform duration-500 group-hover:scale-125 group-hover:-rotate-12 origin-bottom-left">{topic.emoji}</span>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-1.5">{topic.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{topic.description}</p>
+              </SpotlightCard>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </section>
 
       {/* CTA */}
-      <div className="mt-12 p-6 rounded-2xl bg-brand-400/10 border border-brand-400/20 text-center">
+      <Reveal className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-brand-400/15 via-orange-400/10 to-accent-500/15 border border-accent-500/20 text-center">
         <p className="text-gray-700 dark:text-gray-300 text-sm mb-3">{t("ctaText")}</p>
-        <a
-          href="https://youtube.com/@SiaExplains"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-400 hover:bg-brand-300 text-brand-900 font-medium text-sm transition-colors"
-        >
-          <YoutubeIcon size={15} />
-          {t("followJourney")}
-        </a>
-      </div>
+        <Magnet>
+          <a href="https://youtube.com/@SiaExplains" target="_blank" rel="noopener noreferrer" className="btn btn-violet">
+            <YoutubeIcon size={15} />
+            {t("followJourney")}
+          </a>
+        </Magnet>
+      </Reveal>
     </div>
   );
 }

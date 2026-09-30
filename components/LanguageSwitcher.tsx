@@ -5,6 +5,8 @@ import { usePathname, useRouter } from "@/lib/navigation";
 import { useState, useRef, useEffect } from "react";
 import { Globe, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
+import { MICRO } from "@/lib/motion";
 
 const locales = [
   { code: "en", flag: "🇬🇧", label: "English", short: "EN" },
@@ -43,7 +45,7 @@ export default function LanguageSwitcher() {
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label={t("label")}
-        className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+        className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
       >
         <Globe size={14} />
         <span className="hidden sm:inline">{current.flag}</span>
@@ -54,28 +56,35 @@ export default function LanguageSwitcher() {
         />
       </button>
 
+      <AnimatePresence>
       {open && (
-        <div className="absolute right-0 top-full mt-1 w-36 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#14110a] shadow-lg z-50 overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, y: -6, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: -6, scale: 0.95 }}
+          transition={MICRO}
+          className="absolute right-0 rtl:right-auto rtl:left-0 top-full mt-1 w-36 origin-top rounded-xl border border-gray-200 dark:border-white/10 bg-white/95 dark:bg-surface-900/95 backdrop-blur-xl shadow-[0_18px_40px_-16px_rgba(139,92,246,0.45)] z-50 overflow-hidden">
           {locales.map(({ code, flag, label }) => (
             <button
               key={code}
               onClick={() => switchLocale(code)}
               className={cn(
-                "w-full flex items-center gap-2.5 px-3 py-2.5 text-sm transition-colors text-left",
+                "w-full flex items-center gap-2.5 px-3 py-2.5 text-sm transition-all text-start hover:ps-4",
                 code === locale
-                  ? "text-brand-700 dark:text-brand-400 bg-brand-400/10"
+                  ? "text-accent-700 dark:text-accent-300 bg-accent-500/10"
                   : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5"
               )}
             >
               <span>{flag}</span>
               <span>{label}</span>
               {code === locale && (
-                <span className="ml-auto w-1.5 h-1.5 rounded-full bg-brand-400" />
+                <span className="ms-auto w-1.5 h-1.5 rounded-full bg-gradient-to-r from-brand-400 to-accent-500" />
               )}
             </button>
           ))}
-        </div>
+        </motion.div>
       )}
+      </AnimatePresence>
     </div>
   );
 }

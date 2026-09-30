@@ -3,6 +3,8 @@ import { getTranslations } from "next-intl/server";
 import { Mail } from "lucide-react";
 import { YoutubeIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/SocialIcons";
 import ContactForm from "@/components/ContactForm";
+import PageHeader from "@/components/PageHeader";
+import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("contact");
@@ -53,56 +55,50 @@ export default async function ContactPage() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="mb-12">
-        <p className="text-accent-600 dark:text-accent-300 text-sm font-medium tracking-wide uppercase mb-3">
-          {t("label")}
-        </p>
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{t("title")}</h1>
-        <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl">
-          {t("description")}
-        </p>
-      </div>
+      <PageHeader label={t("label")} title={t("title")} description={t("description")} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
+        <Reveal>
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-5">
             {t("sendMessage")}
           </h2>
           <ContactForm />
-        </div>
+        </Reveal>
 
-        <div>
+        <Reveal delay={0.1}>
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-5">
             {t("findMeOn")}
           </h2>
-          <div className="space-y-3">
+          <RevealGroup className="space-y-3">
             {socials.map(({ label, handle, href, icon: Icon, color, bg, border }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`flex items-center gap-3 p-4 rounded-xl border ${bg} ${border} hover:border-gray-300 dark:hover:border-white/20 transition-colors`}
-              >
-                <div className={`p-2 rounded-lg ${bg}`}>
-                  <Icon size={18} className={color} />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-gray-900 dark:text-white">{label}</p>
-                  <p className="text-xs text-gray-500">{handle}</p>
-                </div>
-              </a>
+              <RevealItem key={label}>
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`group flex items-center gap-3 p-4 rounded-xl border ${bg} ${border} transition-all duration-300 hover:-translate-y-0.5 hover:ps-5 hover:border-accent-500/40 hover:shadow-[0_14px_30px_-16px_rgba(139,92,246,0.55)]`}
+                >
+                  <div className={`p-2 rounded-lg ${bg} transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6`}>
+                    <Icon size={18} className={color} />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-900 dark:text-white">{label}</p>
+                    <p className="text-xs text-gray-500">{handle}</p>
+                  </div>
+                </a>
+              </RevealItem>
             ))}
-          </div>
+          </RevealGroup>
 
           <div className="mt-6 p-4 rounded-xl border border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-white/5">
             <div className="flex items-center gap-2 mb-1">
               <Mail size={14} className="text-brand-700 dark:text-brand-400" />
               <span className="text-sm font-medium text-gray-900 dark:text-white">{t("email")}</span>
             </div>
-            <p className="text-sm text-gray-500">siaexplains@gmail.com</p>
+            <a href="mailto:siaexplains@gmail.com" className="link-draw text-sm text-gray-500 hover:text-accent-700 dark:hover:text-accent-300">siaexplains@gmail.com</a>
           </div>
-        </div>
+        </Reveal>
       </div>
     </div>
   );

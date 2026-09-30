@@ -18,6 +18,8 @@ const eslintConfig = [
       "out/**",
       "build/**",
       "next-env.d.ts",
+      // Local Claude Code worktrees are full repo copies (with their own .next); never lint them.
+      ".claude/**",
     ],
   },
 ];

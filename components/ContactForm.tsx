@@ -14,7 +14,7 @@ export default function ContactForm() {
           id="contact-name"
           type="text"
           placeholder="Your name"
-          className="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 text-sm focus:outline-none focus:border-brand-500/50 transition-colors"
+          className="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 text-sm focus:outline-none focus:border-accent-500/60 focus:ring-4 focus:ring-accent-500/15 hover:border-gray-300 dark:hover:border-white/20 transition-all duration-200"
         />
       </div>
       <div>
@@ -25,7 +25,7 @@ export default function ContactForm() {
           id="contact-email"
           type="email"
           placeholder="you@example.com"
-          className="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 text-sm focus:outline-none focus:border-brand-500/50 transition-colors"
+          className="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 text-sm focus:outline-none focus:border-accent-500/60 focus:ring-4 focus:ring-accent-500/15 hover:border-gray-300 dark:hover:border-white/20 transition-all duration-200"
         />
       </div>
       <div>
@@ -36,12 +36,12 @@ export default function ContactForm() {
           id="contact-message"
           rows={5}
           placeholder="What's on your mind?"
-          className="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 text-sm focus:outline-none focus:border-brand-500/50 transition-colors resize-none"
+          className="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 text-sm focus:outline-none focus:border-accent-500/60 focus:ring-4 focus:ring-accent-500/15 hover:border-gray-300 dark:hover:border-white/20 transition-all duration-200 resize-none"
         />
       </div>
       <button
         type="submit"
-        className="w-full py-3 rounded-lg bg-brand-400 hover:bg-brand-300 text-brand-900 font-medium text-sm transition-colors"
+        className="btn btn-primary w-full justify-center !py-3"
       >
         Send message
       </button>

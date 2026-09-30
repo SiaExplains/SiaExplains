@@ -15,25 +15,25 @@ const components = {
   ),
   a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
     <a
-      className="text-brand-700 dark:text-brand-400 hover:text-brand-600 dark:hover:text-brand-300 underline underline-offset-2 transition-colors"
+      className="link-draw font-medium text-accent-700 dark:text-accent-300 hover:text-accent-600 dark:hover:text-accent-200"
       {...props}
     />
   ),
   code: (props: React.HTMLAttributes<HTMLElement>) => (
     <code
-      className="bg-gray-100 dark:bg-white/5 text-brand-700 dark:text-brand-300 px-1.5 py-0.5 rounded text-sm font-mono"
+      className="bg-gray-100 dark:bg-white/5 text-accent-700 dark:text-accent-300 px-1.5 py-0.5 rounded text-sm font-mono"
       {...props}
     />
   ),
   pre: (props: React.HTMLAttributes<HTMLPreElement>) => (
     <pre
-      className="bg-gray-100 dark:bg-[#111118] border border-gray-200 dark:border-white/10 rounded-xl p-4 overflow-x-auto my-6 text-sm"
+      className="bg-gray-100 dark:bg-surface-900 border border-gray-200 dark:border-white/10 rounded-xl p-4 overflow-x-auto my-6 text-sm"
       {...props}
     />
   ),
   blockquote: (props: React.HTMLAttributes<HTMLQuoteElement>) => (
     <blockquote
-      className="border-l-4 border-brand-500/50 pl-4 my-4 text-gray-600 dark:text-gray-400 italic"
+      className="border-s-4 border-accent-500/60 bg-accent-500/5 rounded-e-lg ps-4 py-2 my-4 text-gray-600 dark:text-gray-400 italic"
       {...props}
     />
   ),

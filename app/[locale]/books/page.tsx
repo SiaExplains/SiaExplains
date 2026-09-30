@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Book } from "@/types";
+import PageHeader from "@/components/PageHeader";
+import SpotlightCard from "@/components/motion/SpotlightCard";
+import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("books");
@@ -24,7 +27,7 @@ function StarRating({ rating }: { rating: number }) {
   return (
     <div className="flex gap-0.5">
       {[1, 2, 3, 4, 5].map((star) => (
-        <span key={star} className={star <= rating ? "text-brand-700 dark:text-brand-400" : "text-gray-300 dark:text-gray-700"}>
+        <span key={star} className={star <= rating ? "text-brand-500 dark:text-brand-400" : "text-gray-300 dark:text-gray-700"}>
           ★
         </span>
       ))}
@@ -37,45 +40,41 @@ export default async function BooksPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="mb-12">
-        <p className="text-accent-600 dark:text-accent-300 text-sm font-medium tracking-wide uppercase mb-3">
-          {t("label")}
-        </p>
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{t("title")}</h1>
-        <p className="text-gray-600 dark:text-gray-400 text-lg">{t("description")}</p>
-      </div>
+      <PageHeader label={t("label")} title={t("title")} description={t("description")} />
 
-      <div className="flex flex-wrap gap-2 mb-10">
-        <span className="text-xs px-3 py-1 rounded-full bg-brand-400/10 border border-brand-400/20 text-brand-700 dark:text-brand-400">
+      <Reveal className="flex flex-wrap gap-2 mb-10">
+        <span className="text-xs px-3 py-1 rounded-full bg-accent-500/10 border border-accent-500/25 text-accent-700 dark:text-accent-300">
           All ({books.length})
         </span>
         {categories.map((cat) => (
-          <span key={cat} className="text-xs px-3 py-1 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/5 text-gray-500">
+          <span key={cat} className="text-xs px-3 py-1 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/5 text-gray-500 transition-all hover:-translate-y-0.5 hover:border-brand-400/40 hover:text-brand-700 dark:hover:text-brand-300">
             {cat} ({books.filter((b) => b.category === cat).length})
           </span>
         ))}
-      </div>
+      </Reveal>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <RevealGroup className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {books.map((book) => (
-          <div key={book.title} className="rounded-2xl border border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-white/5 p-5 hover:border-gray-300 dark:hover:border-white/10 transition-colors">
-            <div className="flex items-start gap-3 mb-3">
-              <span className="text-3xl shrink-0">{book.emoji}</span>
-              <div className="flex-1 min-w-0">
-                <h3 className="font-semibold text-gray-900 dark:text-white text-sm leading-snug mb-0.5">{book.title}</h3>
-                <p className="text-xs text-gray-500">{book.author}</p>
+          <RevealItem key={book.title}>
+            <SpotlightCard className="group h-full p-5">
+              <div className="flex items-start gap-3 mb-3">
+                <span className="text-3xl shrink-0 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6">{book.emoji}</span>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-semibold text-gray-900 dark:text-white text-sm leading-snug mb-0.5">{book.title}</h3>
+                  <p className="text-xs text-gray-500">{book.author}</p>
+                </div>
               </div>
-            </div>
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-white/5 text-gray-500">{book.category}</span>
-              <StarRating rating={book.rating} />
-            </div>
-            {book.notes && (
-              <p className="text-xs text-gray-500 leading-relaxed border-t border-gray-200 dark:border-white/5 pt-3">{book.notes}</p>
-            )}
-          </div>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-white/5 text-gray-500">{book.category}</span>
+                <StarRating rating={book.rating} />
+              </div>
+              {book.notes && (
+                <p className="text-xs text-gray-500 leading-relaxed border-t border-gray-200 dark:border-white/5 pt-3">{book.notes}</p>
+              )}
+            </SpotlightCard>
+          </RevealItem>
         ))}
-      </div>
+      </RevealGroup>
     </div>
   );
 }

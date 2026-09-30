@@ -38,7 +38,18 @@
     "highlightWritingTitle": "Writing & Articles",
     "highlightWritingDesc": "Long-form technical writing on system design, engineering leadership, and building software that lasts.",
     "highlightBookTitle": "Book a Call",
-    "highlightBookDesc": "30-minute sessions for career advice, code review, or just talking shop with a senior engineer."
+    "highlightBookDesc": "30-minute sessions for career advice, code review, or just talking shop with a senior engineer.",
+    "heroRolesPrefix": "Right now I'm",
+    "heroRoles": [
+      "leading engineering teams",
+      "building startups in public",
+      "explaining tech on YouTube",
+      "shipping side projects with AI"
+    ],
+    "portraitAlt": "Portrait of Siavash Ghanbari",
+    "statYears": "years shipping software",
+    "statProjects": "projects delivered",
+    "statCountries": "countries worked in"
   },
   "about": {
     "label": "About me",
@@ -99,7 +110,9 @@
     "source": "Source",
     "morePipeline": "More projects in the pipeline.",
     "followYouTube": "Follow on YouTube",
-    "started": "Started"
+    "started": "Started",
+    "soloFounder": "Solo founder",
+    "coFounder": "Co-founder"
   },
   "youtube": {
     "langBadge": "🇮🇷 Videos in Persian (Farsi)",
@@ -139,9 +152,9 @@
       },
       {
         "year": "2026",
-        "title": "Launched Iranian Tech Hub",
+        "title": "Founded Iranian Tech Hub",
         "category": "Company",
-        "description": "Built Iranian Tech Hub — a vetted, members-only platform for the 348-member Iranian Startup Community, with topic archives, verified profiles, co-founder matching, and a funding channel.",
+        "description": "As solo founder, built Iranian Tech Hub — a vetted, members-only platform for the 348-member Iranian Startup Community, with topic archives, verified profiles, co-founder matching, and a funding channel.",
         "location": "Berlin, Germany",
         "url": "https://www.iraniantechhub.com"
       },
@@ -162,9 +175,9 @@
       },
       {
         "year": "2025",
-        "title": "Launched Emojar",
+        "title": "Founded Emojar",
         "category": "Company",
-        "description": "Built and launched Emojar.com — a free emoji search and copy platform featuring 3,600+ emojis, curated collections, and mini-games. The entire product was shipped using AI tools with zero hand-written code. Monetised via Google Ads.",
+        "description": "As solo founder, built and launched Emojar.com — a free emoji search and copy platform featuring 3,600+ emojis, curated collections, and mini-games. The entire product was shipped using AI tools with zero hand-written code. Monetised via Google Ads.",
         "location": "Berlin, Germany"
       },
       {
