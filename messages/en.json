@@ -139,6 +139,22 @@
       },
       {
         "year": "2026",
+        "title": "Launched Iranian Tech Hub",
+        "category": "Company",
+        "description": "Built Iranian Tech Hub — a vetted, members-only platform for the 348-member Iranian Startup Community, with topic archives, verified profiles, co-founder matching, and a funding channel.",
+        "location": "Berlin, Germany",
+        "url": "https://www.iraniantechhub.com"
+      },
+      {
+        "year": "2026",
+        "title": "Co-founded FocusCrew",
+        "category": "Company",
+        "description": "Co-founded FocusCrew with Sheida — a gamified Pomodoro platform where small crews focus together. Planner, habit tracker, timer, and crews in one place, live at focus-crew.com.",
+        "location": "Berlin, Germany",
+        "url": "https://www.focus-crew.com"
+      },
+      {
+        "year": "2026",
         "title": "Launched WikiDigit",
         "category": "Company",
         "description": "Founded WikiDigit — a tech media and news platform delivering curated stories on AI, software, and the digital world. Built for engineers and tech enthusiasts who want depth over clickbait.",
@@ -214,7 +230,8 @@
         "description": "Enrolled at Azad University to study Software. Participated in Robotics Seminar and built an Interactive Content Management System as my final project. Graduated in 2009 with a grade of 16.66/20.",
         "location": "Iran"
       }
-    ]
+    ],
+    "visitWebsite": "Visit website"
   },
   "newsletter": {
     "title": "The Newsletter",

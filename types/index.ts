@@ -13,6 +13,7 @@ export type TimelineEvent = {
   description: string;
   category: "Education" | "Career" | "Company" | "Life";
   location?: string;
+  url?: string;
 };
 
 export type Project = {
