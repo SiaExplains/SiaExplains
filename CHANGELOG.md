@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.0 — 2026-09-30
+
+### Added
+- Every page, in English, Farsi and German, now has a canonical URL pointing to itself, plus `hreflang` links to its other two language versions and an `x-default` pointing to English. Search engines treat the three versions as translations of one page, not as duplicates.
+- The sitemap lists the same language alternates for every entry.
+
+### Fixed
+- `/cv` and `/books` were missing from the sitemap.
+
 ## 0.3.1 — 2026-09-30
 
 ### Changed

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { localeAlternates } from "@/lib/seo";
 import Image from "next/image";
 import { Play, ExternalLink, TrendingUp } from "lucide-react";
 import { YoutubeIcon } from "@/components/SocialIcons";
@@ -13,6 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "YouTube — SiaExplains",
     description: t("channelDesc"),
+    alternates: await localeAlternates("/youtube"),
   };
 }
 

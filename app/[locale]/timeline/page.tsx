@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { localeAlternates } from "@/lib/seo";
 import Timeline from "@/components/Timeline";
 import PageHeader from "@/components/PageHeader";
 import { Reveal } from "@/components/motion/Reveal";
@@ -7,7 +8,7 @@ import { TimelineEvent } from "@/types";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("timeline");
-  return { title: t("title"), description: t("description") };
+  return { title: t("title"), description: t("description"), alternates: await localeAlternates("/timeline") };
 }
 
 export default async function TimelinePage() {
