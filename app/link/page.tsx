@@ -1,4 +1,5 @@
 import { getVisibleLinks } from "@/lib/links";
+import { SITE_URL } from "@/lib/site";
 import LinkTree from "./LinkTree";
 
 // Edits in the admin call revalidatePath("/link"); this is the safety net.
@@ -12,8 +13,8 @@ export default async function LinkPage() {
     "@type": "Person",
     name: "Siavash Ghanbari",
     alternateName: "Sia",
-    url: "https://siaexplains.com",
-    image: "https://siaexplains.com/sia-portrait.webp",
+    url: SITE_URL,
+    image: `${SITE_URL}/sia-portrait.webp`,
     jobTitle: "Principal Software Engineer",
     address: { "@type": "PostalAddress", addressLocality: "Berlin", addressCountry: "DE" },
     sameAs: links.map((l) => l.url),

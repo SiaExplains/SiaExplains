@@ -20,7 +20,7 @@ export const FALLBACK_LINKS: LinkItem[] = [
   { id: "hampa", label: "Hampa on Instagram", url: "https://www.instagram.com/hampa.berlin", description: "Community in Berlin", icon: "instagram", sort: 20, visible: true },
   { id: "ith", label: "Iranian Tech Hub", url: "https://www.iraniantechhub.com", description: "Members-only home for the Iranian Startup Community", icon: "users", sort: 30, visible: true },
   { id: "fc", label: "FocusCrew", url: "https://www.focus-crew.com", description: "Focus together — Pomodoro with a crew", icon: "timer", sort: 40, visible: true },
-  { id: "site", label: "siaexplains.com", url: "https://siaexplains.com", description: "Blog, projects, CV and more", icon: "globe", sort: 50, visible: true },
+  { id: "site", label: "siaexplains.com", url: "https://www.siaexplains.com", description: "Blog, projects, CV and more", icon: "globe", sort: 50, visible: true },
 ];
 
 export function toLinkIcon(value: string | null | undefined): LinkIcon {

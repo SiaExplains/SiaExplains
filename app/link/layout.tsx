@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Instrument_Serif } from "next/font/google";
+import { SITE_URL } from "@/lib/site";
 import "../globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -11,7 +12,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://siaexplains.com"),
+  metadataBase: new URL(SITE_URL),
   title: "Siavash Ghanbari — Links",
   description:
     "All of Sia's links in one place: the SiaExplains YouTube channel, Hampa, Iranian Tech Hub, FocusCrew and siaexplains.com.",

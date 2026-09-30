@@ -132,7 +132,7 @@ export default function LinkTree({ links }: { links: LinkItem[] }) {
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
-          <a href="https://siaexplains.com" className="link-draw hover:text-gray-300">
+          <a href="https://www.siaexplains.com" className="link-draw hover:text-gray-300">
             siaexplains.com
           </a>
         </motion.footer>
