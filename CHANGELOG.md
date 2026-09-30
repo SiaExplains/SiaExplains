@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.1 — 2026-09-30
+
+### Fixed
+- The Emojar icon on the Projects page shows again. The image file had been deleted by accident in the i18n change.
+- `/links` now redirects permanently to `/link`, so the plural no longer 404s.
+
 ## 0.4.0 — 2026-09-30
 
 ### Added
