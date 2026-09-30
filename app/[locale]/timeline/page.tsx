@@ -18,6 +18,7 @@ export default async function TimelinePage() {
       category: string;
       description: string;
       location: string;
+      url?: string;
     }>
   ).map((e) => ({
     year: e.year,
@@ -25,6 +26,7 @@ export default async function TimelinePage() {
     category: e.category as TimelineEvent["category"],
     description: e.description,
     location: e.location,
+    url: e.url,
   }));
 
   return (
@@ -59,6 +61,7 @@ export default async function TimelinePage() {
           Company: t("company"),
           Life: t("life"),
         }}
+        visitLabel={t("visitWebsite")}
       />
     </div>
   );

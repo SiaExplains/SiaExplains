@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { GraduationCap, Briefcase, Rocket, Heart } from "lucide-react";
+import { GraduationCap, Briefcase, Rocket, Heart, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { TimelineEvent } from "@/types";
 
@@ -41,16 +41,35 @@ const categoryConfig = {
   },
 };
 
+function EventLink({ url, label, className }: { url: string; label: string; className?: string }) {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={cn(
+        "inline-flex items-center gap-1.5 text-xs text-accent-600 dark:text-accent-300 hover:text-accent-500 dark:hover:text-accent-200 transition-colors",
+        className
+      )}
+    >
+      <ExternalLink size={12} />
+      {label}
+    </a>
+  );
+}
+
 function TimelineItem({
   event,
   index,
   isLast,
   categoryLabels,
+  visitLabel,
 }: {
   event: TimelineEvent;
   index: number;
   isLast: boolean;
   categoryLabels?: Record<string, string>;
+  visitLabel: string;
 }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
@@ -92,6 +111,9 @@ function TimelineItem({
             </p>
             {event.location && (
               <p className="text-xs text-gray-500 mt-2">📍 {event.location}</p>
+            )}
+            {event.url && (
+              <EventLink url={event.url} label={visitLabel} className="mt-2" />
             )}
           </motion.div>
         )}
@@ -147,6 +169,9 @@ function TimelineItem({
             {event.location && (
               <p className="text-xs text-gray-500 mt-2">📍 {event.location}</p>
             )}
+            {event.url && (
+              <EventLink url={event.url} label={visitLabel} className="mt-2" />
+            )}
           </motion.div>
         )}
       </div>
@@ -181,6 +206,9 @@ function TimelineItem({
         {event.location && (
           <p className="text-xs text-gray-500 mt-1.5">📍 {event.location}</p>
         )}
+        {event.url && (
+          <EventLink url={event.url} label={visitLabel} className="mt-1.5" />
+        )}
       </motion.div>
     </div>
   );
@@ -189,9 +217,11 @@ function TimelineItem({
 export default function Timeline({
   events,
   categoryLabels,
+  visitLabel,
 }: {
   events: TimelineEvent[];
   categoryLabels?: Record<string, string>;
+  visitLabel: string;
 }) {
   return (
     <div className="relative">
@@ -206,6 +236,7 @@ export default function Timeline({
             index={i}
             isLast={i === events.length - 1}
             categoryLabels={categoryLabels}
+            visitLabel={visitLabel}
           />
         ))}
       </div>
