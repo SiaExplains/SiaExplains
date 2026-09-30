@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/mdx";
+import { getBlogPosts } from "@/lib/posts";
 import { routing } from "@/i18n/routing";
 
 const BASE_URL = "https://siaexplains.com";
@@ -17,8 +18,10 @@ const staticPaths = [
   { path: "/book", priority: 0.5, changeFrequency: "monthly" as const },
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const blogPosts = getAllPosts("blog").flatMap((post) =>
+export const revalidate = 3600;
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const blogPosts = (await getBlogPosts()).flatMap((post) =>
     routing.locales.map((locale) => ({
       url: locale === routing.defaultLocale
         ? `${BASE_URL}/blog/${post.slug}`
@@ -51,5 +54,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...staticRoutes, ...blogPosts, ...articles];
+  // /link is a single English page outside the locale tree.
+  const linkPage: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/link`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
+  ];
+
+  return [...staticRoutes, ...linkPage, ...blogPosts, ...articles];
 }

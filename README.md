@@ -24,6 +24,23 @@ This is the source code for **siaexplains.com** — my personal site, built with
 - **TypeScript**
 - **Tailwind CSS v4**
 - **MDX** for blog posts and articles
+- **Framer Motion** + [Bedrock](https://github.com/Jacknelson6/bedrock)/ReactBits components for the animation
+- **Supabase** for the `/admin` panel (the `/link` buttons and admin-written blog posts)
+
+### Running it locally
+
+```bash
+npm install
+npm run dev
+```
+
+The site runs without Supabase: the blog shows only the MDX posts, `/link` uses its built-in links, and `/admin` shows a setup screen. To work on the admin:
+
+1. `supabase start`: local stack on ports 55xxx (see `supabase/config.toml`); it applies `supabase/migrations/`.
+2. Copy `.env.example` to `.env.local`, then fill in the URL and anon key from `supabase status`.
+3. Create the admin user in the local Auth (Studio is off, so use the Auth admin API). Only `ADMIN_EMAIL` can sign in.
+
+For production, run `0001_init.sql` on the hosted project, set the three env vars in Vercel, turn **off** "Allow new users to sign up" (keep the Email provider on), and add your admin user in Auth → Users.
 
 It's open source. Feel free to look around, take inspiration, or open an issue if something is broken.
 

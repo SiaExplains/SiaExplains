@@ -23,16 +23,17 @@ export default async function Footer() {
   ];
 
   return (
-    <footer className="border-t border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-[#14110a]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="relative overflow-hidden border-t border-gray-200 dark:border-white/5 bg-gray-50/80 dark:bg-surface-900">
+      <div aria-hidden className="pointer-events-none absolute -top-40 left-1/2 h-80 w-[720px] -translate-x-1/2 rounded-full bg-gradient-to-r from-brand-400/20 via-orange-400/10 to-accent-500/20 blur-3xl" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           {/* Brand */}
           <div>
             <Link
               href="/"
-              className="text-gray-900 dark:text-white font-semibold text-lg tracking-tight"
+              className="text-gray-900 dark:text-white font-semibold text-xl tracking-tight"
             >
-              <span className="text-brand-700 dark:text-brand-400">Sia</span>Explains
+              <span className="text-brand-600 dark:text-brand-400">Sia</span>Explains
             </Link>
             <p className="mt-3 text-sm text-gray-500 leading-relaxed max-w-xs">
               {t("tagline")}
@@ -49,7 +50,7 @@ export default async function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
+                    className="link-draw text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white"
                   >
                     {label}
                   </Link>
@@ -71,7 +72,7 @@ export default async function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="p-2 rounded-lg text-gray-500 hover:text-accent-600 dark:hover:text-accent-300 hover:bg-accent-300/10 dark:hover:bg-accent-300/10 transition-colors"
+                  className="p-2.5 rounded-xl border border-transparent text-gray-500 transition-all duration-300 hover:-translate-y-1 hover:rotate-[-6deg] hover:border-accent-500/30 hover:text-accent-600 dark:hover:text-accent-300 hover:bg-accent-500/10 hover:shadow-[0_10px_24px_-10px_rgba(139,92,246,0.6)]"
                 >
                   <Icon size={18} />
                 </a>

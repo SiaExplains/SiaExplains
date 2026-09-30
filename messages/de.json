@@ -38,7 +38,18 @@
     "highlightWritingTitle": "Texte & Artikel",
     "highlightWritingDesc": "Ausführliche technische Beiträge zu System-Design, Engineering-Leadership und nachhaltiger Software.",
     "highlightBookTitle": "Termin buchen",
-    "highlightBookDesc": "30-minütige Sitzungen für Karriereberatung, Code-Review oder einfach ein Gespräch mit einem Senior Engineer."
+    "highlightBookDesc": "30-minütige Sitzungen für Karriereberatung, Code-Review oder einfach ein Gespräch mit einem Senior Engineer.",
+    "heroRolesPrefix": "Gerade",
+    "heroRoles": [
+      "leite ich Engineering-Teams",
+      "baue ich Startups öffentlich",
+      "erkläre ich Tech auf YouTube",
+      "baue ich Side-Projects mit KI"
+    ],
+    "portraitAlt": "Porträt von Siavash Ghanbari",
+    "statYears": "Jahre Software-Entwicklung",
+    "statProjects": "gelieferte Projekte",
+    "statCountries": "Länder, in denen ich gearbeitet habe"
   },
   "about": {
     "label": "Über mich",
@@ -99,7 +110,9 @@
     "source": "Quellcode",
     "morePipeline": "Weitere Projekte in der Pipeline.",
     "followYouTube": "Auf YouTube folgen",
-    "started": "Gestartet"
+    "started": "Gestartet",
+    "soloFounder": "Alleingründer",
+    "coFounder": "Mitgründer"
   },
   "youtube": {
     "langBadge": "🇮🇷 Videos auf Persisch (Farsi)",
@@ -139,9 +152,9 @@
       },
       {
         "year": "2026",
-        "title": "Iranian Tech Hub gestartet",
+        "title": "Iranian Tech Hub gegründet",
         "category": "Company",
-        "description": "Iranian Tech Hub gebaut — eine geprüfte Plattform nur für Mitglieder der 348-köpfigen Iranian Startup Community, mit Themenarchiven, verifizierten Profilen, Mitgründer-Matching und einem Finanzierungskanal.",
+        "description": "Als Alleingründer Iranian Tech Hub gebaut — eine geprüfte Plattform nur für Mitglieder der 348-köpfigen Iranian Startup Community, mit Themenarchiven, verifizierten Profilen, Mitgründer-Matching und einem Finanzierungskanal.",
         "location": "Berlin, Deutschland",
         "url": "https://www.iraniantechhub.com"
       },
@@ -162,9 +175,9 @@
       },
       {
         "year": "2025",
-        "title": "Emojar gestartet",
+        "title": "Emojar gegründet",
         "category": "Company",
-        "description": "Emojar.com gebaut und gestartet — eine kostenlose Emoji-Such- und Kopierpattform mit über 3.600 Emojis, kuratierten Sammlungen und Mini-Spielen. Das gesamte Produkt wurde mit KI-Tools ohne eine einzige handgeschriebene Codezeile geliefert. Monetarisiert über Google Ads.",
+        "description": "Als Alleingründer Emojar.com gebaut und gestartet — eine kostenlose Emoji-Such- und Kopierplattform mit über 3.600 Emojis, kuratierten Sammlungen und Mini-Spielen. Das gesamte Produkt wurde mit KI-Tools ohne eine einzige handgeschriebene Codezeile geliefert. Monetarisiert über Google Ads.",
         "location": "Berlin, Deutschland"
       },
       {

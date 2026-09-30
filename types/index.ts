@@ -23,6 +23,7 @@ export type Project = {
   status: "live" | "building" | "concept";
   url?: string;
   repo?: string;
+  role?: "soloFounder" | "coFounder";
 };
 
 export type Book = {
