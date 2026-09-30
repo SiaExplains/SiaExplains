@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.2 — 2026-09-30
+
+### Fixed
+- `/link`: the "siaexplains.com" button points straight at `https://www.siaexplains.com` (migration `0002`, already applied to production).
+- `/link`: the footer link now opens in a new tab like every button above it.
+
 ## 0.4.1 — 2026-09-30
 
 ### Fixed
