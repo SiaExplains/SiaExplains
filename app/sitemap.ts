@@ -2,8 +2,9 @@ import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/mdx";
 import { getBlogPosts } from "@/lib/posts";
 import { routing } from "@/i18n/routing";
+import { SITE_URL } from "@/lib/site";
 
-const BASE_URL = "https://siaexplains.com";
+const BASE_URL = SITE_URL;
 
 const staticPaths = [
   { path: "", priority: 1, changeFrequency: "weekly" as const },

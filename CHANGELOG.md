@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.1 — 2026-09-30
+
+### Changed
+- The sitemap, robots.txt, canonical tags, Open Graph URLs and structured data now use `https://www.siaexplains.com`, the address the apex domain redirects to. The domain is defined once, in `lib/site.ts`.
+
 ## 0.3.0 — 2026-09-30
 
 ### Added
