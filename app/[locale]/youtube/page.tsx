@@ -19,6 +19,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const videos = [
+  { id: "rfbg5Q4bscY", title: "بعد از ۶ سال کار در آلمان اینو فهمیدم...", titleEn: "What I Learned After 6 Years Working in Germany", views: "30K", date: "Sep 2026", topPick: false },
+  { id: "_4prPkpDiN8", title: "دوازده ابزار رایگان هوش مصنوعی که لازمت میشه!", titleEn: "12 Free AI Tools You'll Need", views: "526", date: "Aug 2026", topPick: false },
   { id: "oGQxFNgn6BY", title: "پنج سال زندگی در آلمان", titleEn: "Five Years Living in Germany", views: "40K", date: "Apr 2025", topPick: true },
   { id: "BwWjT-IKZWU", title: "چطور شهروندی آلمان رو گرفتم؟", titleEn: "How I Got German Citizenship", views: "10K", date: "Sep 2025", topPick: false },
   { id: "pO4iPZNygNI", title: "شهروندی آلمان، اخراج‌ها و عمل جراحی", titleEn: "German Citizenship, Layoffs & Surgery", views: "6.7K", date: "Aug 2025", topPick: false },

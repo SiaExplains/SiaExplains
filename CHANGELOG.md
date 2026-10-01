@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.4 — 2026-10-01
+
+### Added
+- Two new videos at the top of the YouTube page: "What I Learned After 6 Years Working in Germany" and "12 Free AI Tools You'll Need".
+- WikiDigit carries the solo founder badge on the Projects page.
+
+### Removed
+- AI Code Review Bot, Infra Cost Analyzer and ReadingList from the Projects page.
+- The Books page is hidden: gone from the navbar and sitemap, and `/books` now returns 404. The page and its data are kept, so it can come back.
+
 ## 0.4.3 — 2026-09-30
 
 ### Fixed
