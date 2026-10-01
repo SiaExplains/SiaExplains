@@ -1,9 +1,9 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/lib/navigation";
 import { YoutubeIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/SocialIcons";
+import { orderedChannels } from "@/lib/channels";
 
-const socials = [
-  { label: "YouTube", href: "https://youtube.com/@SiaExplains", icon: YoutubeIcon },
+const otherSocials = [
   { label: "GitHub", href: "https://github.com/SiaExplains", icon: GithubIcon },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/siavash-ghanbari/", icon: LinkedinIcon },
   { label: "Twitter", href: "https://twitter.com/SiaExplains", icon: TwitterIcon },
@@ -13,6 +13,10 @@ export default async function Footer() {
   const t = await getTranslations("footer");
   const nav = await getTranslations("nav");
   const year = new Date().getFullYear();
+  const socials = [
+    ...orderedChannels(await getLocale()).map((c) => ({ label: `YouTube — ${c.name}`, href: c.url, icon: YoutubeIcon })),
+    ...otherSocials,
+  ];
 
   const footerLinks = [
     { href: "/blog" as const, label: nav("blog") },

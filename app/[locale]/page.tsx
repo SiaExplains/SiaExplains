@@ -90,10 +90,10 @@ export default async function HomePage() {
                   </Link>
                 </Magnet>
                 <Magnet>
-                  <a href="https://youtube.com/@SiaExplains" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+                  <Link href="/youtube" className="btn btn-ghost">
                     <YoutubeIcon size={16} className="text-red-500" />
                     YouTube
-                  </a>
+                  </Link>
                 </Magnet>
               </Reveal>
             </div>

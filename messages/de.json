@@ -116,15 +116,13 @@
   },
   "youtube": {
     "langBadge": "🇮🇷 Videos auf Persisch (Farsi)",
-    "newVideos": "Regelmäßig neue Videos",
     "channelDesc": "Ein persischsprachiger Kanal für Iraner, die Tech-Karrieren, Immigration nach Deutschland und das Leben als Expat-Ingenieur navigieren. Echte Geschichten, echte Zahlen — kein Fluff.",
     "subscribe": "Auf YouTube abonnieren",
     "featuredVideos": "Ausgewählte Videos",
     "mostViewed": "Meistgesehen",
     "viewAll": "Alle Videos auf YouTube",
     "whatICover": "Meine Themen",
-    "ctaText": "Wenn du ein iranischer Ingenieur bist, der ans Auswandern denkt oder seine Tech-Karriere ausbauen möchte — dieser Kanal ist für dich.",
-    "followJourney": "Der Reise folgen",
+    "ctaText": "Ob auf Englisch oder Persisch: Wenn du deine Tech-Karriere ausbauen, etwas Eigenes aufbauen oder ins Ausland gehen möchtest, sind diese Kanäle für dich.",
     "immigrationTitle": "Immigration & Leben in Deutschland",
     "immigrationDesc": "Die echte Geschichte des Umzugs vom Iran nach Berlin — Visa, deutsche Staatsbürgerschaft, Wohnen, Banking und wie man wirklich ein Leben im Ausland aufbaut.",
     "careerTitle": "Karriere & Engineering-Wachstum",
@@ -132,7 +130,11 @@
     "aiTitle": "KI & Tech-Tools",
     "aiDesc": "Ehrliche Walkthroughs von KI-Zertifikaten und Tools — was Ingenieuren im Alltag wirklich hilft versus was nur Hype ist.",
     "financeTitle": "Finanzen & Expat-Tipps",
-    "financeDesc": "Praktische Geldtipps für Einwanderer und Expats in Deutschland — Banken, Steuern, Sparen und das deutsche Finanzsystem navigieren."
+    "financeDesc": "Praktische Geldtipps für Einwanderer und Expats in Deutschland — Banken, Steuern, Sparen und das deutsche Finanzsystem navigieren.",
+    "pageTitle": "Zwei Kanäle, eine Reise",
+    "pageDesc": "Sia Barry auf Englisch und SiaExplains auf Persisch: Tech-Karrieren, KI-Tools, Startups und das Ingenieursleben in Deutschland.",
+    "siaBarryBadge": "🌍 Videos auf Englisch",
+    "siaBarryDesc": "Ein englischsprachiger Kanal übers Bauen als Ingenieur: Startup-Tech-Stacks, KI-Tools und Repos, die man kennen sollte, und das Leben als Softwareentwickler in Deutschland."
   },
   "timeline": {
     "label": "Die Reise",

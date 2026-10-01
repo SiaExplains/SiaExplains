@@ -4,6 +4,7 @@ import { localeAlternates } from "@/lib/seo";
 import Image from "next/image";
 import { ExternalLink, Zap, Clock, Lightbulb, CalendarDays, Crown, Users } from "lucide-react";
 import { GithubIcon } from "@/components/SocialIcons";
+import { Link } from "@/lib/navigation";
 import { Project } from "@/types";
 import PageHeader from "@/components/PageHeader";
 import SpotlightCard from "@/components/motion/SpotlightCard";
@@ -106,9 +107,9 @@ export default async function ProjectsPage() {
       <Reveal className="mt-12 p-6 rounded-2xl border border-dashed border-accent-500/30 bg-gradient-to-r from-brand-400/5 to-accent-500/5 text-center">
         <p className="text-gray-500 text-sm">
           {t("morePipeline")}{" "}
-          <a href="https://youtube.com/@SiaExplains" target="_blank" rel="noopener noreferrer" className="link-draw font-medium text-accent-700 dark:text-accent-300">
+          <Link href="/youtube" className="link-draw font-medium text-accent-700 dark:text-accent-300">
             {t("followYouTube")}
-          </a>{" "}
+          </Link>{" "}
           to watch them get built.
         </p>
       </Reveal>

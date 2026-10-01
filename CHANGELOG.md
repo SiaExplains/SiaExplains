@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.5.0 — 2026-10-01
+
+### Added
+- Sia Barry, the English YouTube channel, now sits next to SiaExplains everywhere the site mentions YouTube: the YouTube page, the footer, the Contact page and `/link`. Persian visitors see SiaExplains first; everyone else sees Sia Barry first. Both channels show in every language.
+- The YouTube page has a section per channel, each with its own description, subscribe button and videos.
+
+### Changed
+- The home page's YouTube button and the "follow on YouTube" link on Projects now open the site's YouTube page, which lists both channels.
+- `/link` gets its Sia Barry button from migration `0003` (needs applying to production).
+
 ## 0.4.5 — 2026-10-01
 
 ### Fixed

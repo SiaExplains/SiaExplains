@@ -17,6 +17,7 @@ export type LinkItem = {
 /** Shown when Supabase isn't configured yet or can't be reached — mirrors the migration seed. */
 export const FALLBACK_LINKS: LinkItem[] = [
   { id: "yt", label: "YouTube — SiaExplains", url: "https://www.youtube.com/@SiaExplains", description: "Tech, AI, career & life in Germany (Farsi)", icon: "youtube", sort: 10, visible: true },
+  { id: "ytb", label: "YouTube — Sia Barry", url: "https://www.youtube.com/@SiaBarry", description: "Startups, AI tools & engineering life in Germany (English)", icon: "youtube", sort: 15, visible: true },
   { id: "hampa", label: "Hampa on Instagram", url: "https://www.instagram.com/hampa.berlin", description: "Community in Berlin", icon: "instagram", sort: 20, visible: true },
   { id: "ith", label: "Iranian Tech Hub", url: "https://www.iraniantechhub.com", description: "Members-only home for the Iranian Startup Community", icon: "users", sort: 30, visible: true },
   { id: "fc", label: "FocusCrew", url: "https://www.focus-crew.com", description: "Focus together — Pomodoro with a crew", icon: "timer", sort: 40, visible: true },

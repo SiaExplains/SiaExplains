@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { localeAlternates } from "@/lib/seo";
 import { Mail } from "lucide-react";
 import { YoutubeIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/SocialIcons";
 import ContactForm from "@/components/ContactForm";
+import { orderedChannels } from "@/lib/channels";
 import PageHeader from "@/components/PageHeader";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
@@ -12,16 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return { title: t("title"), description: t("description"), alternates: await localeAlternates("/contact") };
 }
 
-const socials = [
-  {
-    label: "YouTube",
-    handle: "@SiaExplains",
-    href: "https://youtube.com/@SiaExplains",
-    icon: YoutubeIcon,
-    color: "text-brand-700 dark:text-brand-400",
-    bg: "bg-brand-400/10",
-    border: "border-brand-400/20",
-  },
+const otherSocials = [
   {
     label: "GitHub",
     handle: "github.com/SiaExplains",
@@ -53,6 +45,18 @@ const socials = [
 
 export default async function ContactPage() {
   const t = await getTranslations("contact");
+  const socials = [
+    ...orderedChannels(await getLocale()).map((c) => ({
+      label: `YouTube — ${c.name}`,
+      handle: c.handle,
+      href: c.url,
+      icon: YoutubeIcon,
+      color: "text-brand-700 dark:text-brand-400",
+      bg: "bg-brand-400/10",
+      border: "border-brand-400/20",
+    })),
+    ...otherSocials,
+  ];
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
