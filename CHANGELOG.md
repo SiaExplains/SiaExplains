@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.5 — 2026-10-01
+
+### Fixed
+- `git status` and `git diff` no longer crash. Two local Claude Code worktrees had been committed into the repo as links to a folder that no longer exists. They are removed from git, and `.claude/worktrees/` is now ignored.
+
 ## 0.4.4 — 2026-10-01
 
 ### Added
