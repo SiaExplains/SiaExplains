@@ -116,15 +116,13 @@
   },
   "youtube": {
     "langBadge": "🇮🇷 Videos in Persian (Farsi)",
-    "newVideos": "New videos regularly",
     "channelDesc": "A Persian-language channel for Iranians navigating tech careers, immigration to Germany, and life as an expat engineer. Real stories, real numbers — no fluff.",
     "subscribe": "Subscribe on YouTube",
     "featuredVideos": "Featured videos",
     "mostViewed": "Most Viewed",
     "viewAll": "View all videos on YouTube",
     "whatICover": "What I cover",
-    "ctaText": "If you're an Iranian engineer thinking about moving abroad or growing your tech career — this channel is for you.",
-    "followJourney": "Follow the journey",
+    "ctaText": "Whether you watch in English or Persian: if you're growing a tech career, building something of your own or thinking about moving abroad, these channels are for you.",
     "immigrationTitle": "Immigration & Life in Germany",
     "immigrationDesc": "The real story of moving from Iran to Berlin — visas, German citizenship, housing, banking, and how to actually build a life abroad.",
     "careerTitle": "Career & Engineering Growth",
@@ -132,7 +130,11 @@
     "aiTitle": "AI & Tech Tools",
     "aiDesc": "Honest walkthroughs of AI certifications, tools, and what actually helps engineers in day-to-day work versus what's just hype.",
     "financeTitle": "Finance & Expat Tips",
-    "financeDesc": "Practical money advice for immigrants and expats in Germany — banks, taxes, savings, and navigating the German financial system."
+    "financeDesc": "Practical money advice for immigrants and expats in Germany — banks, taxes, savings, and navigating the German financial system.",
+    "pageTitle": "Two channels, one journey",
+    "pageDesc": "Sia Barry in English and SiaExplains in Persian: tech careers, AI tools, startups and engineering life in Germany.",
+    "siaBarryBadge": "🌍 Videos in English",
+    "siaBarryDesc": "An English-language channel about building as an engineer: startup tech stacks, AI tools and repos worth knowing, and life as a software engineer in Germany."
   },
   "timeline": {
     "label": "The journey",
