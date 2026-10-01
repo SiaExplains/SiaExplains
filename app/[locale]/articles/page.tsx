@@ -44,10 +44,10 @@ export default async function ArticlesPage() {
                       </span>
                     ))}
                   </div>
-                  <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 group-hover:text-accent-700 dark:group-hover:text-accent-200 transition-colors mb-2">
+                  <h2 dir="auto" className="text-xl font-semibold text-gray-800 dark:text-gray-100 group-hover:text-accent-700 dark:group-hover:text-accent-200 transition-colors mb-2">
                     {article.title}
                   </h2>
-                  <p className="text-gray-500 leading-relaxed mb-4 text-sm">{article.description}</p>
+                  <p dir="auto" className="text-gray-500 leading-relaxed mb-4 text-sm">{article.description}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex gap-3 text-xs text-gray-500">
                       <span>{formatDate(article.date)}</span>

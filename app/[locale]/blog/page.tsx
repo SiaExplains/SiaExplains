@@ -50,10 +50,10 @@ export default async function BlogPage() {
                     </span>
                   ))}
                 </div>
-                <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 group-hover:text-accent-700 dark:group-hover:text-accent-200 transition-colors mb-2">
+                <h2 dir="auto" className="text-xl font-semibold text-gray-800 dark:text-gray-100 group-hover:text-accent-700 dark:group-hover:text-accent-200 transition-colors mb-2">
                   {post.title}
                 </h2>
-                <p className="text-gray-500 leading-relaxed mb-3 text-sm">{post.description}</p>
+                <p dir="auto" className="text-gray-500 leading-relaxed mb-3 text-sm">{post.description}</p>
                 <div className="flex items-center justify-between">
                   <div className="flex gap-3 text-xs text-gray-500">
                     <span>{formatDate(post.date)}</span>

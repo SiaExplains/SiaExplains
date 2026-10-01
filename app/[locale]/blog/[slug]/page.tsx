@@ -59,15 +59,18 @@ export default async function BlogPostPage({ params }: Props) {
             ))}
           </div>
   
-          <BlurText
-            as="h1"
-            text={frontmatter.title}
-            delay={40}
-            className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white leading-tight mb-4"
-          />
-          <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-5">
-            {frontmatter.description}
-          </p>
+          {/* dir="auto": the post's own text decides its direction, so English posts stay LTR on /fa. */}
+          <div dir="auto">
+            <BlurText
+              as="h1"
+              text={frontmatter.title}
+              delay={40}
+              className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white leading-tight mb-4"
+            />
+            <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-5">
+              {frontmatter.description}
+            </p>
+          </div>
   
           <div className="flex flex-wrap gap-4 text-sm text-gray-500">
             <span className="flex items-center gap-1.5">
@@ -85,7 +88,7 @@ export default async function BlogPostPage({ params }: Props) {
       </Reveal>
 
       <Reveal as="div" delay={0.15}>
-        <article>
+        <article dir="auto">
           <MdxContent source={content} />
         </article>
       </Reveal>
