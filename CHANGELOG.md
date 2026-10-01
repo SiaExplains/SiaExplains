@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.1 — 2026-10-01
+
+### Added
+- Blog post: "Meet Sia Barry, My English Channel".
+
 ## 0.5.0 — 2026-10-01
 
 ### Added
