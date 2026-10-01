@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.2 — 2026-10-01
+
+### Fixed
+- English posts and articles read left-to-right on the Persian site. Before, they took on the page's right-to-left layout, so full stops landed at the start of lines and lists were mirrored. The browser now picks the direction from each post's own text, so a post written in Persian still reads right-to-left.
+
 ## 0.5.1 — 2026-10-01
 
 ### Added

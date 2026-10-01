@@ -195,7 +195,7 @@ export default async function HomePage() {
                       <span className="hidden sm:block font-serif italic text-2xl text-gray-300 dark:text-gray-700 transition-colors group-hover:text-accent-500">
                         0{i + 1}
                       </span>
-                      <div>
+                      <div dir="auto">
                         <h3 className="font-semibold text-lg text-gray-900 dark:text-gray-100 group-hover:text-accent-700 dark:group-hover:text-accent-200 transition-colors mb-1">
                           {post.title}
                         </h3>
