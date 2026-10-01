@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { localeAlternates } from "@/lib/seo";
 import { Book } from "@/types";
@@ -37,6 +38,9 @@ function StarRating({ rating }: { rating: number }) {
 }
 
 export default async function BooksPage() {
+  // Hidden for now: out of the navbar and sitemap, and 404s. Delete this line to bring it back.
+  notFound();
+
   const t = await getTranslations("books");
 
   return (

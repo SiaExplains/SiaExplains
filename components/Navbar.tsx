@@ -30,7 +30,6 @@ export default function Navbar() {
     { href: "/youtube", label: t("youtube") },
     { href: "/blog", label: t("blog") },
     { href: "/articles", label: t("articles") },
-    { href: "/books", label: t("books") },
     { href: "/contact", label: t("contact") },
   ];
   const cta = { href: "/book", label: t("bookCall") };
