@@ -47,7 +47,7 @@ export default async function CvPage() {
         <div aria-hidden className="bg-dots pointer-events-none absolute -inset-x-10 -top-16 h-56" />
         <BlurText as="h1" text="Siavash Ghanbari" className="relative text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-2" />
         <p className="relative text-gradient text-lg font-medium mb-1 inline-block">Principal Software Engineer | Manager</p>
-        <p className="text-gray-500 text-sm">Berlin, Germany · siaexplains@gmail.com · siaexplains.com</p>
+        <p className="text-gray-500 text-sm">Berlin, Germany · hi@siaexplains.com · siaexplains.com</p>
         <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
           Spearheaded the delivery of engineering solutions for web, mobile, and native applications, leveraging ReactJS, NodeJS, AWS, and MongoDB, resulting in{" "}
           <strong className="text-gray-900 dark:text-white">+25 successful projects</strong> and{" "}

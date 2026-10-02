@@ -79,7 +79,7 @@ export default async function BookPage() {
           <p className="text-gray-500 text-sm mb-2">{t("calendlyWidget")}</p>
           <p className="text-gray-400 dark:text-gray-700 text-xs max-w-xs">{t("calendlyInfo")}</p>
           <Magnet className="mt-5">
-            <a href="mailto:siaexplains@gmail.com?subject=Book a Call" className="btn btn-primary">
+            <a href="mailto:hi@siaexplains.com?subject=Book a Call" className="btn btn-primary">
               {t("emailToSchedule")}
             </a>
           </Magnet>

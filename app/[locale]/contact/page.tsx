@@ -101,7 +101,7 @@ export default async function ContactPage() {
               <Mail size={14} className="text-brand-700 dark:text-brand-400" />
               <span className="text-sm font-medium text-gray-900 dark:text-white">{t("email")}</span>
             </div>
-            <a href="mailto:siaexplains@gmail.com" className="link-draw text-sm text-gray-500 hover:text-accent-700 dark:hover:text-accent-300">siaexplains@gmail.com</a>
+            <a href="mailto:hi@siaexplains.com" className="link-draw text-sm text-gray-500 hover:text-accent-700 dark:hover:text-accent-300">hi@siaexplains.com</a>
           </div>
         </Reveal>
       </div>
