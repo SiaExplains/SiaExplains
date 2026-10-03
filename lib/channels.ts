@@ -48,6 +48,7 @@ export const CHANNELS: Record<ChannelId, Channel> = {
     url: "https://www.youtube.com/@SiaBarry",
     lang: "en",
     videos: [
+      { id: "wDZ_sP5_s30", title: "6 Years Working in Germany: What Nobody Tells You", views: "106", date: "Oct 2026" },
       { id: "gqMzRJKQvuU", title: "My 2026 Startup Tech Stack 🚀", views: "276", date: "Sep 2026" },
       { id: "Vz0ilD8wKic", title: "12 GitHub Repository Every AI Developer should know", views: "454", date: "Aug 2026" },
       { id: "IVMtYpAIZoM", title: "A Software Engineer in Germany", views: "134", date: "Jul 2026" },
