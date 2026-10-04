@@ -26,7 +26,7 @@ export const revalidate = 3600;
 /** One entry per locale, each listing every language version (hreflang) of the same page. */
 function localizedEntries(
   path: string,
-  opts: { lastModified: Date; changeFrequency: ChangeFrequency; priority: number }
+  opts: { lastModified?: Date; changeFrequency: ChangeFrequency; priority: number }
 ): MetadataRoute.Sitemap {
   const languages = languageAlternates(path);
   return routing.locales.map((locale) => ({
@@ -37,10 +37,10 @@ function localizedEntries(
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date();
-
+  // Static pages carry no lastmod: stamping them with "now" on every request tells Google the
+  // dates are noise, and it then ignores the real ones on posts too.
   const staticRoutes = staticPaths.flatMap(({ path, priority, changeFrequency }) =>
-    localizedEntries(path, { lastModified: now, changeFrequency, priority })
+    localizedEntries(path, { changeFrequency, priority })
   );
 
   const blogPosts = (await getBlogPosts()).flatMap((post) =>
@@ -61,7 +61,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // /link is a single English page outside the locale tree, so it has no language alternates.
   const linkPage: MetadataRoute.Sitemap = [
-    { url: `${SITE_URL}/link`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/link`, changeFrequency: "monthly", priority: 0.6 },
   ];
 
   return [...staticRoutes, ...linkPage, ...blogPosts, ...articles];

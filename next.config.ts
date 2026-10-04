@@ -15,8 +15,14 @@ const nextConfig: NextConfig = {
     root: __dirname,
   },
   async redirects() {
-    // People type the plural; the link-in-bio page lives at /link.
-    return [{ source: "/links", destination: "/link", permanent: true }];
+    return [
+      // People type the plural; the link-in-bio page lives at /link.
+      { source: "/links", destination: "/link", permanent: true },
+      // English lives at the root. next-intl would strip /en with a temporary 307; make it
+      // permanent so search engines consolidate on the unprefixed URL.
+      { source: "/en", destination: "/", permanent: true },
+      { source: "/en/:path*", destination: "/:path*", permanent: true },
+    ];
   },
 };
 

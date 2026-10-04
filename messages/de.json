@@ -139,7 +139,7 @@
   "timeline": {
     "label": "Die Reise",
     "title": "Werdegang",
-    "description": "Wichtige Meilensteine vom Iran nach Berlin — vom Mitgründer eines Unternehmens mit 20 Jahren bis zum Principal Engineer, Manager und Creator.",
+    "description": "Wichtige Meilensteine vom Iran nach Berlin — von der Gründung eines Unternehmens mit 20 Jahren bis zum Principal Engineer, Manager und Creator.",
     "education": "Ausbildung",
     "career": "Karriere",
     "company": "Unternehmen",
@@ -156,7 +156,7 @@
         "year": "2026",
         "title": "Iranian Tech Hub gegründet",
         "category": "Company",
-        "description": "Als Alleingründer Iranian Tech Hub gebaut — eine geprüfte Plattform nur für Mitglieder der 348-köpfigen Iranian Startup Community, mit Themenarchiven, verifizierten Profilen, Mitgründer-Matching und einem Finanzierungskanal.",
+        "description": "Als Alleingründer Iranian Tech Hub gebaut — eine gemeinnützige, geprüfte Plattform nur für Mitglieder der über 800-köpfigen Iranian Startup Community auf Telegram, mit bisher 150 aufgenommenen Mitgliedern, mit Themenarchiven, verifizierten Profilen, Mitgründer-Matching und einem Finanzierungskanal.",
         "location": "Berlin, Deutschland",
         "url": "https://www.iraniantechhub.com"
       },
@@ -233,9 +233,9 @@
       },
       {
         "year": "2007",
-        "title": "Mitgründung von Taazuu Developers",
+        "title": "Gründung von Taazuu Developers",
         "category": "Company",
-        "description": "Während des Studiums ein Softwareentwicklungsunternehmen mitgegründet. Als CTO ein mehrsprachiges Wörterbuch mit Unterstützung von 12+ Sprachen und OCR gebaut, ein LMS für eine große iranische Universität entworfen und über 12 Web-Portfolios sowie eine native Windows-Anwendung zur Kraftstoffkartenverteilung in 14 Städten geliefert.",
+        "description": "Während des Studiums ein Softwareentwicklungsunternehmen gegründet. Als Gründer und CEO das Unternehmen geführt und ein mehrsprachiges Wörterbuch mit Unterstützung von 12+ Sprachen und OCR gebaut, ein LMS für eine große iranische Universität entworfen und über 12 Web-Portfolios sowie eine native Windows-Anwendung zur Kraftstoffkartenverteilung in 14 Städten geliefert.",
         "location": "Ghaemshahr, Iran"
       },
       {

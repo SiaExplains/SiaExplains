@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
-import { localeAlternates } from "@/lib/seo";
+import { localeMetadata } from "@/lib/seo";
 import Image from "next/image";
 import { Play, ExternalLink, TrendingUp } from "lucide-react";
 import { YoutubeIcon } from "@/components/SocialIcons";
@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `YouTube — ${channels.map((c) => c.name).join(" & ")}`,
     description: t("pageDesc"),
-    alternates: await localeAlternates("/youtube"),
+    ...(await localeMetadata("/youtube")),
   };
 }
 

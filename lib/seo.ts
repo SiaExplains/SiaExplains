@@ -20,8 +20,34 @@ export function languageAlternates(path: string): Record<string, string> {
   };
 }
 
-/** Self-referencing canonical + hreflang alternates for a page in the current request's locale. */
-export async function localeAlternates(path: string): Promise<Metadata["alternates"]> {
+/** Served by app/[locale]/opengraph-image.tsx; the unprefixed path resolves to the English route. */
+export const OG_IMAGE_URL = `${SITE_URL}/opengraph-image`;
+
+const OG_LOCALES: Record<string, string> = { en: "en_US", de: "de_DE", fa: "fa_IR" };
+
+type PageSeo = { type?: "website" | "article" | "profile"; publishedTime?: string; tags?: string[] };
+
+/**
+ * Canonical, hreflang and Open Graph for a page in the current request's locale. A page's
+ * openGraph replaces the layout's rather than merging, so siteName is repeated here. It also drops
+ * the file-based image from app/[locale]/opengraph-image.tsx, so that is linked explicitly.
+ * og:title and og:description are filled in by Next from the page's title and description.
+ */
+export async function localeMetadata(path: string, seo: PageSeo = {}): Promise<Pick<Metadata, "alternates" | "openGraph">> {
   const locale = await getLocale();
-  return { canonical: localizedUrl(path, locale), languages: languageAlternates(path) };
+  const url = localizedUrl(path, locale);
+  const common = {
+    url,
+    images: [{ url: OG_IMAGE_URL, width: 1200, height: 630, alt: "Siavash Ghanbari — SiaExplains" }],
+    siteName: "SiaExplains",
+    locale: OG_LOCALES[locale],
+    alternateLocale: routing.locales.filter((l) => l !== locale).map((l) => OG_LOCALES[l]),
+  };
+  return {
+    alternates: { canonical: url, languages: languageAlternates(path) },
+    openGraph:
+      seo.type === "article"
+        ? { ...common, type: "article", publishedTime: seo.publishedTime, authors: [SITE_URL + "/about"], tags: seo.tags }
+        : { ...common, type: seo.type ?? "website" },
+  };
 }

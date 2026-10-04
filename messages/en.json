@@ -139,7 +139,7 @@
   "timeline": {
     "label": "The journey",
     "title": "Timeline",
-    "description": "Key milestones from Iran to Berlin — from co-founding a company at 20 to Principal Engineer, manager, and creator.",
+    "description": "Key milestones from Iran to Berlin — from founding a company at 20 to Principal Engineer, manager, and creator.",
     "education": "Education",
     "career": "Career",
     "company": "Company",
@@ -156,7 +156,7 @@
         "year": "2026",
         "title": "Founded Iranian Tech Hub",
         "category": "Company",
-        "description": "As solo founder, built Iranian Tech Hub — a vetted, members-only platform for the 348-member Iranian Startup Community, with topic archives, verified profiles, co-founder matching, and a funding channel.",
+        "description": "As solo founder, built Iranian Tech Hub — a non-profit, vetted, members-only platform for the 800+ member Iranian Startup Community on Telegram, with 150 members onboarded so far, with topic archives, verified profiles, co-founder matching, and a funding channel.",
         "location": "Berlin, Germany",
         "url": "https://www.iraniantechhub.com"
       },
@@ -233,9 +233,9 @@
       },
       {
         "year": "2007",
-        "title": "Co-founded Taazuu Developers",
+        "title": "Founded Taazuu Developers",
         "category": "Company",
-        "description": "Co-founded a software development company while still in university. As CTO, built a multilingual dictionary supporting 12+ languages with OCR, architected an LMS for a major Iranian university, and shipped over 12 web portfolios and a native Windows app for fuel card distribution across 14 cities.",
+        "description": "Founded a software development company while still in university. As founder and CEO, led the company and built a multilingual dictionary supporting 12+ languages with OCR, architected an LMS for a major Iranian university, and shipped over 12 web portfolios and a native Windows app for fuel card distribution across 14 cities.",
         "location": "Ghaemshahr, Iran"
       },
       {

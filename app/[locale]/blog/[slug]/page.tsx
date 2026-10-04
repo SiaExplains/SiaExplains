@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import { localeAlternates } from "@/lib/seo";
+import { getLocale, getTranslations } from "next-intl/server";
+import JsonLd from "@/components/JsonLd";
+import { postGraph } from "@/lib/jsonld";
+import { localeMetadata } from "@/lib/seo";
 import { Link } from "@/lib/navigation";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Calendar, Clock, Tag } from "lucide-react";
@@ -23,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: result.frontmatter.title,
     description: result.frontmatter.description,
-    alternates: await localeAlternates(`/blog/${slug}`),
+    ...(await localeMetadata(`/blog/${slug}`, { type: "article", publishedTime: result.frontmatter.date, tags: result.frontmatter.tags })),
   };
 }
 
@@ -34,9 +36,12 @@ export default async function BlogPostPage({ params }: Props) {
   if (!result) notFound();
 
   const { frontmatter, content } = result;
+  const locale = await getLocale();
+  const tSection = await getTranslations("blog");
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <JsonLd data={postGraph(frontmatter, "blog", tSection("title"), locale)} />
       <Link
         href="/blog"
         className="group inline-flex items-center gap-2 text-sm text-gray-500 hover:text-accent-700 dark:hover:text-accent-300 transition-colors mb-10"
