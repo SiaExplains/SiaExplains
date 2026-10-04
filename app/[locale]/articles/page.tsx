@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { localeAlternates } from "@/lib/seo";
+import { localeMetadata } from "@/lib/seo";
 import { Link } from "@/lib/navigation";
 import { ArrowRight, Tag, BookOpen } from "lucide-react";
 import { getAllPosts } from "@/lib/mdx";
@@ -11,7 +11,7 @@ import { RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("articles");
-  return { title: t("title"), description: t("description"), alternates: await localeAlternates("/articles") };
+  return { title: t("title"), description: t("description"), ...(await localeMetadata("/articles")) };
 }
 
 export default async function ArticlesPage() {

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { localeAlternates } from "@/lib/seo";
+import { localeMetadata } from "@/lib/seo";
 import { Calendar, Clock, MessageSquare, Video } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import Magnet from "@/components/motion/Magnet";
@@ -9,7 +9,7 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("book");
-  return { title: t("title"), description: t("description"), alternates: await localeAlternates("/book") };
+  return { title: t("title"), description: t("description"), ...(await localeMetadata("/book")) };
 }
 
 export default async function BookPage() {

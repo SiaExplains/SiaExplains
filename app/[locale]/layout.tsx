@@ -10,6 +10,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ThemeProvider from "@/components/ThemeProvider";
 import MotionProvider from "@/components/motion/MotionProvider";
+import JsonLd from "@/components/JsonLd";
+import { siteGraph } from "@/lib/jsonld";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,7 +44,8 @@ export const metadata: Metadata = {
   description:
     "Principal Software Engineer & Tech Lead based in Berlin. Building software, sharing knowledge, and documenting the journey on YouTube.",
   keywords: ["software engineering", "tech", "AI", "YouTube", "Berlin", "SiaExplains"],
-  authors: [{ name: "Siavash" }],
+  authors: [{ name: "Siavash Ghanbari", url: `${SITE_URL}/about` }],
+  creator: "Siavash Ghanbari",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -57,6 +60,11 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "SiaExplains",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@SiaExplains",
+    creator: "@SiaExplains",
   },
 };
 
@@ -84,6 +92,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} ${vazirmatn.variable} antialiased min-h-screen flex flex-col`}
         style={{ backgroundColor: "var(--background)", color: "var(--foreground)" }}
       >
+        <JsonLd data={siteGraph()} />
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
             <MotionProvider>

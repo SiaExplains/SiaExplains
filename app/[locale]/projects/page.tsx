@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { localeAlternates } from "@/lib/seo";
+import { localeMetadata } from "@/lib/seo";
 import Image from "next/image";
 import { ExternalLink, Zap, Clock, Lightbulb, CalendarDays, Crown, Users } from "lucide-react";
 import { GithubIcon } from "@/components/SocialIcons";
@@ -12,11 +12,11 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("projects");
-  return { title: t("title"), description: t("description"), alternates: await localeAlternates("/projects") };
+  return { title: t("title"), description: t("description"), ...(await localeMetadata("/projects")) };
 }
 
 const projects: (Project & { emoji?: string; image?: string; started?: string })[] = [
-  { emoji: "🤝", title: "Iranian Tech Hub", role: "soloFounder", description: "A vetted, members-only platform for the Iranian Startup Community: searchable topic archives, verified profiles, co-founder matching, and a funding channel. Built to give a 348-member Telegram group a durable home.", tags: ["Next.js", "TypeScript", "Supabase", "Tailwind", "next-intl"], status: "live", url: "https://www.iraniantechhub.com", started: "Sep 2026" },
+  { emoji: "🤝", title: "Iranian Tech Hub", role: "soloFounder", description: "A vetted, members-only platform for the Iranian Startup Community: searchable topic archives, verified profiles, co-founder matching, and a funding channel. A non-profit built to give an 800+ member Telegram community a durable home; 150 members onboarded so far and growing.", tags: ["Next.js", "TypeScript", "Supabase", "Tailwind", "next-intl"], status: "live", url: "https://www.iraniantechhub.com", started: "Sep 2026" },
   { emoji: "⏱️", title: "FocusCrew", role: "coFounder", description: "A gamified Pomodoro platform with crew-based accountability — your plan, your habits, and your focus in one place. Pick a small crew, focus at the same time, earn XP and badges. Co-founded with Sheida.", tags: ["Next.js", "TypeScript", "tRPC", "Drizzle", "PostgreSQL"], status: "live", url: "https://www.focus-crew.com", started: "Aug 2026" },
   { emoji: "📰", title: "WikiDigit", role: "soloFounder", description: "A tech media and news website covering the latest in technology, AI, and the digital world. Curated content for engineers and tech enthusiasts who want signal over noise.", tags: ["Next.js", "TypeScript", "Tailwind", "CMS"], status: "live", url: "https://wikidigit.com", started: "Jan 2026" },
   { image: "/emojar-favicon.png", title: "Emojar", role: "soloFounder", description: "A free emoji search and copy platform with 3,600+ emojis, curated collections, and mini-games. Built entirely with AI tools — zero lines of hand-written code. Monetised via Google Ads.", tags: ["TypeScript", "Next.js", "Tailwind", "Google Ads"], status: "live", url: "https://emojar.com", started: "Apr 2025" },

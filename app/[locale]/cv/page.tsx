@@ -1,17 +1,23 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import { localeAlternates } from "@/lib/seo";
+import { getLocale, getTranslations } from "next-intl/server";
+import JsonLd from "@/components/JsonLd";
+import { profilePage } from "@/lib/jsonld";
+import { localeMetadata } from "@/lib/seo";
 import { Briefcase, GraduationCap, Code2, Globe } from "lucide-react";
 import BlurText from "@/components/motion/BlurText";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("cv");
-  return { title: t("label"), description: t("description"), alternates: await localeAlternates("/cv") };
+  return { title: t("label"), description: t("description"), ...(await localeMetadata("/cv", { type: "profile" })) };
 }
 
 const experience = [
   { role: "Principal Software Engineer | Manager", company: "MHP", period: "Oct 2023 — Present", location: "Berlin, Germany", bullets: ["Led a cross functional team.", "Designed and developed KPI Comparison for Volkswagen Group plants.", "Implemented Virtual Meter Concept for Volkswagen energy consumption dashboard.", "Elevated code quality through refactoring, introducing strong types, decoupling, and adhering to SOLID.", "Automated CI/CD release for staging and production which was manual before.", "Designed and Implemented the Automatic Outlier Detection for incoming consumption data."] },
+  { role: "Solo Founder & CTO", company: "Iranian Tech Hub · Non-profit", period: "Sep 2026 — Present", location: "Berlin, Germany", url: "https://www.iraniantechhub.com", bullets: ["Founded and built a vetted, members-only, non-profit platform for an 800+ member Iranian startup community on Telegram.", "Onboarded the first 150 founders, operators and investors through application and human review, growing every day.", "Designed and shipped searchable topic archives, verified profiles, co-founder matching, and a funding channel on Next.js, TypeScript, and Supabase."] },
+  { role: "Founder & Technical Lead", company: "Hampa · Non-profit", period: "Feb 2024 — Present", location: "Berlin, Germany", url: "https://www.instagram.com/hampa.berlin", bullets: ["Founded a non-profit sports community for Iranians in Berlin that has grown to about 870 members.", "Organise regular events across sports, each run by volunteer coaches in its own topic channel.", "Leading the move to a registered non-profit association (Verein) and the technical planning for its community app."] },
+  { role: "Co-Founder & CTO", company: "FocusCrew", period: "Aug 2026 — Present", location: "Berlin, Germany", url: "https://www.focus-crew.com", bullets: ["Co-founded a gamified Pomodoro platform where small crews focus together, with Sheida.", "Own the architecture and engineering: planner, habit tracker, timer, and crew-based accountability with XP and badges.", "Built on Next.js, TypeScript, tRPC, Drizzle, and PostgreSQL."] },
+  { role: "Solo Founder & Engineer · Side Project", company: "Emojar", period: "Apr 2025 — Present", location: "Berlin, Germany", url: "https://emojar.com", bullets: ["Built and launched a free emoji search and copy platform with 3,600+ emojis, curated collections, and mini-games.", "Shipped the entire product with AI tools and zero hand-written code.", "Monetised through Google Ads."] },
   { role: "Senior Software Engineer", company: "Trademachines GmbH", period: "Aug 2020 — Oct 2023", location: "Berlin, Germany", bullets: ["Developed a new management dashboard for data visualization and insights based on Next.js 13.", "Boosted Web Core Vitals metrics by 18%, enhancing user experience with smoother interactions.", "Introduced Google Optimize for A/B testing, increasing user engagement by 30% and conversion rates by 20%.", "Developed interactive map feature, contributing to an 11% increase in Time-On-Site.", "Led migration from legacy PHP7 to ReactJS, improving performance and modernizing UI.", "Migrated Google Analytics to GA4, ensuring accurate and comprehensive data analysis.", "Introduced a Cookie-Consent Manager to ensure compliance and safeguard user privacy.", "Resolved multiple technical SEO issues, boosting SEO rankings and organic traffic by 30%."] },
   { role: "Senior Software Engineer", company: "AIMEX5", period: "Mar 2019 — Jul 2020", location: "Sydney, Australia", bullets: ["Migrated the e-commerce application from legacy PHP to ReactJS + Node.js from scratch.", "Created a ticketing system to facilitate communication between the company and customers."] },
   { role: "Senior Software Engineer", company: "SON Corporate Group", period: "Apr 2017 — Jan 2020", location: "Tehran, Iran", bullets: ["Played a pivotal role in creating a user-friendly financial data entry application.", "Improved a spreadsheet application with a custom language that helps users design financial forms without any programming expertise."] },
@@ -19,7 +25,7 @@ const experience = [
   { role: "Senior Back-End Developer", company: "Iranhost Ltd.", period: "Sep 2015 — Feb 2016", location: "Tehran, Iran", bullets: ["Enhanced the membership module in Iranhost's website builder, resulting in a 25% increase in Time-On-Site.", "Improved the current authorization pipeline with a token-based authorization process, enabling seamless integration of sub-apps."] },
   { role: "Senior Backend Developer", company: "IT Orbit Ltd.", period: "Jun 2015 — Aug 2015", location: "Tehran, Iran", bullets: ["Streamlined processes and integrated advanced technologies, resulting in a 40% reduction in administrative tasks.", "Key role in developing a comprehensive system for seamless data flow across healthcare entities.", "Designed highly efficient back-end APIs that retrieved and processed raw data from diverse applications."] },
   { role: "Software Developer", company: "Saman International Analysts Ltd.", period: "May 2012 — May 2015", location: "Tehran, Iran", bullets: ["Redesigned an app based on ISO-8553 for Financial transaction card originated interchange messaging.", "Implemented an automatic, manageable, and modular updating system in the core app, resulting in annual savings of $50,000.", "Led the implementation of modules including deposit process, withdrawals, and transfers."] },
-  { role: "CTO and Co-Founder", company: "Taazuu Developers Ltd.", period: "Jul 2007 — Feb 2012", location: "Ghaemshahr, Iran", bullets: ["Advised a system architecture for a LMS (Learning Management System) for Payame-Noor University.", "Built a multilingual dictionary that supports over 12 languages and can scan text from images using OCR.", "Produced over 12 portfolios and small shops.", "Implemented a native Windows application for issuing and distributing fuel cards in 14 cities."] },
+  { role: "Founder & CEO", company: "Taazuu Developers Ltd.", period: "Jul 2007 — Feb 2012", location: "Ghaemshahr, Iran", bullets: ["Advised a system architecture for a LMS (Learning Management System) for Payame-Noor University.", "Built a multilingual dictionary that supports over 12 languages and can scan text from images using OCR.", "Produced over 12 portfolios and small shops.", "Implemented a native Windows application for issuing and distributing fuel cards in 14 cities."] },
 ];
 
 const education = [
@@ -40,9 +46,11 @@ const languages = [
 
 export default async function CvPage() {
   const t = await getTranslations("cv");
+  const locale = await getLocale();
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <JsonLd data={profilePage("/cv", locale, `Siavash Ghanbari — ${t("label")}`)} />
       <div className="relative mb-12 pb-8 border-b border-gray-200 dark:border-white/5">
         <div aria-hidden className="bg-dots pointer-events-none absolute -inset-x-10 -top-16 h-56" />
         <BlurText as="h1" text="Siavash Ghanbari" className="relative text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-2" />
@@ -70,7 +78,15 @@ export default async function CvPage() {
               <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white">{job.role}</h3>
-                  <p className="text-accent-700 dark:text-accent-300 text-sm">{job.company}</p>
+                  <p className="text-accent-700 dark:text-accent-300 text-sm">
+                    {"url" in job && job.url ? (
+                      <a href={job.url} target="_blank" rel="noopener noreferrer" className="link-draw">
+                        {job.company}
+                      </a>
+                    ) : (
+                      job.company
+                    )}
+                  </p>
                 </div>
                 <div className="text-end">
                   <p className="text-sm text-gray-500">{job.period}</p>

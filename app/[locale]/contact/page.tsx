@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
-import { localeAlternates } from "@/lib/seo";
+import { localeMetadata } from "@/lib/seo";
 import { Mail } from "lucide-react";
 import { YoutubeIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/SocialIcons";
 import ContactForm from "@/components/ContactForm";
@@ -10,7 +10,7 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("contact");
-  return { title: t("title"), description: t("description"), alternates: await localeAlternates("/contact") };
+  return { title: t("title"), description: t("description"), ...(await localeMetadata("/contact")) };
 }
 
 const otherSocials = [

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import { localeAlternates } from "@/lib/seo";
+import { getLocale, getTranslations } from "next-intl/server";
+import JsonLd from "@/components/JsonLd";
+import { profilePage } from "@/lib/jsonld";
+import { localeMetadata } from "@/lib/seo";
 import { Link } from "@/lib/navigation";
 import { ArrowRight, MapPin, Code2, Globe } from "lucide-react";
 import Image from "next/image";
@@ -13,7 +15,7 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("about");
-  return { title: t("title"), description: t("subtitle"), alternates: await localeAlternates("/about") };
+  return { title: t("title"), description: t("subtitle"), ...(await localeMetadata("/about", { type: "profile" })) };
 }
 
 export default async function AboutPage() {
@@ -26,8 +28,11 @@ export default async function AboutPage() {
     { icon: Globe, label: t("factFrom"), value: "Tehran, Iran" },
   ];
 
+  const locale = await getLocale();
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <JsonLd data={profilePage("/about", locale, t("title"))} />
       <div className="grid items-center gap-10 md:grid-cols-[1.4fr_1fr] mb-4">
         <PageHeader label={t("label")} title={t("title")} description={t("subtitle")} className="mb-0" />
         <Reveal delay={0.2} className="relative mx-auto w-full max-w-[260px]">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import { localeAlternates } from "@/lib/seo";
+import { localeMetadata } from "@/lib/seo";
 import { Book } from "@/types";
 import PageHeader from "@/components/PageHeader";
 import SpotlightCard from "@/components/motion/SpotlightCard";
@@ -9,7 +9,7 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("books");
-  return { title: t("title"), description: t("description"), alternates: await localeAlternates("/books") };
+  return { title: t("title"), description: t("description"), ...(await localeMetadata("/books")) };
 }
 
 const books: (Book & { emoji: string })[] = [

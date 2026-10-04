@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.6.0 — 2026-10-04
+
+### Added
+- The CV lists my own ventures under my current job: the non-profits Iranian Tech Hub and Hampa, FocusCrew (as co-founder and CTO) and the side project Emojar, each linking to the project.
+- Search engines and AI assistants now get a structured description of the site. Every page says who I am, what I founded and where to find me elsewhere. Blog posts and articles carry their author, date and breadcrumb, and the About and CV pages are marked as my profile.
+- Every page now has a large preview image and its own link in social and chat previews.
+- `/llms.txt`: a plain-text guide to the site for AI assistants, listing key pages, ventures, channels and every post.
+
+### Changed
+- Iranian Tech Hub's numbers are current everywhere on the site: 800+ members on Telegram, 150 onboarded to the platform so far.
+- At Taazuu Developers I'm listed as Founder & CEO, not CTO and co-founder. The timeline says the same in all three languages.
+- `/en/...` addresses now redirect permanently to the unprefixed English page.
+- The sitemap no longer stamps every page with today's date. Only posts carry a date, and it is their real publish date.
+
 ## 0.5.2 — 2026-10-01
 
 ### Fixed
