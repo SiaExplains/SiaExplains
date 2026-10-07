@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.1 — 2026-10-07
+
+### Changed
+- The Emojar card on the Projects page describes what Emojar is now: free, privacy-friendly online tools (image and PDF converters, developer utilities, calculators, text tools) that run in the browser. Its tags are TypeScript, Next.js, Tailwind, Browser APIs and WebAssembly.
+
 ## 0.6.0 — 2026-10-04
 
 ### Added
