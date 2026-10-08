@@ -1,0 +1,69 @@
+---
+title: "I Launched Mylper, an Image Editor That Runs in Your Browser"
+description: "Mylper is a free, layer-based image editor in the spirit of Photoshop and GIMP. It runs entirely in your browser, and your images never leave your device."
+date: "2026-10-09"
+tags: ["side-project", "build-in-public", "nextjs", "typescript"]
+readingTime: "4 min read"
+---
+
+You want to crop a screenshot, blur a name, or put some text on a picture. That's a two-minute job.
+
+Your choices are usually to install a big desktop app like GIMP or Photoshop, or to upload your image to some random website and hope for the best.
+
+I wanted a third option. So I built **[Mylper](https://mylper.com)**.
+
+---
+
+## What Mylper Is
+
+Mylper is a free, layer-based image editor that runs entirely in your browser. You can edit photos, create images from scratch, and draw. It works like the desktop editors you already know, but you just open a tab.
+
+There's no account and nothing to install. Open the site, create a document or drop an image on the page, and start editing.
+
+---
+
+## Private by Design
+
+This is the part I care about most: **your images are never uploaded.**
+
+All the editing happens in your browser, on your device. There's no server that stores your files, so nobody can lose them, leak them, or train on them. That matters when the image is a passport scan, a contract, or a family photo.
+
+Your work also saves itself in your browser's storage, so you can close the tab and come back to it later. One honest caveat: browsers can clear that storage, so export anything important.
+
+---
+
+## What You Can Do With It
+
+I didn't want a toy. If you've used Photoshop or GIMP, the layout should feel familiar: menus at the top, tools on the left, properties and layers on the right.
+
+- **Layers that stay editable:** groups, masks, 16 blend modes, adjustment layers and effects
+- **Selections:** marquee, lasso and magic wand
+- **Paint and draw:** brushes, pencil, eraser, fill and gradients
+- **Shapes and text** right on the canvas
+- **Transform:** crop, flip, scale and rotate
+- **Start fast:** presets for HD, square posts, stories, web banners and A4
+- **Open and export** PNG, JPEG and WebP
+
+---
+
+## How I Built It
+
+Mylper is built with **Next.js** and **TypeScript**, and the editor itself runs on the browser's own graphics APIs.
+
+The hard part of an image editor isn't drawing pixels. It's keeping everything editable. A layer with a mask, a blend mode and an adjustment on top has to look right every time you change any of them, and it has to feel instant. Doing all of that on the user's machine, with no server to lean on, was the most interesting engineering problem I've worked on in a while.
+
+---
+
+## Why Another Image Editor?
+
+Online image editors already exist, and some of them are very good. But I wanted one that's private by default, free, and built with a modern web stack I know inside out.
+
+It's also the kind of tool I use all the time: for YouTube thumbnails, blog images and quick fixes to screenshots. Building something I use every day keeps me honest about what's actually useful.
+
+---
+
+## Try It
+
+Mylper is live at **[mylper.com](https://mylper.com)**. It's free and needs no account, and your images stay on your device.
+
+If something breaks or a tool you need is missing, [tell me](/contact). It's a young product, and I'm building it in public.

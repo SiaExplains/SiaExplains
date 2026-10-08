@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.1 — 2026-10-09
+
+### Added
+- Blog post: "I Launched Mylper, an Image Editor That Runs in Your Browser".
+
 ## 0.7.0 — 2026-10-09
 
 ### Added
