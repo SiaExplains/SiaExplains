@@ -154,6 +154,14 @@
       },
       {
         "year": "2026",
+        "title": "Launched Mylper",
+        "category": "Company",
+        "description": "Built and launched Mylper.com as solo founder — a free, browser-based image editor for editing photos, creating images, and drawing, in the spirit of Photoshop and GIMP. Nothing to install; it all runs in the browser. Built with Next.js and TypeScript.",
+        "location": "Berlin, Germany",
+        "url": "https://mylper.com"
+      },
+      {
+        "year": "2026",
         "title": "Founded Iranian Tech Hub",
         "category": "Company",
         "description": "As solo founder, built Iranian Tech Hub — a non-profit, vetted, members-only platform for the 800+ member Iranian Startup Community on Telegram, with 150 members onboarded so far, with topic archives, verified profiles, co-founder matching, and a funding channel.",

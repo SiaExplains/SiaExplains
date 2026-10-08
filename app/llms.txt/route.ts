@@ -26,7 +26,7 @@ export async function GET() {
 
   const body = `# SiaExplains
 
-> Personal site of Siavash Ghanbari ("Sia"), a Principal Software Engineer and manager at MHP in Berlin with 17+ years of experience in React, Next.js, Node.js, TypeScript and AWS. He founded the non-profits Iranian Tech Hub and Hampa, co-founded FocusCrew as CTO, built WikiDigit and the side project Emojar, and runs two YouTube channels: SiaExplains (Persian) and Sia Barry (English).
+> Personal site of Siavash Ghanbari ("Sia"), a Principal Software Engineer and manager at MHP in Berlin with 17+ years of experience in React, Next.js, Node.js, TypeScript and AWS. He founded the non-profits Iranian Tech Hub and Hampa, co-founded FocusCrew as CTO, built Mylper, WikiDigit and the side project Emojar, and runs two YouTube channels: SiaExplains (Persian) and Sia Barry (English).
 
 The site is available in English (default), Persian (/fa) and German (/de).
 
@@ -36,6 +36,7 @@ ${pages.map(([name, path, desc]) => `- [${name}](${SITE_URL}${path}): ${desc}`).
 
 ## Ventures
 
+- [Mylper](https://mylper.com) (founder, 2026): browser-based image editor for photo editing, image creation and drawing, in the spirit of Photoshop and GIMP.
 - [Iranian Tech Hub](https://www.iraniantechhub.com) (solo founder & CTO, 2026, non-profit): members-only network for Iranian founders, operators and investors; 150 members onboarded from an 800+ member Telegram community.
 - [FocusCrew](https://www.focus-crew.com) (co-founder & CTO, 2026): gamified Pomodoro platform where small crews focus together.
 - [WikiDigit](https://wikidigit.com) (founder, 2026): tech media and news site.
