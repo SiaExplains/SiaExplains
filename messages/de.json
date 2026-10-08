@@ -154,6 +154,14 @@
       },
       {
         "year": "2026",
+        "title": "Mylper gestartet",
+        "category": "Company",
+        "description": "Als Alleingründer Mylper.com gebaut und gestartet — ein kostenloser Bildeditor im Browser zum Bearbeiten von Fotos, Erstellen von Bildern und Zeichnen, ähnlich wie Photoshop und GIMP. Keine Installation nötig; alles läuft im Browser. Gebaut mit Next.js und TypeScript.",
+        "location": "Berlin, Deutschland",
+        "url": "https://mylper.com"
+      },
+      {
+        "year": "2026",
         "title": "Iranian Tech Hub gegründet",
         "category": "Company",
         "description": "Als Alleingründer Iranian Tech Hub gebaut — eine gemeinnützige, geprüfte Plattform nur für Mitglieder der über 800-köpfigen Iranian Startup Community auf Telegram, mit bisher 150 aufgenommenen Mitgliedern, mit Themenarchiven, verifizierten Profilen, Mitgründer-Matching und einem Finanzierungskanal.",

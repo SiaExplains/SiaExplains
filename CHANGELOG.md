@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.0 — 2026-10-09
+
+### Added
+- Mylper, my browser-based image editor for editing photos, creating images and drawing (like Photoshop and GIMP, but online), is on the Projects page, the CV and the Timeline in all three languages. It is also listed in the site's structured data and in `/llms.txt`.
+
 ## 0.6.1 — 2026-10-07
 
 ### Changed

@@ -9,6 +9,7 @@ export const PERSON_ID = `${SITE_URL}/#person`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 
 const ventures = [
+  { name: "Mylper", type: "Organization", url: "https://mylper.com", foundingDate: "2026-10", description: "A free, browser-based image editor for photo editing, image creation, and drawing, in the spirit of Photoshop and GIMP." },
   { name: "Iranian Tech Hub", type: "NGO", url: "https://www.iraniantechhub.com", foundingDate: "2026-09", description: "A non-profit, members-only network for Iranian founders, operators and investors, grown from an 800+ member Telegram community." },
   { name: "FocusCrew", type: "Organization", url: "https://www.focus-crew.com", foundingDate: "2026-08", description: "A gamified Pomodoro platform where small crews focus together." },
   { name: "WikiDigit", type: "Organization", url: "https://wikidigit.com", foundingDate: "2026-01", description: "A tech media and news website covering technology, AI, and the digital world." },
