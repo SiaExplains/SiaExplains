@@ -1,8 +1,7 @@
 import { getPublicClient } from "@/lib/supabase/public";
+import { LINK_ICONS, type LinkIcon } from "@/lib/link-icons";
 
-export type LinkIcon = "youtube" | "instagram" | "users" | "timer" | "globe" | "github" | "linkedin" | "mail" | "link";
-
-export const LINK_ICONS: LinkIcon[] = ["youtube", "instagram", "users", "timer", "globe", "github", "linkedin", "mail", "link"];
+export { LINK_ICONS, type LinkIcon };
 
 export type LinkItem = {
   id: string;

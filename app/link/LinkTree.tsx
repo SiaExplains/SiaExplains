@@ -2,23 +2,11 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Globe, Link2, Mail, Timer, Users } from "lucide-react";
-import { GithubIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from "@/components/SocialIcons";
+import { ArrowUpRight } from "lucide-react";
 import ClickSpark from "@/components/motion/ClickSpark";
 import { ENTRANCE, MICRO } from "@/lib/motion";
+import { LINK_ICON_REGISTRY } from "@/lib/link-icons";
 import type { LinkIcon, LinkItem } from "@/lib/links";
-
-const ICONS: Record<LinkIcon, React.ComponentType<{ size?: number; className?: string }>> = {
-  youtube: YoutubeIcon,
-  instagram: InstagramIcon,
-  users: Users,
-  timer: Timer,
-  globe: Globe,
-  github: GithubIcon,
-  linkedin: LinkedinIcon,
-  mail: Mail,
-  link: Link2,
-};
 
 const ICON_TINT: Partial<Record<LinkIcon, string>> = {
   youtube: "from-red-500 to-orange-500",
@@ -26,7 +14,20 @@ const ICON_TINT: Partial<Record<LinkIcon, string>> = {
   users: "from-emerald-500 to-teal-500",
   timer: "from-teal-600 to-cyan-500",
   globe: "from-brand-400 to-accent-500",
+  x: "from-gray-800 to-black",
+  send: "from-sky-400 to-blue-500",
+  "message-circle": "from-green-500 to-emerald-600",
+  music: "from-green-500 to-lime-500",
+  gamepad: "from-violet-600 to-indigo-600",
+  coffee: "from-amber-600 to-yellow-500",
 };
+
+/** Relative luminance check, so a logo on a pale brand colour (Snapchat yellow) stays visible. */
+function isLight(hex: string): boolean {
+  const n = parseInt(hex.slice(1), 16);
+  const [r, g, b] = [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+  return 0.299 * r + 0.587 * g + 0.114 * b > 186;
+}
 
 const list = { hidden: {}, visible: { transition: { staggerChildren: 0.08, delayChildren: 0.35 } } };
 const item = {
@@ -86,7 +87,9 @@ export default function LinkTree({ links }: { links: LinkItem[] }) {
 
         <motion.ul className="space-y-3" variants={list} initial="hidden" animate="visible">
           {links.map((link) => {
-            const Icon = ICONS[link.icon];
+            const def = LINK_ICON_REGISTRY[link.icon];
+            const Icon = def.Icon;
+            const brandColor = !ICON_TINT[link.icon] && "color" in def ? def.color : undefined;
             return (
               <motion.li key={link.id} variants={item}>
                 <motion.a
@@ -104,7 +107,8 @@ export default function LinkTree({ links }: { links: LinkItem[] }) {
                     className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full"
                   />
                   <span
-                    className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br ${ICON_TINT[link.icon] ?? "from-gray-600 to-gray-700"} text-white shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6`}
+                    style={brandColor ? { backgroundColor: brandColor } : undefined}
+                    className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl ${brandColor ? "" : `bg-gradient-to-br ${ICON_TINT[link.icon] ?? "from-gray-600 to-gray-700"}`} ${brandColor && isLight(brandColor) ? "text-gray-900" : "text-white"} shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6`}
                   >
                     <Icon size={20} />
                   </span>

@@ -2,10 +2,11 @@
 
 import { useActionState, useEffect, useRef } from "react";
 import { ArrowDown, ArrowUp, Trash2 } from "lucide-react";
-import { LINK_ICONS, type LinkItem } from "@/lib/links";
+import type { LinkItem } from "@/lib/links";
 import { cn } from "@/lib/utils";
 import { inputClass, labelClass } from "../../ui";
 import { createLink, deleteLink, moveLink, updateLink } from "./actions";
+import IconPicker from "./IconPicker";
 
 type Props = { link?: LinkItem; isFirst?: boolean; isLast?: boolean };
 
@@ -62,13 +63,7 @@ export default function LinkEditor({ link, isFirst, isLast }: Props) {
             <label htmlFor={`icon-${id}`} className={labelClass}>
               Icon
             </label>
-            <select id={`icon-${id}`} name="icon" defaultValue={link?.icon ?? "link"} className={inputClass}>
-              {LINK_ICONS.map((icon) => (
-                <option key={icon} value={icon} className="bg-surface-900">
-                  {icon}
-                </option>
-              ))}
-            </select>
+            <IconPicker id={`icon-${id}`} name="icon" defaultValue={link?.icon ?? "link"} />
           </div>
           <label className="flex items-end gap-2 pb-2 text-sm text-gray-300">
             <input
