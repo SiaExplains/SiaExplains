@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.8.0 — 2026-10-09
+
+### Added
+- Links on `/link` can use any of 233 icons instead of 9. That includes 76 real brand logos (Telegram, WhatsApp, Discord, TikTok, Spotify, Twitch, Medium, Substack, Patreon, Ko-fi, Product Hunt, Figma, Claude and more), each shown in its own brand colour. The rest are general icons covering social and media, communication, community, work and dev, learning, shopping, events, and places.
+- In the admin, the icon field is now a button that shows the current icon. It opens a popup with every icon in a searchable grid, grouped by topic. Type something like "telegram", "shop" or "ai" and press Enter to pick the first match.
+
 ## 0.7.1 — 2026-10-09
 
 ### Added

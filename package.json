@@ -1,12 +1,13 @@
 {
   "name": "siaexplains-bootstrap",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "icons:brands": "node scripts/generate-brand-icons.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",
@@ -32,6 +33,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.15",
+    "simple-icons": "^16.32.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
