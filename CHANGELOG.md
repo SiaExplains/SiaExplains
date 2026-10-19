@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.1 — 2026-10-19
+
+### Changed
+- Mylper is now Picstea. The Projects page, CV, Timeline (all three languages), structured data, `/llms.txt` and the launch post use the new name and link to picstea.com. The post moved to `/blog/i-launched-picstea`; the old URL redirects there.
+
 ## 0.8.0 — 2026-10-09
 
 ### Added
