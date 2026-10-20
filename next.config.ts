@@ -22,6 +22,9 @@ const nextConfig: NextConfig = {
       // permanent so search engines consolidate on the unprefixed URL.
       { source: "/en", destination: "/", permanent: true },
       { source: "/en/:path*", destination: "/:path*", permanent: true },
+      // Mylper was rebranded to Picstea; keep the old post URL working.
+      { source: "/blog/i-launched-mylper", destination: "/blog/i-launched-picstea", permanent: true },
+      { source: "/:locale(fa|de)/blog/i-launched-mylper", destination: "/:locale/blog/i-launched-picstea", permanent: true },
     ];
   },
 };
